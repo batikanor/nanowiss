@@ -21,7 +21,7 @@ const Navbar = () => {
                 Home
               </Link>
             </li>
-            <li>
+            {/* <li>
               <Link
                 to="/story"
                 className={`text-white hover:text-primary-light ${isActive('/story') ? 'font-bold text-primary-light' : ''}`}
@@ -36,7 +36,7 @@ const Navbar = () => {
               >
                 Technology
               </Link>
-            </li>
+            </li> */}
             <li>
               <Link
                 to="/team"
@@ -47,12 +47,20 @@ const Navbar = () => {
             </li>
             <li>
               <Link
-                to="/nanowiss/contact"
+                to="/products"
+                className={`text-white hover:text-primary-light ${isActive('/products') ? 'font-bold text-primary-light' : ''}`}
+              >
+                Products
+              </Link>
+            </li>
+            {/* <li>
+              <Link
+                to="/contact"
                 className={`text-white hover:text-primary-light ${isActive('/contact') ? 'font-bold text-primary-light' : ''}`}
               >
                 Contact
               </Link>
-            </li>
+            </li> */}
           </ul>
         </nav>
       </div>

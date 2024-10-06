@@ -43,7 +43,7 @@ const HomePage = () => {
             </div>
 
             {/* Latest Product Section */}
-            <div className="w-full md:w-1/2 px-4 flex flex-col items-center">
+            {/* <div className="w-full md:w-1/2 px-4 flex flex-col items-center">
               <h2 className="text-3xl font-bold mb-8 text-primary-dark">Our Latest Product</h2>
               <img 
                 src={productImage} 
@@ -56,7 +56,7 @@ const HomePage = () => {
               >
                 Order Now
               </a>
-            </div>
+            </div> */}
           </div>
         </section>
 
@@ -88,6 +88,10 @@ const HomePage = () => {
         <div className="container mx-auto text-center">
           <p>&copy; 2024 nanoWISS. All rights reserved.</p>
           <p className="mt-2">Contact: info@nanowiss.com</p>
+          {/* Credit Section */}
+          <p className="text-xs mt-2 text-gray-400">
+            Special thanks to our friend Batıkan Bora Ormancı for voluntarily creating this web app for nanoWISS.
+          </p>
         </div>
       </footer>
     </div>
