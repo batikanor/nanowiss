@@ -1,18 +1,18 @@
 {
   "files": {
     "main.css": "/static/css/main.c3afc295.css",
-    "main.js": "/static/js/main.09558ab8.js",
+    "main.js": "/static/js/main.a4e5c9cc.js",
     "static/js/453.e5c486a4.chunk.js": "/static/js/453.e5c486a4.chunk.js",
     "static/media/nwiss_backgr.jpg": "/static/media/nwiss_backgr.04c96cfb0fef4b7611dc.jpg",
     "static/media/product1.png": "/static/media/product1.04cc79e675ade3f7b45a.png",
     "static/media/logo.svg": "/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/index.html",
     "main.c3afc295.css.map": "/static/css/main.c3afc295.css.map",
-    "main.09558ab8.js.map": "/static/js/main.09558ab8.js.map",
+    "main.a4e5c9cc.js.map": "/static/js/main.a4e5c9cc.js.map",
     "453.e5c486a4.chunk.js.map": "/static/js/453.e5c486a4.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c3afc295.css",
-    "static/js/main.09558ab8.js"
+    "static/js/main.a4e5c9cc.js"
   ]
 }
