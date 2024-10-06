@@ -4,20 +4,20 @@ import Navbar from './Navbar'; // Import the Navbar component
 const TeamPage = () => {
   const teamMembers = [
     {
-      name: 'Dr. Clara Friedrich',
+      name: 'Zeynep Feyza Atabey',
       role: 'Chief Science Officer',
       bio: 'With over 15 years of experience in nanotechnology and bioengineering, Dr. Clara leads our scientific research. Her groundbreaking work in nanoparticle production for medical treatments has garnered international recognition.',
       image: 'path-to-image-of-Clara' // Replace with appropriate image path
     },
     {
-      name: 'Aiden Nakamura',
-      role: 'Lead Engineer',
+      name: 'Selen Özdinç',
+      role: 'Chief Technology Officer',
       bio: 'Aiden is a master of engineering solutions, focusing on scaling nanoparticle production processes for mass-market applications. His innovative approaches have accelerated production without compromising quality.',
       image: 'path-to-image-of-Aiden' // Replace with appropriate image path
     },
     {
-      name: 'Lena Schmidt',
-      role: 'Chief Marketing Officer',
+      name: 'Elif Kaman',
+      role: 'Chief Innovation Officer',
       bio: 'Lena brings over a decade of experience in marketing for biotech startups. She’s passionate about raising awareness of rare diseases and driving community engagement for our mission.',
       image: 'path-to-image-of-Lena' // Replace with appropriate image path
     }
