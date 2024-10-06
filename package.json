@@ -1,7 +1,7 @@
 {
   "name": "nanowiss",
   "version": "0.1.0",
-  "homepage": "https://batikanor.github.io/nanowiss",
+  "homepage": "https://www.nanowiss.com",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
@@ -10,6 +10,7 @@
     "lucide-react": "^0.447.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-router-dom": "^6.26.2",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },

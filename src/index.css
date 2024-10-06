@@ -1,6 +1,38 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+  @keyframes slide {
+    0% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(-10px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  @keyframes zoom {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05); /* Adjust the zoom level */
+    }
+  }
+  
+  /* .animate-zoom {
+    animation: zoom 3s ease-in-out infinite;
+  }
+  .animate-slide {
+    animation: slide 2s ease-in-out infinite;
+  } */
+  .animate-zoom-slide {
+    animation: slide 2s ease-in-out infinite, zoom 3s ease-in-out infinite;
+  }
+}
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
