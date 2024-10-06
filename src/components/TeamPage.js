@@ -9,7 +9,7 @@ const teamMembers = [
   {
     name: 'Zeynep Feyza Atabey',
     role: 'Chief Executive Officer',
-    bio: 'Zeynep Feyza Atabey is a Biotechnology master’s student at Saarland University and a Molecular Biotechnology graduate from Turkish-German University. She has worked on projects and internships focused on microbiology, rare diseases, and nanoparticle production. A finalist in the 2023 TOG & ETI "You Are Young, You Are Strong" project, she received a grant and mentorship for her work in rare disease and infection treatments. As CEO, she manages partnerships, promotions, and overall processes for nanoWISS.',
+    bio: 'Zeynep Feyza Atabey is a Biotechnology master student at Saarland University and a Molecular Biotechnology graduate from Turkish-German University. She has worked on projects and internships focused on microbiology, rare diseases, and nanoparticle production. A finalist in the 2023 TOG & ETI "You Are Young, You Are Strong" project, she received a grant and mentorship for her work in rare disease and infection treatments. As CEO, she manages partnerships, promotions, and overall processes for nanoWISS.',
     image: FeyzaImage // Use imported image here
   },
   {
@@ -31,9 +31,9 @@ const teamMembers = [
     image: NisaImage
   },
   {
-    name: 'Yiğit Doğancı',
+    name: 'Yigit Doganci',
     role: 'Lead Engineer',
-    bio: 'Yiğit Doğancı is a Mechanical Engineering graduate from Başkent University and an instructor in nanotechnology at T3 Foundation Dene-Yap. He has worked on various projects and is responsible for the development of the nanoparticle production device at nanoWISS.',
+    bio: 'Yigit Doganci is a Mechanical Engineering graduate from Baskent University and an instructor in nanotechnology at T3 Foundation Dene-Yap. He has worked on various projects and is responsible for the development of the nanoparticle production device at nanoWISS.',
     image: '' // No image provided
   },
   {
