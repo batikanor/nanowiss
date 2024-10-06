@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.52a566d4.css",
-    "main.js": "/static/js/main.9126ab6b.js",
+    "main.js": "/static/js/main.245008cb.js",
     "reactPlayerYouTube.js": "/static/js/reactPlayerYouTube.94f24096.chunk.js",
     "reactPlayerSoundCloud.js": "/static/js/reactPlayerSoundCloud.8053a1bb.chunk.js",
     "reactPlayerVimeo.js": "/static/js/reactPlayerVimeo.553794c6.chunk.js",
@@ -18,13 +18,16 @@
     "reactPlayerPreview.js": "/static/js/reactPlayerPreview.3d43639f.chunk.js",
     "static/js/453.e5c486a4.chunk.js": "/static/js/453.e5c486a4.chunk.js",
     "static/media/feyza_yuvarlak.png": "/static/media/feyza_yuvarlak.f056584cc09ab84c8906.png",
+    "static/media/selen özdinç foto.png": "/static/media/selen özdinç foto.fe3691852aadf8961b7c.png",
+    "static/media/elif kaman foto.png": "/static/media/elif kaman foto.ffdd7b4b9304e0f15f95.png",
+    "static/media/nisa tan foto.png": "/static/media/nisa tan foto.f73b729386d91b4bd994.png",
     "static/media/lab_nanoparticle.png": "/static/media/lab_nanoparticle.a8a73f15cca2a9b17682.png",
     "static/media/nwiss_backgr.jpg": "/static/media/nwiss_backgr.04c96cfb0fef4b7611dc.jpg",
     "static/media/nanoparticle_device.png": "/static/media/nanoparticle_device.ab951ac2f848f9686331.png",
     "static/media/product1.png": "/static/media/product1.04cc79e675ade3f7b45a.png",
     "index.html": "/index.html",
     "main.52a566d4.css.map": "/static/css/main.52a566d4.css.map",
-    "main.9126ab6b.js.map": "/static/js/main.9126ab6b.js.map",
+    "main.245008cb.js.map": "/static/js/main.245008cb.js.map",
     "reactPlayerYouTube.94f24096.chunk.js.map": "/static/js/reactPlayerYouTube.94f24096.chunk.js.map",
     "reactPlayerSoundCloud.8053a1bb.chunk.js.map": "/static/js/reactPlayerSoundCloud.8053a1bb.chunk.js.map",
     "reactPlayerVimeo.553794c6.chunk.js.map": "/static/js/reactPlayerVimeo.553794c6.chunk.js.map",
@@ -43,6 +46,6 @@
   },
   "entrypoints": [
     "static/css/main.52a566d4.css",
-    "static/js/main.9126ab6b.js"
+    "static/js/main.245008cb.js"
   ]
 }
