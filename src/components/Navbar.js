@@ -15,7 +15,7 @@ const Navbar = () => {
           <ul className="flex space-x-4">
             <li>
               <Link
-                to="/nanowiss"
+                to="/"
                 className={`text-white hover:text-primary-light ${isActive('/') ? 'font-bold text-primary-light' : ''}`}
               >
                 Home
@@ -23,7 +23,7 @@ const Navbar = () => {
             </li>
             <li>
               <Link
-                to="/nanowiss/story"
+                to="/story"
                 className={`text-white hover:text-primary-light ${isActive('/story') ? 'font-bold text-primary-light' : ''}`}
               >
                 Story
@@ -31,7 +31,7 @@ const Navbar = () => {
             </li>
             <li>
               <Link
-                to="/nanowiss/technology"
+                to="/technology"
                 className={`text-white hover:text-primary-light ${isActive('/technology') ? 'font-bold text-primary-light' : ''}`}
               >
                 Technology
@@ -39,7 +39,7 @@ const Navbar = () => {
             </li>
             <li>
               <Link
-                to="/nanowiss/team"
+                to="/team"
                 className={`text-white hover:text-primary-light ${isActive('/team') ? 'font-bold text-primary-light' : ''}`}
               >
                 Team
