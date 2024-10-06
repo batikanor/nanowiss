@@ -17,6 +17,9 @@ websitenin son halini deploy etmek icin
 npm run deploy
 
 
+github daki son degisiklikleri kendi bilgisayarina cekmek icin
+git pull
+
 sitenin kaynak kodunda yaptigin degisikleri GitHub a gondermek icin
 git add .
 git commit -m "Buraya yapilan degisiklikleri acikla"
