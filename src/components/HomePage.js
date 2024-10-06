@@ -18,8 +18,12 @@ const HomePage = () => {
           />
           <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
             <div className="text-center text-white">
-              <h2 className="text-4xl font-bold mb-4">We make nanoparticles for a healthier world!</h2>
-              <div className="text-6xl font-extrabold">nanoWISS</div>
+              <h2 className="text-2xl md:text-xl sm:text-lg font-bold mb-4">
+                We make nanoparticles for a healthier world!
+              </h2>
+              <div className="text-2xl md:text-5xl sm:text-3xl font-extrabold">
+                nanoWISS
+              </div>
             </div>
           </div>
         </div>
@@ -30,7 +34,7 @@ const HomePage = () => {
             {/* Our Mission Section */}
             <div className="w-full md:w-1/2 px-4">
               <h2 className="text-3xl font-bold mb-8 text-primary-dark">Our Mission</h2>
-              <p className="text-xl text-gray-700">
+              <p className="text-xl sm:text-lg text-gray-700">
                 nanoWISS is a deep technology and social impact startup aiming to revolutionize 
                 nanoparticle production for treating biofilm bacterial infections in cystic fibrosis, 
                 allowing patients to breathe deeper. We're committed to efficient nanoparticle 
@@ -44,7 +48,7 @@ const HomePage = () => {
               <img 
                 src={productImage} 
                 alt="nanoWISS Product" 
-                className="mx-auto mb-4 max-w-xs" 
+                className="mx-auto mb-4 max-w-xs sm:max-w-full" 
               />
               <a 
                 href="mailto:info@nanowiss.com?subject=Preorder Request&body=Hey, I'm interested!" 

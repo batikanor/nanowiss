@@ -9,10 +9,10 @@ const Navbar = () => {
 
   return (
     <header className="bg-primary-dark p-4">
-      <div className="container mx-auto flex justify-between items-center">
+      <div className="container mx-auto flex justify-between items-center overflow-hidden">
         <h1 className="text-white text-2xl font-bold">nanoWISS</h1>
-        <nav>
-          <ul className="flex space-x-4">
+        <nav className="flex-1">
+          <ul className="flex flex-wrap justify-end space-x-4 overflow-hidden">
             <li>
               <Link
                 to="/"

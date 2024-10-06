@@ -36,3 +36,43 @@
     transform: rotate(360deg);
   }
 }
+
+/* Mobile-specific adjustments */
+@media only screen and (max-width: 600px) {
+  /* Adjust heading font sizes for smaller screens */
+  h1, h2, h3 {
+    font-size: 1.2rem; /* Smaller size for headlines */
+    margin: 10px 0; /* Reduce margins to avoid extra spacing */
+  }
+
+  .App-header {
+    font-size: 1rem; /* Adjust size for smaller screens */
+    padding: 10px; /* Reduce padding for smaller viewports */
+  }
+
+  /* Adjust the navbar */
+  nav {
+    padding: 10px;
+    font-size: 0.9rem; /* Smaller text size for mobile */
+  }
+
+  /* Ensure the image fits the mobile screen */
+  img {
+    width: 100%; /* Make images responsive */
+    max-width: 200px; /* Limit maximum size */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  /* Avoid horizontal scrolling */
+  .App {
+    padding: 0;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  /* Reduce padding and margins globally */
+  section {
+    padding: 10px;
+    margin: 0 auto;
+  }
+}
