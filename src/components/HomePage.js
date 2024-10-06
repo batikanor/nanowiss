@@ -90,7 +90,7 @@ const HomePage = () => {
           <p className="mt-2">Contact: info@nanowiss.com</p>
           {/* Credit Section */}
           <p className="text-xs mt-2 text-gray-400">
-            Special thanks to our friend Batıkan Bora Ormancı for voluntarily creating this web app for nanoWISS.
+            Special thanks to our friend Batıkan Bora Ormancı for creating this web app for nanoWISS.
           </p>
         </div>
       </footer>
