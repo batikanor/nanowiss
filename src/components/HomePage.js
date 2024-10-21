@@ -3,10 +3,22 @@ import { Camera } from 'lucide-react';
 import backgroundImage from '../assets/nwiss_backgr.jpg';
 import productImage from '../assets/product1.png'; // Import your product image
 import Navbar from './Navbar'; // Import the Navbar component
+import { Helmet } from 'react-helmet';
 
 const HomePage = () => {
   return (
     <div className="min-h-screen flex flex-col bg-background">
+      {/* React Helmet for SEO */}
+      <Helmet>
+        <title>nanoWISS - Nanoparticles for a Healthier World</title>
+        <meta name="description" content="nanoWISS is revolutionizing nanoparticle production for treating biofilm bacterial infections in cystic fibrosis. Learn more about our mission and technology." />
+        <meta name="keywords" content="nanoparticles, cystic fibrosis, biofilm treatment, rare diseases, nanoWISS" />
+        <meta name="author" content="nanoWISS" />
+        <meta property="og:title" content="nanoWISS - Nanoparticles for a Healthier World" />
+        <meta property="og:description" content="Learn more about our mission to produce nanoparticles for treating biofilm bacterial infections in cystic fibrosis." />
+        <meta property="og:url" content="https://nanowiss.com" />
+      </Helmet>
+
       <Navbar /> {/* Include the Navbar */}
 
       <main className="flex-grow">
