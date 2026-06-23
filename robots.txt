@@ -1,3 +1,8 @@
-# https://www.robotstxt.org/robotstxt.html
 User-agent: *
-Disallow:
+Allow: /
+Disallow: /alternative
+Disallow: /alternative/
+Disallow: /nanowiss/alternative
+Disallow: /nanowiss/alternative/
+
+Sitemap: https://www.nanowiss.com/sitemap.xml

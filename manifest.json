@@ -1,6 +1,7 @@
 {
   "short_name": "nanoWISS",
-  "name": "nanoWISS - Let's take a Deep breath",
+  "name": "nanoWISS | Nanoparticle Technologies",
+  "description": "Let's take a Deep breath. nanoWISS develops nanoparticle technologies for health and agricultural biotechnology.",
   "icons": [
     {
       "src": "favicon.ico",
@@ -18,8 +19,12 @@
       "sizes": "512x512"
     }
   ],
-  "start_url": ".",
+  "id": "https://www.nanowiss.com/",
+  "start_url": "/",
+  "scope": "/",
   "display": "standalone",
+  "orientation": "portrait-primary",
+  "categories": ["business", "education", "medical"],
   "theme_color": "#422768",
   "background_color": "#1a1a2e"
 }
