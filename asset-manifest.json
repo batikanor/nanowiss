@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/static/css/main.77f27c91.css",
-    "main.js": "/static/js/main.9ec9a62f.js",
+    "main.js": "/static/js/main.b6f39a64.js",
     "static/js/453.e5c486a4.chunk.js": "/static/js/453.e5c486a4.chunk.js",
     "static/media/agrowiss_team.png": "/static/media/agrowiss_team.f7a5f11a934b846c091f.png",
     "static/media/hakan_yilmaz.png": "/static/media/hakan_yilmaz.bf9ff6e883a31e8df024.png",
     "static/media/agrowiss_product.png": "/static/media/agrowiss_product.3d707799af90c8c143fd.png",
-    "static/media/selen özdinç foto.png": "/static/media/selen özdinç foto.fe3691852aadf8961b7c.png",
-    "static/media/elif kaman foto.png": "/static/media/elif kaman foto.ffdd7b4b9304e0f15f95.png",
+    "static/media/selen_ozdinc_foto.png": "/static/media/selen_ozdinc_foto.fe3691852aadf8961b7c.png",
+    "static/media/elif_kaman_foto.png": "/static/media/elif_kaman_foto.ffdd7b4b9304e0f15f95.png",
     "static/media/feyza_atabey_foto.png": "/static/media/feyza_atabey_foto.25db46e8ac5d2139dad8.png",
-    "static/media/nisa tan foto.png": "/static/media/nisa tan foto.f73b729386d91b4bd994.png",
+    "static/media/nisa_tan_foto.png": "/static/media/nisa_tan_foto.f73b729386d91b4bd994.png",
     "static/media/sumeyye_demir.png": "/static/media/sumeyye_demir.e2f03f42cb4338007467.png",
     "static/media/ceyda_oner.png": "/static/media/ceyda_oner.62fc681d9646107f4178.png",
     "static/media/bogazici_teknopark.png": "/static/media/bogazici_teknopark.c24ab6c35df656b310d4.png",
@@ -26,11 +26,11 @@
     "static/media/social_impact_award.png": "/static/media/social_impact_award.c815cabfbe1715e387e2.png",
     "index.html": "/index.html",
     "main.77f27c91.css.map": "/static/css/main.77f27c91.css.map",
-    "main.9ec9a62f.js.map": "/static/js/main.9ec9a62f.js.map",
+    "main.b6f39a64.js.map": "/static/js/main.b6f39a64.js.map",
     "453.e5c486a4.chunk.js.map": "/static/js/453.e5c486a4.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.77f27c91.css",
-    "static/js/main.9ec9a62f.js"
+    "static/js/main.b6f39a64.js"
   ]
 }
