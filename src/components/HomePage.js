@@ -1,41 +1,35 @@
 import React from 'react';
 import { Camera } from 'lucide-react';
 import backgroundImage from '../assets/nwiss_backgr.jpg';
-import productImage from '../assets/product1.png'; // Import your product image
+import mobileBackgroundImage from '../assets/nwiss_backgr_mobile.jpg';
 import Navbar from './Navbar'; // Import the Navbar component
-import { Helmet } from 'react-helmet';
+import Footer from './Footer';
 
 const HomePage = () => {
   return (
     <div className="min-h-screen flex flex-col bg-background">
-      {/* React Helmet for SEO */}
-      <Helmet>
-        <title>nanoWISS - Nanoparticles for a Healthier World</title>
-        <meta name="description" content="nanoWISS is revolutionizing nanoparticle production for treating biofilm bacterial infections in cystic fibrosis. Learn more about our mission and technology." />
-        <meta name="keywords" content="nanoparticles, cystic fibrosis, biofilm treatment, rare diseases, nanoWISS" />
-        <meta name="author" content="nanoWISS" />
-        <meta property="og:title" content="nanoWISS - Nanoparticles for a Healthier World" />
-        <meta property="og:description" content="Learn more about our mission to produce nanoparticles for treating biofilm bacterial infections in cystic fibrosis." />
-        <meta property="og:url" content="https://nanowiss.com" />
-      </Helmet>
-
       <Navbar /> {/* Include the Navbar */}
 
       <main className="flex-grow">
-        <div className="relative h-126 overflow-hidden">
-          <img 
+        <div className="relative h-[32rem] overflow-hidden">
+          <img
             src={backgroundImage} 
             alt="Nanoparticle visualization" 
-            className="w-full h-full object-cover animate-zoom-slide" 
+            className="hidden w-full h-full object-cover animate-zoom-slide md:block"
+          />
+          <img
+            src={mobileBackgroundImage}
+            alt="Nanoparticle visualization"
+            className="h-full w-full object-cover md:hidden"
           />
           <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
             <div className="text-center text-white">
-              <h2 className="text-2xl md:text-xl sm:text-lg font-bold mb-4">
+              <p className="text-2xl md:text-xl sm:text-lg font-bold mb-4">
                 We make nanoparticles for a healthier world!
-              </h2>
-              <div className="text-2xl md:text-5xl sm:text-3xl font-extrabold">
+              </p>
+              <h1 className="text-2xl md:text-5xl sm:text-3xl font-extrabold">
                 nanoWISS
-              </div>
+              </h1>
             </div>
           </div>
         </div>
@@ -47,28 +41,12 @@ const HomePage = () => {
             <div className="w-full md:w-1/2 px-4">
               <h2 className="text-3xl font-bold mb-8 text-primary-dark">Our Mission</h2>
               <p className="text-xl sm:text-lg text-gray-700">
-                nanoWISS is a deep technology and social impact startup aiming to revolutionize 
-                nanoparticle production for treating biofilm bacterial infections in cystic fibrosis, 
-                allowing patients to breathe deeper. We're committed to efficient nanoparticle 
-                production and raising awareness of rare diseases.
+                nanoWISS is a deep technology and social impact startup developing nanoparticle
+                technologies for healthier people and a healthier planet. Our work began with
+                nanotechnology-based solutions for resistant biofilm infections in cystic fibrosis
+                and now also supports eco-friendly agricultural biotechnology through AgroWISS.
               </p>
             </div>
-
-            {/* Latest Product Section */}
-            {/* <div className="w-full md:w-1/2 px-4 flex flex-col items-center">
-              <h2 className="text-3xl font-bold mb-8 text-primary-dark">Our Latest Product</h2>
-              <img 
-                src={productImage} 
-                alt="nanoWISS Product" 
-                className="mx-auto mb-4 max-w-xs sm:max-w-full" 
-              />
-              <a 
-                href="mailto:info@nanowiss.com?subject=Preorder Request&body=Hey, I'm interested!" 
-                className="bg-primary-dark text-white px-8 py-3 rounded-full hover:bg-primary-light transition duration-300"
-              >
-                Order Now
-              </a>
-            </div> */}
           </div>
         </section>
 
@@ -96,16 +74,7 @@ const HomePage = () => {
         </section>
       </main>
 
-      <footer className="bg-primary-dark text-white py-8">
-        <div className="container mx-auto text-center">
-          <p>&copy; 2024 nanoWISS. All rights reserved.</p>
-          <p className="mt-2">Contact: info@nanowiss.com</p>
-          {/* Credit Section */}
-          <p className="text-xs mt-2 text-gray-400">
-            Special thanks to our friend Batıkan Bora Ormancı for creating this web app for nanoWISS.
-          </p>
-        </div>
-      </footer>
+      <Footer showCredit />
     </div>
   );
 };

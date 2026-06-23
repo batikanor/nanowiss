@@ -3,7 +3,17 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import './index.css';
+
+const redirectedPath = sessionStorage.getItem('nanowiss.redirect');
+if (redirectedPath) {
+  sessionStorage.removeItem('nanowiss.redirect');
+  window.history.replaceState(null, '', redirectedPath);
+} else {
+  const redirectParam = new URLSearchParams(window.location.search).get('redirect');
+  if (redirectParam && redirectParam.startsWith('/')) {
+    window.history.replaceState(null, '', redirectParam);
+  }
+}
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

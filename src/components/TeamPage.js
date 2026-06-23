@@ -1,82 +1,171 @@
 import React from 'react';
-import Navbar from './Navbar'; // Navbar bileşenini import edin
-import FeyzaImage from '../assets/feyza_atabey_foto.png'; // Resmi import edin
-import NisaImage from '../assets/nisa tan foto.png'; // Resmi import edin
-import SelenImage from '../assets/selen özdinç foto.png'; // Resmi import edin
-import ElifImage from '../assets/elif kaman foto.png'; // Resmi import edin
+import { Linkedin } from 'lucide-react';
+import Navbar from './Navbar';
+import Footer from './Footer';
+import FeyzaImage from '../assets/feyza_atabey_foto.png';
+import NisaImage from '../assets/nisa_tan_foto.png';
+import SelenImage from '../assets/selen_ozdinc_foto.png';
+import ElifImage from '../assets/elif_kaman_foto.png';
+import BerrinImage from '../assets/berrin_saygi_yalcin.png';
+import HakanImage from '../assets/hakan_yilmaz.png';
+import SumeyyeImage from '../assets/sumeyye_demir.png';
+import CeydaImage from '../assets/ceyda_oner.png';
 
-const TeamPage = () => {  // TeamPage bileşenini fonksiyon haline getirdik
-  const teamMembers = [
-    {
-      name: 'Zeynep Feyza Atabey',
-      role: 'Chief Executive Officer',
-      bio: 'Zeynep Feyza Atabey is a Biotechnology master student at Saarland University and a Molecular Biotechnology graduate from Turkish-German University. She has worked on projects and internships focused on microbiology, rare diseases, and nanoparticle production. A finalist in the 2023 TOG & ETI "You Are Young, You Are Strong" project, she received a grant and mentorship for her work in rare disease and infection treatments. As CEO, she manages partnerships, promotions, and overall processes for nanoWISS.',
-      image: FeyzaImage // Resim burada kullanılıyor
-    },
-    {
-      name: 'Selen Özdinç',
-      role: 'Chief Technology Officer',
-      bio: 'Selen Özdinç is a senior Molecular Biotechnology student at Turkish-German University. She has been part of the nanoWISS team since November 2023, working on nanoparticle-related projects under the TÜBİTAK 2209-A program. Currently, she is doing an internship at Koç University, focusing on nanoparticle synthesis and cell cultures. As CTO, Selen coordinates communication among R&D personnel and manages the research and development processes.',
-      image: SelenImage
-    },
-    {
-      name: 'Elif Kaman',
-      role: 'Chief Innovation Officer',
-      bio: 'Elif Kaman is a Biomedical Engineering graduate from Yeditepe University. As Chief Innovation Officer (CINO) at nanoWISS, she is responsible for innovation, optimization, and design processes, particularly focusing on 3D modeling and drawing. Elif’s work ensures the continuous improvement and innovative design of the nanoparticle production device.',
-      image: ElifImage
-    },
-    {
-      name: 'Nisa Tan',
-      role: 'Chief Operating Officer',
-      bio: 'Nisa Tan is a Molecular Biotechnology graduate from Turkish-German University. With experience in bioinformatics from her TÜBİTAK STAR internship and expertise in microbiology, she serves as the Chief Operating Officer (COO) at nanoWISS. Nisa manages operational processes, including sales and procurement, ensuring smooth workflow across the organization.',
-      image: NisaImage
-    },
-    {
-      name: 'Yigit Doganci',
-      role: 'Mechanical Engineer',
-      bio: 'Yigit Doganci is a Mechanical Engineering graduate from Baskent University and an instructor in nanotechnology at T3 Foundation Dene-Yap. He has worked on various projects and is responsible for the development of the nanoparticle production device at nanoWISS.',
-      image: '' // Resim sağlanmamış
-    },
-    {
-      name: 'Hatice Akbay',
-      role: 'Research Support',
-      bio: 'Hatice Akbay is a medical student who provides crucial support to the nanoWISS team by conducting research and assisting with clinical studies. Her involvement in reading scientific articles and contributing to the research and development side ensures that the startup stays updated with the latest medical advancements.',
-      image: '' // Resim sağlanmamış
-    }
-  ];
+const founders = [
+  {
+    name: 'Zeynep Feyza Atabey',
+    role: 'CEO of nanoWISS & CSO of AgroWISS',
+    image: FeyzaImage,
+    linkedin: 'https://www.linkedin.com/in/zeynepfeyzatabey/',
+    bio: [
+      'Zeynep Feyza Atabey is a visionary young female scientist and deep-tech entrepreneur advancing with the dream of contributing to humanity. She completed her Bachelor’s degree in Molecular Biotechnology at the Turkish-German University, where she studied in German, and is currently pursuing her Master’s in Biotechnology at Saarland University. Leveraging her academic background, she is proficient in German and English, with a basic command of French.',
+      'As the CEO of nanoWISS, Feyza began her journey by developing nanotechnology-based solutions for resistant biofilm infections in cystic fibrosis patients. Recognizing the transformative potential of this research for planetary health, she spearheaded AgroWISS under the nanoWISS umbrella, where she serves as acting Chief Scientific Officer.',
+      'In 2025, her team’s work on a Chitosan Nanoparticle-Based Agricultural Improver was awarded the prestigious TUBITAK Seal of Excellence. In the same year, nanoWISS was named a finalist for the Social Impact Award Germany.',
+    ],
+  },
+  {
+    name: 'Selen Özdinç',
+    role: 'CTO of nanoWISS & CFO of AgroWISS',
+    image: SelenImage,
+    linkedin: 'https://www.linkedin.com/in/selen-%C3%B6zdin%C3%A7/',
+    bio: [
+      'Selen Özdinç is a Molecular Biotechnology graduate and Nano-Science master’s student at the University of Tübingen, with experience in nanoparticle synthesis, cell culture studies, and biotechnology-based research.',
+      'As Chief Technology Officer at nanoWISS, Selen supports the coordination of R&D activities, facilitates communication among research personnel, and contributes to nanoparticle-based technology development. She also serves as Chief Financial Officer at AgroWISS, supporting financial planning, project budgeting, and strategic development.',
+    ],
+  },
+  {
+    name: 'Nisa Tan',
+    role: 'COO of nanoWISS & CEO of AgroWISS',
+    image: NisaImage,
+    bio: [
+      'Nisa Tan is a Molecular Biotechnology researcher and entrepreneur currently continuing her M.Sc. studies at the Turkish-German University. Bringing practical expertise from biotechnology research, she balances executive roles with deep technical knowledge.',
+      'Nisa serves as Co-Founder and Chairman of the Board at AgroWISS, leading commercialization and strategic operations for eco-friendly agricultural biotechnologies. Alongside this, she continues as Chief Operating Officer at nanoWISS, managing day-to-day operations, procurement, and sales processes.',
+    ],
+  },
+  {
+    name: 'Elif Kaman',
+    role: 'CINO of nanoWISS & CMO of AgroWISS',
+    image: ElifImage,
+    linkedin: 'https://tr.linkedin.com/in/elif-kaman-ek777',
+    bio: [
+      'Elif Kaman is a Biomedical Engineer and entrepreneur with experience in medical device development, quality systems, and regulatory affairs.',
+      'As Chief Innovation Officer at nanoWISS, she leads innovation and product development processes, focusing on nanoparticle production technologies, system optimization, and 3D device design. She also contributes to AgroWISS through market-oriented product strategy and communication.',
+    ],
+  },
+];
 
-  return (  // JSX kodu artık fonksiyonun içinde
-    <div className="min-h-screen flex flex-col bg-background">
-      <Navbar /> {/* Navbar'ı dahil ettik */}
+const advisors = [
+  {
+    name: 'Assist. Prof. Dr. Berrin Saygı Yalçın',
+    role: 'Scientific Advisor',
+    image: BerrinImage,
+    linkedin: 'https://www.linkedin.com/in/berrin-saygi-yalcin-588b452b/',
+    bio: [
+      'Assist. Prof. Dr. Berrin Saygı Yalçın is a faculty member in the Department of Chemical Engineering at Yalova University. She conducts advanced laboratory research in nanotechnology and provides industrial consultancy.',
+      'Dr. Yalçın serves as our Scientific Advisor through Adaga, the local Turkish company from which we source high-quality chitosan. She guides laboratory testing, establishes synthesis protocols, leads optimization processes, and supports licensing, regulation, and marketing workflows.',
+    ],
+  },
+];
 
-      <main className="flex-grow">
-        <section className="py-16 bg-secondary-light">
-          <div className="container mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-8 text-white">Meet Our Team</h2>
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-              {teamMembers.map((member, index) => (
-                <div key={index} className="bg-white p-6 rounded-lg shadow">
-                  <img
-                    src={member.image}
-                    alt={member.name}
-                    className="mx-auto mb-4 rounded-full w-32 h-32 object-cover"
-                  />
-                  <h3 className="text-xl font-semibold mb-2">{member.name}</h3>
-                  <p className="text-primary-dark mb-1">{member.role}</p>
-                  <p>{member.bio}</p>
-                </div>
-              ))}
-            </div>
+const team = [
+  {
+    name: 'Hakan Yılmaz',
+    role: 'Engineer',
+    image: HakanImage,
+    bio: [
+      'Hakan Yılmaz is a fourth-year Biomedical Engineering student at Ankara University. During his university years, he has gained experience through internships in different fields.',
+      'He currently works as a Quality Control and Mechanical Design Specialist and is responsible for mechanical processes at nanoWISS.',
+    ],
+  },
+  {
+    name: 'Sümeyye Demir',
+    role: 'Science Communication',
+    image: SumeyyeImage,
+    bio: [
+      'Sümeyye Demir is a Bioengineering student at Gebze Technical University. She creates LinkedIn content for NanoNewsScience, a newsletter about nanotechnology, health, agriculture, and biotechnology.',
+      'She supports science communication by making deep-tech biotechnology more understandable for a broad audience.',
+    ],
+  },
+  {
+    name: 'Ceyda Öner',
+    role: 'B.Sc. Chemical Engineer',
+    image: CeydaImage,
+    bio: [
+      'Ceyda graduated from Yalova University with a degree in Chemical Engineering. She has hands-on experience in food and biotechnology laboratory research through internships, as well as field-level experience in production processes.',
+      'As Laboratory Support Staff, she performs practical tasks such as synthesis, characterization, and sample preparation while contributing to technical documentation.',
+    ],
+  },
+];
+
+const TeamCard = ({ member, large = false }) => (
+  <article className={`h-full rounded-lg bg-white p-6 text-left shadow ${large ? 'md:p-8' : ''}`}>
+    <div className="flex flex-col gap-5 sm:flex-row">
+      <img
+        src={member.image}
+        alt={member.name}
+        loading="eager"
+        decoding="async"
+        className={`${large ? 'h-36 w-36' : 'h-28 w-28'} shrink-0 rounded-full object-cover`}
+      />
+      <div>
+        <h3 className="text-xl font-bold text-primary-dark">{member.name}</h3>
+        <p className="mt-1 font-semibold text-secondary-light">{member.role}</p>
+        {member.bio.map((paragraph) => (
+          <p key={paragraph} className="mt-4 text-gray-700">
+            {paragraph}
+          </p>
+        ))}
+        {member.linkedin && (
+          <a
+            href={member.linkedin}
+            target="_blank"
+            rel="noreferrer"
+            className="mt-5 inline-flex items-center gap-2 rounded-full bg-primary-dark px-4 py-2 text-sm font-semibold text-white transition hover:bg-primary-light"
+          >
+            <Linkedin size={16} />
+            LinkedIn
+          </a>
+        )}
+      </div>
+    </div>
+  </article>
+);
+
+const TeamSection = ({ title, members, large = false }) => (
+  <section className="py-12">
+    <div className="container mx-auto px-4">
+      <h2 className="mb-8 text-center text-3xl font-bold text-white">{title}</h2>
+      <div className={`grid gap-6 ${large ? 'lg:grid-cols-2' : 'md:grid-cols-3'}`}>
+        {members.map((member) => (
+          <TeamCard key={member.name} member={member} large={large} />
+        ))}
+      </div>
+    </div>
+  </section>
+);
+
+const TeamPage = () => {
+  return (
+    <div className="min-h-screen bg-background">
+      <Navbar />
+      <main>
+        <section className="bg-secondary-light py-14 text-center text-white">
+          <div className="container mx-auto px-4">
+            <h1 className="text-4xl font-extrabold">Meet Our Team</h1>
+            <p className="mx-auto mt-4 max-w-3xl text-lg text-white/85">
+              nanoWISS brings together molecular biotechnology, biomedical engineering,
+              chemical engineering, product development, and science communication.
+            </p>
           </div>
         </section>
-      </main>
 
-      <footer className="bg-primary-dark text-white py-8">
-        <div className="container mx-auto text-center">
-          <p>&copy; 2024 nanoWISS. All rights reserved.</p>
-          <p className="mt-2">Contact: info@nanowiss.com</p>
+        <div className="bg-background">
+          <TeamSection title="Co-Founders" members={founders} large />
+          <TeamSection title="Scientific Advisor" members={advisors} large />
+          <TeamSection title="Team" members={team} />
         </div>
-      </footer>
+      </main>
+      <Footer />
     </div>
   );
 };

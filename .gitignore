@@ -12,6 +12,8 @@
 /build
 
 # misc
+0_dont_commit_or_stage/
+.playwright-cli/
 .DS_Store
 .env.local
 .env.development.local
