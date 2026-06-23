@@ -4,11 +4,21 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Redirecting...</title>
+    <meta http-equiv="refresh" content="2; url=/">
     <script>
-        sessionStorage.setItem('nanowiss.redirect', window.location.pathname + window.location.search + window.location.hash);
-        window.location.replace('/');
+        (function () {
+            var redirectPath = window.location.pathname + window.location.search + window.location.hash;
+            try {
+                sessionStorage.setItem('nanowiss.redirect', redirectPath);
+                window.location.replace('/');
+            } catch (error) {
+                window.location.replace('/?redirect=' + encodeURIComponent(redirectPath));
+            }
+        })();
     </script>
 </head>
 <body>
+    <p>Redirecting to nanoWISS...</p>
+    <p><a href="/">Open nanoWISS</a></p>
 </body>
 </html>
