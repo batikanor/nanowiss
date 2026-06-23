@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.e1563ea6.css",
-    "main.js": "/static/js/main.333a915d.js",
+    "main.css": "/static/css/main.b2f58c06.css",
+    "main.js": "/static/js/main.b35f8d65.js",
     "static/js/453.e5c486a4.chunk.js": "/static/js/453.e5c486a4.chunk.js",
     "static/media/agrowiss_team.png": "/static/media/agrowiss_team.f7a5f11a934b846c091f.png",
     "static/media/hakan_yilmaz.png": "/static/media/hakan_yilmaz.bf9ff6e883a31e8df024.png",
@@ -25,12 +25,12 @@
     "static/media/tubitak_bigg.png": "/static/media/tubitak_bigg.216deb91caec315338f1.png",
     "static/media/social_impact_award.png": "/static/media/social_impact_award.c815cabfbe1715e387e2.png",
     "index.html": "/index.html",
-    "main.e1563ea6.css.map": "/static/css/main.e1563ea6.css.map",
-    "main.333a915d.js.map": "/static/js/main.333a915d.js.map",
+    "main.b2f58c06.css.map": "/static/css/main.b2f58c06.css.map",
+    "main.b35f8d65.js.map": "/static/js/main.b35f8d65.js.map",
     "453.e5c486a4.chunk.js.map": "/static/js/453.e5c486a4.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e1563ea6.css",
-    "static/js/main.333a915d.js"
+    "static/css/main.b2f58c06.css",
+    "static/js/main.b35f8d65.js"
   ]
 }
