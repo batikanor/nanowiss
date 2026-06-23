@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.27d6906b.css",
-    "main.js": "/static/js/main.1e2a212f.js",
+    "main.js": "/static/js/main.0c0bedcd.js",
     "static/js/453.e5c486a4.chunk.js": "/static/js/453.e5c486a4.chunk.js",
     "static/media/agrowiss_team.png": "/static/media/agrowiss_team.f7a5f11a934b846c091f.png",
     "static/media/hakan_yilmaz.png": "/static/media/hakan_yilmaz.bf9ff6e883a31e8df024.png",
@@ -26,11 +26,11 @@
     "static/media/social_impact_award.png": "/static/media/social_impact_award.c815cabfbe1715e387e2.png",
     "index.html": "/index.html",
     "main.27d6906b.css.map": "/static/css/main.27d6906b.css.map",
-    "main.1e2a212f.js.map": "/static/js/main.1e2a212f.js.map",
+    "main.0c0bedcd.js.map": "/static/js/main.0c0bedcd.js.map",
     "453.e5c486a4.chunk.js.map": "/static/js/453.e5c486a4.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.27d6906b.css",
-    "static/js/main.1e2a212f.js"
+    "static/js/main.0c0bedcd.js"
   ]
 }
