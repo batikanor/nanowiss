@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.de1b4198.css",
-    "main.js": "/static/js/main.176665a8.js",
+    "main.css": "/static/css/main.87a9998a.css",
+    "main.js": "/static/js/main.23ac4921.js",
     "static/js/453.e5c486a4.chunk.js": "/static/js/453.e5c486a4.chunk.js",
     "static/media/agrowiss_team.png": "/static/media/agrowiss_team.f7a5f11a934b846c091f.png",
     "static/media/hakan_yilmaz.png": "/static/media/hakan_yilmaz.bf9ff6e883a31e8df024.png",
@@ -30,12 +30,12 @@
     "static/media/tubitak_bigg.png": "/static/media/tubitak_bigg.216deb91caec315338f1.png",
     "static/media/social_impact_award.png": "/static/media/social_impact_award.c815cabfbe1715e387e2.png",
     "index.html": "/index.html",
-    "main.de1b4198.css.map": "/static/css/main.de1b4198.css.map",
-    "main.176665a8.js.map": "/static/js/main.176665a8.js.map",
+    "main.87a9998a.css.map": "/static/css/main.87a9998a.css.map",
+    "main.23ac4921.js.map": "/static/js/main.23ac4921.js.map",
     "453.e5c486a4.chunk.js.map": "/static/js/453.e5c486a4.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.de1b4198.css",
-    "static/js/main.176665a8.js"
+    "static/css/main.87a9998a.css",
+    "static/js/main.23ac4921.js"
   ]
 }
