@@ -5,8 +5,7 @@ import biofilmPoster from '../assets/product1.png';
 const BiofilmVideo = ({ className = '', ariaLabel = 'nanoWISS biofilm visualization' }) => (
   <div className={`relative overflow-hidden rounded-md bg-white ${className}`}>
     <video
-      className="absolute inset-0 h-full w-full object-cover"
-      style={{ transform: 'translate(-5%, -15%) scale(1.18)', transformOrigin: 'center center' }}
+      className="h-full w-full object-contain"
       src={biofilmDemoVideo}
       poster={biofilmPoster}
       autoPlay

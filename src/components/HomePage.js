@@ -1,7 +1,10 @@
 import React from 'react';
-import { Camera } from 'lucide-react';
+import { ArrowRight, Award, Camera } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import backgroundImage from '../assets/agrowiss_team.png';
 import agrowissLogo from '../assets/agrowiss_logo.png';
+import socialImpactAwardLogo from '../assets/social_impact_award.png';
+import migrantAcceleratorLogo from '../assets/migrant_accelerator.png';
 import BiofilmVideo from './BiofilmVideo';
 import Navbar from './Navbar'; // Import the Navbar component
 import Footer from './Footer';
@@ -55,6 +58,63 @@ const HomePage = () => {
                 AgroWISS carries nanoWISS nanoparticle know-how into sustainable crop protection
                 with chitosan-based, slow-release agricultural biotechnology.
               </p>
+            </div>
+          </div>
+        </section>
+
+        <section id="social-impact" className="scroll-mt-24 bg-white py-16">
+          <div className="container mx-auto grid grid-cols-1 items-center gap-10 px-4 lg:grid-cols-[0.95fr_1.05fr]">
+            <div className="rounded-lg border border-gray-100 bg-background p-8 shadow">
+              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                <a
+                  href="https://germany.socialimpactaward.net/project/nanowiss/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="flex h-32 items-center justify-center rounded-md bg-white p-5 transition hover:-translate-y-1 hover:shadow-lg"
+                  aria-label="Social Impact Award Germany nanoWISS profile"
+                >
+                  <img
+                    src={socialImpactAwardLogo}
+                    alt="Social Impact Award Germany"
+                    className="max-h-24 w-full object-contain"
+                  />
+                </a>
+                <a
+                  href="https://themigrantaccelerator.com"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="flex h-32 items-center justify-center rounded-md bg-white p-5 transition hover:-translate-y-1 hover:shadow-lg"
+                  aria-label="The Migrant Accelerator"
+                >
+                  <img
+                    src={migrantAcceleratorLogo}
+                    alt="The Migrant Accelerator"
+                    className="max-h-24 w-full object-contain"
+                  />
+                </a>
+              </div>
+            </div>
+            <div>
+              <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-md bg-primary-dark text-white">
+                <Award size={28} />
+              </div>
+              <p className="font-semibold uppercase tracking-wide text-secondary-light">Social Impact</p>
+              <h2 className="mt-3 text-3xl font-bold text-primary-dark">
+                Recognition for science built around healthier people and a healthier planet.
+              </h2>
+              <p className="mt-5 text-lg text-gray-700">
+                nanoWISS started from resistant biofilm infection research and expanded toward
+                sustainable agricultural biotechnology through AgroWISS. Social Impact Award
+                Germany and The Migrant Accelerator help frame that mission as a clear, credible
+                impact story.
+              </p>
+              <Link
+                to="/social-impact"
+                className="mt-7 inline-flex items-center gap-2 rounded-full bg-primary-dark px-6 py-3 font-semibold text-white transition hover:bg-primary-light"
+              >
+                Explore the impact story
+                <ArrowRight size={18} />
+              </Link>
             </div>
           </div>
         </section>
