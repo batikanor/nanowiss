@@ -146,8 +146,8 @@ const AlternativeShowcasePage = () => {
                 nanoWISS products shown as moving nanoparticle systems.
               </h1>
               <p className="mt-6 max-w-2xl text-lg text-white/75">
-                This route is designed for demos and investor conversations: it turns nanoWISS
-                technologies into visual product stories with motion, system details, and clear
+                This page is designed for demos and investor conversations: it turns nanoWISS
+                company strengths into clear product stories with proof, team context, and
                 application paths.
               </p>
               <div className="mt-8 flex flex-wrap gap-3">

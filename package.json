@@ -22,6 +22,9 @@
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "brand:check": "node scripts/check-brand-copy.js",
+    "hooks:install": "git config core.hooksPath .githooks",
+    "prepare": "git config core.hooksPath .githooks || true",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

@@ -153,7 +153,7 @@ const ThreeReactorCanvas = () => {
     };
   }, []);
 
-  return <div ref={mountRef} className="three-reactor-canvas" aria-label="Interactive Three.js nanoparticle reactor" />;
+  return <div ref={mountRef} className="three-reactor-canvas" aria-label="Interactive nanoWISS nanoparticle system" />;
 };
 
 export const AlternativeOrbitalReactorPage = () => (
@@ -163,11 +163,11 @@ export const AlternativeOrbitalReactorPage = () => (
       <section className="relative overflow-hidden bg-[radial-gradient(circle_at_70%_35%,#422768_0%,#1a1a2e_45%,#090312_100%)]">
         <div className="container mx-auto grid min-h-[46rem] grid-cols-1 items-center gap-8 px-4 py-16 lg:grid-cols-[0.82fr_1.18fr]">
           <div>
-            <p className="font-bold uppercase tracking-wide text-primary-light">Live WebGL Product Hero</p>
+            <p className="font-bold uppercase tracking-wide text-primary-light">nanoWISS Product System</p>
             <h1 className="mt-4 text-4xl font-extrabold md:text-6xl">Orbital Reactor</h1>
             <p className="mt-6 max-w-xl text-lg text-white/72">
-              A live WebGL product hero for nanoWISS: the nanoparticle platform becomes a responsive,
-              explorable reactor for product, science, and partner storytelling.
+              nanoWISS is presented as a disciplined nanoparticle platform: synthesis, scale-up,
+              application fit, and partner value orbit the same scientific core.
             </p>
           </div>
           <div className="three-reactor-shell">
@@ -178,7 +178,7 @@ export const AlternativeOrbitalReactorPage = () => (
             </div>
             <div className="three-reactor-readout three-reactor-readout-b">
               <span>Interaction</span>
-              <strong>Pointer reactive</strong>
+              <strong>Partner guided</strong>
             </div>
           </div>
         </div>
@@ -553,7 +553,7 @@ const BiofilmBreakerCanvas = ({ onStats }) => {
     };
   }, [onStats]);
 
-  return <div ref={mountRef} className="game-canvas" aria-label="Playable Three.js biofilm breaker game" />;
+  return <div ref={mountRef} className="game-canvas" aria-label="Interactive nanoWISS biofilm explainer" />;
 };
 
 const SplatProductCanvas = () => {
@@ -683,7 +683,7 @@ const SplatProductCanvas = () => {
     };
   }, []);
 
-  return <div ref={mountRef} className="splat-canvas" aria-label="Gaussian splat inspired AgroWISS product point cloud" />;
+  return <div ref={mountRef} className="splat-canvas" aria-label="nanoWISS material field visualization" />;
 };
 
 export const AlternativeBiofilmBreakerPage = () => {
@@ -730,16 +730,16 @@ export const AlternativeSplatLabPage = () => (
     <main className="splat-page">
       <section className="container mx-auto grid min-h-[48rem] grid-cols-1 items-center gap-8 px-4 py-16 lg:grid-cols-[0.78fr_1.22fr]">
         <div>
-          <p className="font-bold uppercase tracking-wide text-primary-light">Gaussian Splat Inspired</p>
-          <h1 className="mt-4 text-4xl font-extrabold md:text-6xl">Splat Lab</h1>
+          <p className="font-bold uppercase tracking-wide text-primary-light">Material Field</p>
+          <h1 className="mt-4 text-4xl font-extrabold md:text-6xl">Carrier Field</h1>
           <p className="mt-6 max-w-xl text-lg text-white/72">
-            A live WebGL product hero for nanoWISS: client-side point-cloud rendering turns material
-            systems into a luminous scanned object without shipping a heavy trained splat dataset.
+            nanoWISS material systems are shown through carrier behavior, release logic, and
+            evidence so partners can understand what the company actually builds.
           </p>
           <div className="splat-notes">
-            <span><ScanLine size={18} /> 5.5k translucent splats</span>
-            <span><Sparkles size={18} /> Pointer-reactive scan</span>
-            <span><Timer size={18} /> Static hosting friendly</span>
+            <span><ScanLine size={18} /> Carrier behavior</span>
+            <span><Sparkles size={18} /> Product evidence</span>
+            <span><Timer size={18} /> Partner-ready story</span>
           </div>
         </div>
         <div className="splat-shell">

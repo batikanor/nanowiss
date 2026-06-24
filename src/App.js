@@ -76,10 +76,10 @@ const pageSeo = {
 };
 
 const alternativeSeo = {
-  title: 'nanoWISS Interactive Product Homepage | nanoWISS',
+  title: 'nanoWISS Company Experience | nanoWISS',
   description:
-    'nanoWISS interactive homepage routes for WebGL product storytelling, scientific interfaces, and deep-tech brand exploration.',
-  keywords: 'nanoWISS WebGL product showcase, interactive biotechnology website, nanoparticle platform homepage',
+    'nanoWISS company-focused experiences for explaining the team, platform, applications, and partner value behind its nanoparticle work.',
+  keywords: 'nanoWISS company, nanoparticle platform, biotechnology startup, AgroWISS, nanoparticle applications',
   robots: 'noindex, nofollow',
 };
 

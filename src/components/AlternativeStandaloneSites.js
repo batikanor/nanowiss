@@ -465,7 +465,7 @@ const SplatGardenCanvas = () => {
     };
   }, []);
 
-  return <div ref={mountRef} className="award-visual-canvas" aria-label="Gaussian splat inspired nanoWISS particle garden" />;
+  return <div ref={mountRef} className="award-visual-canvas" aria-label="nanoWISS material evidence field" />;
 };
 
 const NanoInstrumentCanvas = () => {
@@ -668,7 +668,7 @@ export const NeonResearchCitySite = () => (
     variant="neon-city"
     eyebrow="Applied Nano Research District"
     title="The city where material ideas become testable systems."
-    text="A live WebGL research district for nanoWISS: synthesis towers, process pathways, evidence blocks, and collaboration routes in one complete homepage."
+    text="nanoWISS shown as an applied research district: synthesis, process pathways, evidence blocks, and collaboration routes in one company story."
     visual={<CityCanvas />}
   >
     <PlatformRows title="A research district organized by capability." />
@@ -869,11 +869,11 @@ export const SplatGardenSite = () => (
     <main>
       <section className="award-hero">
         <div className="award-hero-copy">
-          <p>Point Cloud Field System</p>
+          <p>Material Evidence System</p>
           <h1>A living product scan for nanoWISS.</h1>
           <span>
-            A live WebGL product hero for nanoWISS: particles, product evidence, and application
-            pathways orbit one inspectable material story.
+            nanoWISS is presented through material behavior, product evidence, and application
+            pathways that orbit one inspectable company story.
           </span>
           <div className="standalone-actions">
             <a href="#platform">Enter scan <ScanLine size={18} /></a>
@@ -883,8 +883,8 @@ export const SplatGardenSite = () => (
         <div className="award-hero-stage">
           <SplatGardenCanvas />
           <div className="award-stage-caption">
-            <strong>3,600 procedural splats</strong>
-            <span>Static-hosting safe point cloud, inspired by Gaussian splat product scans.</span>
+            <strong>3,600 carrier signals</strong>
+            <span>A dense material field that keeps the focus on nanoWISS proof and applications.</span>
           </div>
         </div>
       </section>
@@ -910,7 +910,7 @@ export const SplatGardenSite = () => (
       <section id="applications" className="award-section award-editorial-band">
         <div>
           <p className="standalone-kicker">Applications</p>
-          <h2>Designed as a flagship product website, not a brochure.</h2>
+          <h2>Designed as a flagship nanoWISS product story, not a brochure.</h2>
         </div>
         <div>
           <article>
@@ -940,11 +940,11 @@ export const NanoInstrumentSite = () => (
     <main>
       <section className="award-hero award-instrument-hero">
         <div className="award-hero-copy">
-          <p>Interactive Scientific Instrument</p>
-          <h1>The website behaves like the machine.</h1>
+          <p>nanoWISS Systems</p>
+          <h1>nanoWISS turns particle science into usable systems.</h1>
           <span>
-            A live WebGL product hero for nanoWISS: visitors move around a glowing instrument,
-            reactor core, and material-control system.
+            nanoWISS brings together synthesis discipline, scale-up thinking, application
+            pathways, and the team behind the platform.
           </span>
           <div className="standalone-actions">
             <a href="#platform">Inspect system <Gauge size={18} /></a>
@@ -954,19 +954,19 @@ export const NanoInstrumentSite = () => (
         <div className="award-hero-stage">
           <NanoInstrumentCanvas />
           <div className="award-stage-caption">
-            <strong>Pointer-reactive reactor</strong>
-            <span>Three.js core, orbiting particles, glass geometry, and instrument floor grid.</span>
+            <strong>Material decision center</strong>
+            <span>Particle behavior, process context, and application fit arranged as one nanoWISS system.</span>
           </div>
         </div>
       </section>
 
       <section id="platform" className="award-section award-console-grid">
         <p className="standalone-kicker">Platform</p>
-        <h2>A control surface for nanoparticle decisions.</h2>
+        <h2>A decision map for nanoparticle systems.</h2>
         <div>
           {[
             ['Synthesis core', 'A central reactor metaphor for formulation, particle behavior, and iteration.', Microscope],
-            ['Scale-up console', 'Device geometry and floor grid make production-system thinking visible.', Gauge],
+            ['Scale-up console', 'Process context makes production-system thinking visible.', Gauge],
             ['Application orbit', 'Health, biofilm, and AgroWISS applications move around the same scientific core.', Orbit],
           ].map(([title, text, Icon]) => (
             <article key={title}>
@@ -981,12 +981,12 @@ export const NanoInstrumentSite = () => (
       <section id="applications" className="award-section award-proof-theater">
         <div>
           <p className="standalone-kicker">Applications</p>
-          <h2>Every section is staged like a product demo.</h2>
+          <h2>Applications are connected to company proof.</h2>
         </div>
         <div className="award-proof-cards">
           {[
             ['Health interfaces', labImage, 'Biofilm and respiratory research framed through careful validation.'],
-            ['Production systems', deviceImage, 'The nanoWISS production device becomes a premium interface object.'],
+            ['Production systems', deviceImage, 'The nanoWISS production device becomes tangible product proof.'],
             ['AgroWISS branch', agrowissProduct, 'Agricultural biotechnology sits as a productized application branch.'],
           ].map(([title, image, text]) => (
             <article key={title}>
@@ -1000,7 +1000,7 @@ export const NanoInstrumentSite = () => (
 
       <EvidenceGrid />
       <TeamStrip />
-      <ContactBand title="Build a scientific interface with nanoWISS" />
+      <ContactBand title="Discuss a nanoWISS collaboration" />
     </main>
     <SimpleFooter />
   </div>

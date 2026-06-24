@@ -42,7 +42,7 @@ const hiddenConcepts = [
   {
     title: '3D Reactor',
     path: '/alternative/orbital-reactor',
-    description: 'A live Three.js nanoparticle hero with a pointer-reactive particle field.',
+    description: 'A focused nanoWISS product story around synthesis, scale-up, and application fit.',
   },
   {
     title: 'Specimen Vault',
@@ -57,12 +57,12 @@ const hiddenConcepts = [
   {
     title: 'Biofilm Breaker',
     path: '/alternative/biofilm-breaker',
-    description: 'A playable Three.js mini-game where visitors steer a nanoparticle through a biofilm field.',
+    description: 'An interactive nanoWISS explainer around carrier behavior and resistant biofilm environments.',
   },
   {
-    title: 'Splat Lab',
+    title: 'Material Field',
     path: '/alternative/splat-lab',
-    description: 'A Gaussian-splat-inspired point-cloud product scan built for static GitHub Pages hosting.',
+    description: 'A luminous material-field story for nanoWISS carrier systems and product evidence.',
   },
   {
     title: 'Impact Portal',
@@ -120,14 +120,14 @@ const hiddenConcepts = [
     description: 'A waveform and instrumentation homepage for nanoparticle science.',
   },
   {
-    title: 'Splat Garden',
+    title: 'Material Garden',
     path: '/alternative/splat-garden',
-    description: 'A Gaussian-splat-inspired product scan for nanoWISS material systems.',
+    description: 'A spatial nanoWISS product story for material behavior, proof, and application pathways.',
   },
   {
     title: 'Nano Instrument',
     path: '/alternative/nano-instrument',
-    description: 'A Three.js scientific homepage with a pointer-reactive reactor.',
+    description: 'A polished nanoWISS company page organized around synthesis, scale-up, and validation.',
   },
 ];
 
