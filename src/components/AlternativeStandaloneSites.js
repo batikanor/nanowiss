@@ -589,7 +589,7 @@ const NanoInstrumentCanvas = () => {
     };
   }, []);
 
-  return <div ref={mountRef} className="award-visual-canvas" aria-label="Interactive 3D nanoWISS instrument" />;
+  return <div ref={mountRef} className="award-visual-canvas" aria-label="Interactive nanoWISS material system" />;
 };
 
 const SceneFrames = () => (
@@ -661,6 +661,69 @@ const ApplicationsPanel = ({ items, title = 'Application pathways made concrete.
       ))}
     </div>
   </section>
+);
+
+const EvidenceMosaicVisual = () => (
+  <div className="evidence-mosaic-visual">
+    {[labImage, deviceImage, agrowissProduct, agrowissTeam].map((image, index) => (
+      <figure key={image}>
+        <img src={image} alt={`nanoWISS evidence ${index + 1}`} />
+        <figcaption>{['Research', 'Production', 'AgroWISS', 'Team'][index]}</figcaption>
+      </figure>
+    ))}
+  </div>
+);
+
+const ClinicalWhitepaperVisual = () => (
+  <div className="clinical-whitepaper-visual">
+    <div className="whitepaper-page">
+      <p>nanoWISS dossier</p>
+      <h3>Biofilm interface research</h3>
+      <span>Nanoparticle systems are explained through careful mechanism, use context, and validation language.</span>
+      <div className="whitepaper-lines">
+        <i />
+        <i />
+        <i />
+      </div>
+    </div>
+    <img src={labImage} alt="nanoWISS laboratory evidence" />
+  </div>
+);
+
+const FieldNotebookVisual = () => (
+  <div className="field-notebook-visual">
+    <img src={agrowissProduct} alt="AgroWISS product" />
+    <div>
+      <span>01</span>
+      <strong>Carrier system</strong>
+      <p>Chitosan-based thinking connects nanoWISS material science with practical field value.</p>
+    </div>
+    <div>
+      <span>02</span>
+      <strong>Release pathway</strong>
+      <p>Slow-release behavior is presented as a partner-readable product mechanism.</p>
+    </div>
+  </div>
+);
+
+const PartnerBriefingVisual = () => (
+  <div className="partner-briefing-visual">
+    <div className="briefing-core">
+      <strong>nanoWISS</strong>
+      <span>Company proof map</span>
+    </div>
+    {[
+      ['Team', '4 founders'],
+      ['Proof', 'Awards and grants'],
+      ['Platform', 'Nanoparticles'],
+      ['Application', 'AgroWISS'],
+    ].map(([title, text], index) => (
+      <article key={title} className={`briefing-card briefing-card-${index + 1}`}>
+        <span>{title}</span>
+        <strong>{text}</strong>
+      </article>
+    ))}
+  </div>
 );
 
 export const NeonResearchCitySite = () => (
@@ -1023,5 +1086,87 @@ export const SignalObservatorySite = () => (
     <EvidenceGrid />
     <TeamStrip />
     <ContactBand title="Tune a collaboration signal" />
+  </StandaloneShell>
+);
+
+export const EvidenceMosaicSite = () => (
+  <StandaloneShell
+    variant="evidence-mosaic"
+    tone="light"
+    eyebrow="Company Proof Mosaic"
+    title="Every proof point belongs to the nanoWISS story."
+    text="A refined editorial homepage where research images, production systems, AgroWISS, and the founding team are arranged as one coherent company narrative."
+    visual={<EvidenceMosaicVisual />}
+  >
+    <PlatformRows mode="light" title="A company story assembled from evidence." />
+    <ApplicationsPanel title="Proof, applications, and people are presented together." items={[
+      ['Research Base', 'Lab work and nanoparticle formulation establish the scientific foundation.'],
+      ['Product Path', 'Production systems and application branches show how the platform becomes usable.'],
+      ['Team Confidence', 'The founding team is presented as part of the company proof, not as an afterthought.'],
+    ]} />
+    <EvidenceGrid />
+    <TeamStrip />
+    <ContactBand title="Discuss nanoWISS evidence and fit" />
+  </StandaloneShell>
+);
+
+export const ClinicalWhitepaperSite = () => (
+  <StandaloneShell
+    variant="clinical-whitepaper"
+    tone="light"
+    eyebrow="Clinical Dossier"
+    title="A precise path from particle science to partner validation."
+    text="A quiet medical-science homepage for nanoWISS that uses restrained language around biofilm interfaces, formulation thinking, and collaboration readiness."
+    visual={<ClinicalWhitepaperVisual />}
+  >
+    <PlatformRows mode="light" title="A restrained system for careful scientific communication." />
+    <ApplicationsPanel title="Clinical-facing sections stay clear and defensible." items={[
+      ['Biofilm Interface', 'The page explains the problem space without overstating medical outcomes.'],
+      ['Material Fit', 'Carrier behavior, formulation context, and surface interaction are grouped together.'],
+      ['Validation Path', 'Partners can understand the next steps for fit, samples, and responsible testing.'],
+    ]} />
+    <EvidenceGrid />
+    <ContactBand title="Start a validation conversation" />
+  </StandaloneShell>
+);
+
+export const FieldNotebookSite = () => (
+  <StandaloneShell
+    variant="field-notebook"
+    tone="light"
+    eyebrow="Field Notebook"
+    title="AgroWISS makes nanoWISS visible in the field."
+    text="A warm agricultural homepage where nanoWISS platform thinking is translated into crop protection, chitosan carriers, and sustainable field value."
+    visual={<FieldNotebookVisual />}
+  >
+    <PlatformRows mode="light" title="Agricultural value connected to nanoWISS science." />
+    <ApplicationsPanel title="A field-ready story for partners and pilot conversations." items={[
+      ['Carrier System', 'Chitosan-based carriers connect material science with natural active protection.'],
+      ['Field Logic', 'Slow-release behavior is presented as a practical reason to discuss pilots.'],
+      ['Sustainability Fit', 'The AgroWISS branch shows how nanoWISS can support planetary-health goals.'],
+    ]} />
+    <EvidenceGrid />
+    <TeamStrip />
+    <ContactBand title="Discuss an AgroWISS field pathway" />
+  </StandaloneShell>
+);
+
+export const PartnerBriefingSite = () => (
+  <StandaloneShell
+    variant="partner-briefing"
+    eyebrow="Partner Briefing"
+    title="A boardroom view of nanoWISS."
+    text="A high-contrast company homepage for investor and partner discussions, organized around proof, team capacity, platform logic, and application readiness."
+    visual={<PartnerBriefingVisual />}
+  >
+    <PlatformRows title="A concise map for serious partner conversations." />
+    <ApplicationsPanel title="The company case is made in four connected moves." items={[
+      ['Scientific Foundation', 'Nanoparticle synthesis and formulation thinking form the base.'],
+      ['Business Proof', 'Awards, incorporation, and partner signals build confidence.'],
+      ['Application Readiness', 'Health, surfaces, and AgroWISS are framed as focused paths.'],
+    ]} />
+    <EvidenceGrid />
+    <TeamStrip />
+    <ContactBand title="Open a partner briefing" />
   </StandaloneShell>
 );

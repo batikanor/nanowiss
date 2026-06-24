@@ -129,6 +129,26 @@ const hiddenConcepts = [
     path: '/alternative/nano-instrument',
     description: 'A polished nanoWISS company page organized around synthesis, scale-up, and validation.',
   },
+  {
+    title: 'Evidence Mosaic',
+    path: '/alternative/evidence-mosaic',
+    description: 'An editorial nanoWISS homepage that assembles research, products, team, and proof into one story.',
+  },
+  {
+    title: 'Clinical Whitepaper',
+    path: '/alternative/clinical-whitepaper',
+    description: 'A restrained medical-science page for biofilm interfaces, formulation thinking, and validation paths.',
+  },
+  {
+    title: 'Field Notebook',
+    path: '/alternative/field-notebook',
+    description: 'A warm AgroWISS field page connecting nanoWISS material science to sustainable crop protection.',
+  },
+  {
+    title: 'Partner Briefing',
+    path: '/alternative/partner-briefing',
+    description: 'A high-contrast company page for partner and investor conversations around proof and readiness.',
+  },
 ];
 
 const AlternativePage = () => {

@@ -24,6 +24,9 @@ import {
   AgroOrbitSite,
   BreathSignalSite,
   ClinicalEclipseSite,
+  ClinicalWhitepaperSite,
+  EvidenceMosaicSite,
+  FieldNotebookSite,
   FounderLabSite,
   MaterialAtlasSite,
   NanoCinemaSite,
@@ -31,6 +34,7 @@ import {
   NeonResearchCitySite,
   ParticleQuestSite,
   ProductTheaterSite,
+  PartnerBriefingSite,
   SignalObservatorySite,
   SplatGardenSite,
 } from './components/AlternativeStandaloneSites';
@@ -140,6 +144,10 @@ function AppRoutes() {
         <Route path="/alternative/signal-observatory" element={<SignalObservatorySite />} />
         <Route path="/alternative/splat-garden" element={<SplatGardenSite />} />
         <Route path="/alternative/nano-instrument" element={<NanoInstrumentSite />} />
+        <Route path="/alternative/evidence-mosaic" element={<EvidenceMosaicSite />} />
+        <Route path="/alternative/clinical-whitepaper" element={<ClinicalWhitepaperSite />} />
+        <Route path="/alternative/field-notebook" element={<FieldNotebookSite />} />
+        <Route path="/alternative/partner-briefing" element={<PartnerBriefingSite />} />
         <Route path="/nanowiss" element={<HomePage />} />
         <Route path="/nanowiss/team" element={<TeamPage />} />
         <Route path="/nanowiss/products" element={<ProductsPage />} />
@@ -169,6 +177,10 @@ function AppRoutes() {
         <Route path="/nanowiss/alternative/signal-observatory" element={<SignalObservatorySite />} />
         <Route path="/nanowiss/alternative/splat-garden" element={<SplatGardenSite />} />
         <Route path="/nanowiss/alternative/nano-instrument" element={<NanoInstrumentSite />} />
+        <Route path="/nanowiss/alternative/evidence-mosaic" element={<EvidenceMosaicSite />} />
+        <Route path="/nanowiss/alternative/clinical-whitepaper" element={<ClinicalWhitepaperSite />} />
+        <Route path="/nanowiss/alternative/field-notebook" element={<FieldNotebookSite />} />
+        <Route path="/nanowiss/alternative/partner-briefing" element={<PartnerBriefingSite />} />
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </>

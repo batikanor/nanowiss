@@ -1361,7 +1361,10 @@
   body .standalone-agro-orbit,
   body .standalone-material-atlas,
   body .standalone-breath-signal,
-  body .standalone-founder-lab {
+  body .standalone-founder-lab,
+  body .standalone-evidence-mosaic,
+  body .standalone-clinical-whitepaper,
+  body .standalone-field-notebook {
     background: #f6faf5;
     color: #14221c;
   }
@@ -1369,35 +1372,50 @@
   body .standalone-agro-orbit .standalone-hero-copy > span,
   body .standalone-material-atlas .standalone-hero-copy > span,
   body .standalone-breath-signal .standalone-hero-copy > span,
-  body .standalone-founder-lab .standalone-hero-copy > span {
+  body .standalone-founder-lab .standalone-hero-copy > span,
+  body .standalone-evidence-mosaic .standalone-hero-copy > span,
+  body .standalone-clinical-whitepaper .standalone-hero-copy > span,
+  body .standalone-field-notebook .standalone-hero-copy > span {
     color: #4c5f58;
   }
 
   body .standalone-agro-orbit .standalone-section,
   body .standalone-material-atlas .standalone-section,
   body .standalone-breath-signal .standalone-section,
-  body .standalone-founder-lab .standalone-section {
+  body .standalone-founder-lab .standalone-section,
+  body .standalone-evidence-mosaic .standalone-section,
+  body .standalone-clinical-whitepaper .standalone-section,
+  body .standalone-field-notebook .standalone-section {
     background: #f6faf5;
   }
 
   body .standalone-agro-orbit .standalone-section h2,
   body .standalone-material-atlas .standalone-section h2,
   body .standalone-breath-signal .standalone-section h2,
-  body .standalone-founder-lab .standalone-section h2 {
+  body .standalone-founder-lab .standalone-section h2,
+  body .standalone-evidence-mosaic .standalone-section h2,
+  body .standalone-clinical-whitepaper .standalone-section h2,
+  body .standalone-field-notebook .standalone-section h2 {
     color: #14221c;
   }
 
   body .standalone-agro-orbit .standalone-kicker,
   body .standalone-material-atlas .standalone-kicker,
   body .standalone-breath-signal .standalone-kicker,
-  body .standalone-founder-lab .standalone-kicker {
+  body .standalone-founder-lab .standalone-kicker,
+  body .standalone-evidence-mosaic .standalone-kicker,
+  body .standalone-clinical-whitepaper .standalone-kicker,
+  body .standalone-field-notebook .standalone-kicker {
     color: #6d4ab6;
   }
 
   body .standalone-agro-orbit .standalone-section:nth-of-type(even),
   body .standalone-material-atlas .standalone-section:nth-of-type(even),
   body .standalone-breath-signal .standalone-section:nth-of-type(even),
-  body .standalone-founder-lab .standalone-section:nth-of-type(even) {
+  body .standalone-founder-lab .standalone-section:nth-of-type(even),
+  body .standalone-evidence-mosaic .standalone-section:nth-of-type(even),
+  body .standalone-clinical-whitepaper .standalone-section:nth-of-type(even),
+  body .standalone-field-notebook .standalone-section:nth-of-type(even) {
     background: #edf4ef;
   }
 
@@ -1405,12 +1423,302 @@
   body .standalone-material-atlas .platform-rows strong,
   body .standalone-breath-signal .platform-rows strong,
   body .standalone-founder-lab .platform-rows strong,
+  body .standalone-evidence-mosaic .platform-rows strong,
+  body .standalone-clinical-whitepaper .platform-rows strong,
+  body .standalone-field-notebook .platform-rows strong,
   body .standalone-agro-orbit .application-panels strong,
   body .standalone-material-atlas .application-panels strong,
   body .standalone-breath-signal .application-panels strong,
-  body .standalone-founder-lab .application-panels strong {
+  body .standalone-founder-lab .application-panels strong,
+  body .standalone-evidence-mosaic .application-panels strong,
+  body .standalone-clinical-whitepaper .application-panels strong,
+  body .standalone-field-notebook .application-panels strong {
     color: #14221c;
   }
+
+  body .standalone-evidence-mosaic {
+    background:
+      linear-gradient(90deg, rgba(20, 34, 28, 0.055) 1px, transparent 1px),
+      #f8faf8;
+    background-size: 18px 18px;
+  }
+
+  body .standalone-evidence-mosaic .standalone-hero {
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  }
+
+  body .standalone-evidence-mosaic .standalone-hero h1 {
+    max-width: 11ch;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-weight: 900;
+  }
+
+  .evidence-mosaic-visual {
+    position: absolute;
+    inset: 1rem;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    grid-template-rows: 1fr 0.8fr;
+    gap: 0.75rem;
+  }
+
+  .evidence-mosaic-visual figure {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(20, 34, 28, 0.16);
+    background: white;
+    margin: 0;
+  }
+
+  .evidence-mosaic-visual figure:first-child {
+    grid-row: span 2;
+  }
+
+  .evidence-mosaic-visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: saturate(0.9) contrast(1.05);
+  }
+
+  .evidence-mosaic-visual figure:nth-child(2) img,
+  .evidence-mosaic-visual figure:nth-child(3) img {
+    object-fit: contain;
+    padding: 1rem;
+    background: #f4f6f4;
+  }
+
+  .evidence-mosaic-visual figcaption {
+    position: absolute;
+    left: 0.75rem;
+    bottom: 0.75rem;
+    background: #14221c;
+    color: white;
+    padding: 0.4rem 0.6rem;
+    font-size: 0.8rem;
+    font-weight: 900;
+  }
+
+  body .standalone-clinical-whitepaper {
+    background:
+      linear-gradient(180deg, #fbfdff, #eef7fb);
+  }
+
+  body .standalone-clinical-whitepaper .standalone-hero h1 {
+    max-width: 13ch;
+    color: #f8fbff;
+    font-size: clamp(3rem, 6.4vw, 6.8rem);
+  }
+
+  body .standalone-clinical-whitepaper .standalone-hero-copy > span {
+    color: rgba(248, 251, 255, 0.72);
+  }
+
+  body .standalone-clinical-whitepaper .standalone-hero-visual {
+    border-color: rgba(15, 61, 76, 0.16);
+    background: #ffffff;
+    box-shadow: 0 28px 80px rgba(15, 61, 76, 0.14);
+  }
+
+  .clinical-whitepaper-visual {
+    position: absolute;
+    inset: 1rem;
+    display: grid;
+    grid-template-columns: 0.95fr 1.05fr;
+    gap: 1rem;
+    align-items: stretch;
+  }
+
+  .whitepaper-page {
+    border: 1px solid rgba(15, 61, 76, 0.16);
+    background: #fbfdff;
+    padding: clamp(1rem, 3vw, 2rem);
+  }
+
+  .whitepaper-page p {
+    color: #6d4ab6;
+    font-size: 0.8rem;
+    font-weight: 900;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .whitepaper-page h3 {
+    margin-top: 1.2rem;
+    color: #10222b;
+    font-size: clamp(2rem, 4vw, 4.2rem);
+    font-weight: 940;
+    line-height: 0.95;
+  }
+
+  .whitepaper-page span {
+    display: block;
+    margin-top: 1rem;
+    color: #48616a;
+    line-height: 1.7;
+  }
+
+  .whitepaper-lines {
+    display: grid;
+    gap: 0.7rem;
+    margin-top: 2rem;
+  }
+
+  .whitepaper-lines i {
+    display: block;
+    height: 0.65rem;
+    background: linear-gradient(90deg, #b083ff, transparent);
+  }
+
+  .clinical-whitepaper-visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  body .standalone-field-notebook {
+    background:
+      linear-gradient(90deg, rgba(39, 106, 74, 0.08) 1px, transparent 1px),
+      linear-gradient(rgba(39, 106, 74, 0.08) 1px, transparent 1px),
+      #f7fbef;
+    background-size: 36px 36px;
+  }
+
+  body .standalone-field-notebook .standalone-hero h1 {
+    color: #9ee6bf;
+    font-size: clamp(3.2rem, 7vw, 7.2rem);
+  }
+
+  body .standalone-field-notebook .standalone-hero-copy > span {
+    color: rgba(255, 255, 255, 0.72);
+  }
+
+  body .standalone-field-notebook .standalone-hero-visual {
+    border-color: rgba(39, 106, 74, 0.18);
+    background: linear-gradient(135deg, #edf6df, #ffffff);
+  }
+
+  .field-notebook-visual {
+    position: absolute;
+    inset: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 0.92fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .field-notebook-visual img {
+    grid-row: span 2;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background: rgba(255, 255, 255, 0.72);
+    padding: 1rem;
+  }
+
+  .field-notebook-visual div {
+    border-left: 4px solid #276a4a;
+    background: rgba(255, 255, 255, 0.78);
+    padding: 1rem;
+  }
+
+  .field-notebook-visual span {
+    color: #6d4ab6;
+    font-size: 0.8rem;
+    font-weight: 950;
+  }
+
+  .field-notebook-visual strong {
+    display: block;
+    margin-top: 0.5rem;
+    color: #183b2a;
+    font-size: 1.4rem;
+  }
+
+  .field-notebook-visual p {
+    margin-top: 0.7rem;
+    color: #526158;
+    line-height: 1.65;
+  }
+
+  body .standalone-partner-briefing {
+    background:
+      linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+      linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+      #07080f;
+    background-size: 42px 42px;
+  }
+
+  body .standalone-partner-briefing .standalone-hero h1 {
+    max-width: 12ch;
+    font-size: clamp(3.4rem, 6.4vw, 7rem);
+  }
+
+  .partner-briefing-visual {
+    position: absolute;
+    inset: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    background:
+      linear-gradient(135deg, rgba(176, 131, 255, 0.16), rgba(45, 212, 255, 0.06)),
+      rgba(255, 255, 255, 0.04);
+  }
+
+  .briefing-core {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    display: grid;
+    width: min(44vw, 17rem);
+    aspect-ratio: 1;
+    place-items: center;
+    border: 1px solid rgba(158, 230, 191, 0.42);
+    background: #080a12;
+    color: white;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    box-shadow: 0 0 80px rgba(176, 131, 255, 0.24);
+  }
+
+  .briefing-core strong {
+    display: block;
+    font-size: clamp(2rem, 5vw, 4.2rem);
+    font-weight: 950;
+  }
+
+  .briefing-core span {
+    color: #9ee6bf;
+    font-weight: 850;
+  }
+
+  .briefing-card {
+    position: absolute;
+    width: min(42%, 14rem);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    background: rgba(8, 10, 18, 0.78);
+    padding: 1rem;
+    color: white;
+    backdrop-filter: blur(18px);
+  }
+
+  .briefing-card span {
+    display: block;
+    color: #b083ff;
+    font-size: 0.78rem;
+    font-weight: 900;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .briefing-card strong {
+    display: block;
+    margin-top: 0.5rem;
+    font-size: 1.2rem;
+  }
+
+  .briefing-card-1 { left: 5%; top: 7%; }
+  .briefing-card-2 { right: 5%; top: 13%; }
+  .briefing-card-3 { left: 7%; bottom: 10%; }
+  .briefing-card-4 { right: 7%; bottom: 8%; }
 
   body .standalone-agro-orbit .standalone-proof-grid article,
   body .standalone-material-atlas .standalone-proof-grid article,
@@ -2230,6 +2538,44 @@
   .quest-shell {
     min-height: 29rem;
     height: auto;
+  }
+
+  .evidence-mosaic-visual,
+  .clinical-whitepaper-visual,
+  .field-notebook-visual {
+    grid-template-columns: 1fr;
+    grid-template-rows: none;
+    overflow-y: auto;
+  }
+
+  .evidence-mosaic-visual figure:first-child,
+  .field-notebook-visual img {
+    grid-row: auto;
+  }
+
+  .evidence-mosaic-visual figure {
+    min-height: 12rem;
+  }
+
+  .clinical-whitepaper-visual img {
+    min-height: 13rem;
+  }
+
+  .field-notebook-visual img {
+    min-height: 15rem;
+  }
+
+  .briefing-core {
+    width: 11rem;
+  }
+
+  .briefing-card {
+    width: 45%;
+    padding: 0.8rem;
+  }
+
+  .briefing-card strong {
+    font-size: 0.95rem;
   }
 
   .platform-rows > div,
