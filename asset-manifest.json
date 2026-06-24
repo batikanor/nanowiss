@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.77f27c91.css",
-    "main.js": "/static/js/main.ccb75fd3.js",
+    "main.css": "/static/css/main.9e5f191e.css",
+    "main.js": "/static/js/main.9970df42.js",
     "static/js/453.e5c486a4.chunk.js": "/static/js/453.e5c486a4.chunk.js",
     "static/media/agrowiss_team.png": "/static/media/agrowiss_team.f7a5f11a934b846c091f.png",
     "static/media/hakan_yilmaz.png": "/static/media/hakan_yilmaz.bf9ff6e883a31e8df024.png",
@@ -22,19 +22,19 @@
     "static/media/nanoparticle_device.png": "/static/media/nanoparticle_device.ab951ac2f848f9686331.png",
     "static/media/team_nisa_thumb.jpg": "/static/media/team_nisa_thumb.323a724fca5085b28271.jpg",
     "static/media/team_feyza_thumb.jpg": "/static/media/team_feyza_thumb.7c92a990d8464d48367f.jpg",
+    "static/media/agrowiss_logo.png": "/static/media/agrowiss_logo.9ec7a6b40655acdd7675.png",
     "static/media/team_elif_thumb.jpg": "/static/media/team_elif_thumb.a34849e4f4e8f24b9d84.jpg",
     "static/media/nwiss_backgr_mobile.jpg": "/static/media/nwiss_backgr_mobile.9975c28efd5c82f43ede.jpg",
-    "static/media/agrowiss_logo.png": "/static/media/agrowiss_logo.b2d3d017e4f9482282f3.png",
     "static/media/product1.png": "/static/media/product1.04cc79e675ade3f7b45a.png",
     "static/media/tubitak_bigg.png": "/static/media/tubitak_bigg.216deb91caec315338f1.png",
     "static/media/social_impact_award.png": "/static/media/social_impact_award.c815cabfbe1715e387e2.png",
     "index.html": "/index.html",
-    "main.77f27c91.css.map": "/static/css/main.77f27c91.css.map",
-    "main.ccb75fd3.js.map": "/static/js/main.ccb75fd3.js.map",
+    "main.9e5f191e.css.map": "/static/css/main.9e5f191e.css.map",
+    "main.9970df42.js.map": "/static/js/main.9970df42.js.map",
     "453.e5c486a4.chunk.js.map": "/static/js/453.e5c486a4.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.77f27c91.css",
-    "static/js/main.ccb75fd3.js"
+    "static/css/main.9e5f191e.css",
+    "static/js/main.9970df42.js"
   ]
 }
