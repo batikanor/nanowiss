@@ -69,7 +69,6 @@ const HomePage = () => {
                 <p>Efficient and scalable production of nanoparticles for medical applications.</p>
               </div>
               <div className="bg-white p-6 rounded-lg shadow">
-                <Camera className="mx-auto mb-4 text-primary-dark" size={48} />
                 <h3 className="text-xl font-semibold mb-2">Biofilm Treatment</h3>
                 <p>Innovative solutions for treating biofilm bacterial infections in cystic fibrosis.</p>
                 <BiofilmVideo
