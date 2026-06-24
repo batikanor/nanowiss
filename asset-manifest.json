@@ -1,10 +1,11 @@
 {
   "files": {
-    "main.css": "/static/css/main.bcf2121c.css",
-    "main.js": "/static/js/main.3ca15883.js",
+    "main.css": "/static/css/main.de1b4198.css",
+    "main.js": "/static/js/main.176665a8.js",
     "static/js/453.e5c486a4.chunk.js": "/static/js/453.e5c486a4.chunk.js",
     "static/media/agrowiss_team.png": "/static/media/agrowiss_team.f7a5f11a934b846c091f.png",
     "static/media/hakan_yilmaz.png": "/static/media/hakan_yilmaz.bf9ff6e883a31e8df024.png",
+    "static/media/biofilm_demo.mp4": "/static/media/biofilm_demo.58f0ba98f7b6ddee9099.mp4",
     "static/media/agrowiss_product.png": "/static/media/agrowiss_product.3d707799af90c8c143fd.png",
     "static/media/selen_ozdinc_foto.png": "/static/media/selen_ozdinc_foto.fe3691852aadf8961b7c.png",
     "static/media/elif_kaman_foto.png": "/static/media/elif_kaman_foto.ffdd7b4b9304e0f15f95.png",
@@ -29,12 +30,12 @@
     "static/media/tubitak_bigg.png": "/static/media/tubitak_bigg.216deb91caec315338f1.png",
     "static/media/social_impact_award.png": "/static/media/social_impact_award.c815cabfbe1715e387e2.png",
     "index.html": "/index.html",
-    "main.bcf2121c.css.map": "/static/css/main.bcf2121c.css.map",
-    "main.3ca15883.js.map": "/static/js/main.3ca15883.js.map",
+    "main.de1b4198.css.map": "/static/css/main.de1b4198.css.map",
+    "main.176665a8.js.map": "/static/js/main.176665a8.js.map",
     "453.e5c486a4.chunk.js.map": "/static/js/453.e5c486a4.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.bcf2121c.css",
-    "static/js/main.3ca15883.js"
+    "static/css/main.de1b4198.css",
+    "static/js/main.176665a8.js"
   ]
 }
