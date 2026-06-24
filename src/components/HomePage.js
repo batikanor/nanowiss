@@ -2,8 +2,7 @@ import React from 'react';
 import { Camera } from 'lucide-react';
 import backgroundImage from '../assets/agrowiss_team.png';
 import agrowissLogo from '../assets/agrowiss_logo.png';
-import biofilmDemoVideo from '../assets/biofilm_demo.mp4';
-import biofilmPoster from '../assets/product1.png';
+import BiofilmVideo from './BiofilmVideo';
 import Navbar from './Navbar'; // Import the Navbar component
 import Footer from './Footer';
 
@@ -73,15 +72,9 @@ const HomePage = () => {
                 <Camera className="mx-auto mb-4 text-primary-dark" size={48} />
                 <h3 className="text-xl font-semibold mb-2">Biofilm Treatment</h3>
                 <p>Innovative solutions for treating biofilm bacterial infections in cystic fibrosis.</p>
-                <video
-                  className="mt-5 h-48 w-full rounded-md bg-secondary-dark object-cover"
-                  src={biofilmDemoVideo}
-                  poster={biofilmPoster}
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  aria-label="nanoWISS biofilm research visualization"
+                <BiofilmVideo
+                  className="mt-5 h-48 w-full"
+                  ariaLabel="nanoWISS biofilm research visualization"
                 />
               </div>
               <div className="bg-white p-6 rounded-lg shadow">

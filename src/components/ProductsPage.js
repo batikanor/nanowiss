@@ -1,7 +1,6 @@
 import React from 'react';
 import { Award, Building2, FlaskConical, Leaf, Mail } from 'lucide-react';
 import productImage from '../assets/product1.png';
-import biofilmDemoVideo from '../assets/biofilm_demo.mp4';
 import labNanoparticleImage from '../assets/lab_nanoparticle.png';
 import nanoparticleDeviceImage from '../assets/nanoparticle_device.png';
 import socialImpactAwardLogo from '../assets/social_impact_award.png';
@@ -9,6 +8,7 @@ import tubitakBiggLogo from '../assets/tubitak_bigg.png';
 import bogaziciTeknoparkLogo from '../assets/bogazici_teknopark.png';
 import Navbar from './Navbar';
 import Footer from './Footer';
+import BiofilmVideo from './BiofilmVideo';
 
 const products = [
   {
@@ -28,7 +28,7 @@ const products = [
     description:
       'Our development pipeline includes agricultural solutions, disinfection products, and biofilm infection treatment applications.',
     image: productImage,
-    video: biofilmDemoVideo,
+    hasBiofilmVideo: true,
   },
 ];
 
@@ -83,16 +83,10 @@ const ProductsPage = () => {
                   key={product.title}
                   className="flex h-full flex-col rounded-lg border border-gray-100 bg-white p-6 shadow transition duration-300 hover:-translate-y-1 hover:shadow-xl"
                 >
-                  {product.video ? (
-                    <video
-                      src={product.video}
-                      poster={product.image}
-                      className="mb-5 h-52 w-full rounded-md bg-secondary-dark object-cover"
-                      autoPlay
-                      loop
-                      muted
-                      playsInline
-                      aria-label={`${product.title} biofilm visualization`}
+                  {product.hasBiofilmVideo ? (
+                    <BiofilmVideo
+                      className="mb-5 h-52 w-full"
+                      ariaLabel={`${product.title} biofilm visualization`}
                     />
                   ) : (
                     <img
