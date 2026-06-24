@@ -4,9 +4,13 @@ import {
   ArrowRight,
   Building2,
   FlaskConical,
+  Gauge,
   Leaf,
   Mail,
+  Microscope,
+  Orbit,
   Play,
+  ScanLine,
   ShieldCheck,
   Waves,
 } from 'lucide-react';
@@ -46,7 +50,7 @@ const teamCards = [
 const StandaloneNav = ({ tone = 'dark' }) => (
   <header className={`standalone-nav standalone-nav-${tone}`}>
     <a href="#top" className="standalone-logo">nanoWISS</a>
-    <nav aria-label="Concept site navigation">
+    <nav aria-label="nanoWISS site navigation">
       {siteNav.map(([id, label]) => (
         <a key={id} href={`#${id}`}>{label}</a>
       ))}
@@ -345,6 +349,249 @@ const WaveCanvas = () => {
   return <canvas ref={canvasRef} className="wave-canvas" aria-label="Animated signal observatory waveform" />;
 };
 
+const createSoftParticleTexture = () => {
+  const canvas = document.createElement('canvas');
+  canvas.width = 96;
+  canvas.height = 96;
+  const ctx = canvas.getContext('2d');
+  const gradient = ctx.createRadialGradient(48, 48, 0, 48, 48, 48);
+  gradient.addColorStop(0, 'rgba(255,255,255,1)');
+  gradient.addColorStop(0.28, 'rgba(255,255,255,.72)');
+  gradient.addColorStop(0.62, 'rgba(255,255,255,.18)');
+  gradient.addColorStop(1, 'rgba(255,255,255,0)');
+  ctx.fillStyle = gradient;
+  ctx.fillRect(0, 0, 96, 96);
+  return new THREE.CanvasTexture(canvas);
+};
+
+const SplatGardenCanvas = () => {
+  const mountRef = useRef(null);
+
+  useEffect(() => {
+    const mount = mountRef.current;
+    if (!mount) return undefined;
+
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(42, 1, 0.1, 100);
+    camera.position.set(0, 1.4, 7.2);
+    const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+    renderer.setClearColor(0x000000, 0);
+    mount.appendChild(renderer.domElement);
+
+    const group = new THREE.Group();
+    scene.add(group);
+    const spriteTexture = createSoftParticleTexture();
+    const geometry = new THREE.BufferGeometry();
+    const positions = [];
+    const colors = [];
+    const color = new THREE.Color();
+    const count = 3600;
+    for (let i = 0; i < count; i += 1) {
+      const layer = i / count;
+      const theta = i * 0.077 + Math.sin(i) * 0.7;
+      const radius = 0.35 + layer * 2.75 + Math.sin(i * 0.13) * 0.18;
+      const y = Math.sin(theta * 1.7) * 0.55 + (Math.random() - 0.5) * 1.9;
+      const bottleColumn = i % 7 === 0;
+      const x = bottleColumn ? (Math.random() - 0.5) * 0.75 : Math.cos(theta) * radius;
+      const z = bottleColumn ? (Math.random() - 0.5) * 0.55 : Math.sin(theta) * radius * 0.52;
+      positions.push(x, y, z);
+      color.setHSL(bottleColumn ? 0.43 : 0.72 - layer * 0.22, 0.72, bottleColumn ? 0.58 : 0.48 + Math.random() * 0.22);
+      colors.push(color.r, color.g, color.b);
+    }
+    geometry.setAttribute('position', new THREE.Float32BufferAttribute(positions, 3));
+    geometry.setAttribute('color', new THREE.Float32BufferAttribute(colors, 3));
+    const material = new THREE.PointsMaterial({
+      size: 0.085,
+      map: spriteTexture,
+      vertexColors: true,
+      transparent: true,
+      opacity: 0.84,
+      depthWrite: false,
+      blending: THREE.AdditiveBlending,
+    });
+    const points = new THREE.Points(geometry, material);
+    group.add(points);
+
+    const productTexture = new THREE.TextureLoader().load(agrowissProduct);
+    const product = new THREE.Sprite(new THREE.SpriteMaterial({ map: productTexture, transparent: true, opacity: 0.82 }));
+    product.scale.set(1.5, 1.5, 1);
+    product.position.set(0, -0.05, 0.15);
+    group.add(product);
+
+    const ringMaterial = new THREE.MeshBasicMaterial({ color: 0x9ee6bf, transparent: true, opacity: 0.18 });
+    const rings = [1.15, 1.85, 2.55].map((size, index) => {
+      const ring = new THREE.Mesh(new THREE.TorusGeometry(size, 0.008, 8, 180), ringMaterial.clone());
+      ring.rotation.x = Math.PI / 2.8 + index * 0.12;
+      group.add(ring);
+      return ring;
+    });
+
+    scene.add(new THREE.AmbientLight(0xffffff, 0.62));
+    const resize = () => {
+      const { width, height } = mount.getBoundingClientRect();
+      renderer.setSize(width, height, false);
+      camera.aspect = width / height;
+      camera.updateProjectionMatrix();
+    };
+    resize();
+    window.addEventListener('resize', resize);
+    let raf = 0;
+    const animate = () => {
+      group.rotation.y += 0.0028;
+      points.rotation.z += 0.0015;
+      product.material.opacity = 0.72 + Math.sin(Date.now() * 0.001) * 0.08;
+      rings.forEach((ring, index) => {
+        ring.rotation.z += 0.002 + index * 0.001;
+      });
+      renderer.render(scene, camera);
+      raf = window.requestAnimationFrame(animate);
+    };
+    animate();
+
+    return () => {
+      window.cancelAnimationFrame(raf);
+      window.removeEventListener('resize', resize);
+      productTexture.dispose();
+      spriteTexture.dispose();
+      geometry.dispose();
+      material.dispose();
+      rings.forEach((ring) => {
+        ring.geometry.dispose();
+        ring.material.dispose();
+      });
+      renderer.dispose();
+      mount.removeChild(renderer.domElement);
+    };
+  }, []);
+
+  return <div ref={mountRef} className="award-visual-canvas" aria-label="Gaussian splat inspired nanoWISS particle garden" />;
+};
+
+const NanoInstrumentCanvas = () => {
+  const mountRef = useRef(null);
+
+  useEffect(() => {
+    const mount = mountRef.current;
+    if (!mount) return undefined;
+
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(44, 1, 0.1, 100);
+    camera.position.set(0, 2.2, 8.2);
+    camera.lookAt(0, 0, 0);
+    const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+    renderer.setClearColor(0x000000, 0);
+    mount.appendChild(renderer.domElement);
+
+    const pointer = { x: 0, y: 0 };
+    const group = new THREE.Group();
+    scene.add(group);
+
+    const glass = new THREE.MeshPhysicalMaterial({
+      color: 0x9ee6ff,
+      transparent: true,
+      opacity: 0.26,
+      roughness: 0.12,
+      metalness: 0.05,
+      transmission: 0.28,
+      thickness: 0.8,
+    });
+    const purple = new THREE.MeshStandardMaterial({ color: 0x6d28d9, emissive: 0x39106e, roughness: 0.38, metalness: 0.32 });
+    const graphite = new THREE.MeshStandardMaterial({ color: 0x222631, roughness: 0.28, metalness: 0.55 });
+    const cyan = new THREE.MeshStandardMaterial({ color: 0x2dd4ff, emissive: 0x0a5a70, roughness: 0.25, metalness: 0.25 });
+
+    const core = new THREE.Mesh(new THREE.IcosahedronGeometry(0.86, 2), glass);
+    group.add(core);
+    const device = new THREE.Mesh(new THREE.BoxGeometry(2.25, 0.78, 1.22), graphite);
+    device.position.set(0, -1.18, 0);
+    group.add(device);
+    const stripe = new THREE.Mesh(new THREE.BoxGeometry(2.28, 0.18, 1.25), purple);
+    stripe.position.set(0, -0.78, 0);
+    group.add(stripe);
+
+    const rails = [];
+    for (let i = 0; i < 4; i += 1) {
+      const rail = new THREE.Mesh(new THREE.TorusGeometry(1.65 + i * 0.42, 0.012, 10, 220), i % 2 ? purple.clone() : cyan.clone());
+      rail.rotation.x = Math.PI / 2 + i * 0.22;
+      rail.rotation.y = i * 0.55;
+      group.add(rail);
+      rails.push(rail);
+    }
+    const beads = [];
+    for (let i = 0; i < 42; i += 1) {
+      const bead = new THREE.Mesh(new THREE.SphereGeometry(0.045 + (i % 5) * 0.008, 12, 12), i % 3 ? cyan : purple);
+      const angle = i * 0.72;
+      bead.userData = { angle, radius: 1.5 + (i % 7) * 0.24, speed: 0.006 + (i % 6) * 0.001 };
+      group.add(bead);
+      beads.push(bead);
+    }
+    const floor = new THREE.GridHelper(8, 28, 0x2dd4ff, 0x4c1d95);
+    floor.position.y = -1.68;
+    floor.material.transparent = true;
+    floor.material.opacity = 0.2;
+    group.add(floor);
+
+    const purpleLight = new THREE.PointLight(0xb083ff, 6, 16);
+    purpleLight.position.set(2.5, 4, 4);
+    scene.add(purpleLight);
+    const cyanLight = new THREE.PointLight(0x2dd4ff, 4, 14);
+    cyanLight.position.set(-3, 2.5, 3);
+    scene.add(cyanLight);
+    scene.add(new THREE.AmbientLight(0xffffff, 0.42));
+
+    const resize = () => {
+      const { width, height } = mount.getBoundingClientRect();
+      renderer.setSize(width, height, false);
+      camera.aspect = width / height;
+      camera.updateProjectionMatrix();
+    };
+    const move = (event) => {
+      const rect = mount.getBoundingClientRect();
+      pointer.x = ((event.clientX - rect.left) / rect.width - 0.5) * 2;
+      pointer.y = ((event.clientY - rect.top) / rect.height - 0.5) * 2;
+    };
+    resize();
+    window.addEventListener('resize', resize);
+    mount.addEventListener('pointermove', move);
+    let raf = 0;
+    const animate = () => {
+      group.rotation.y += 0.0025 + pointer.x * 0.001;
+      group.rotation.x += (pointer.y * 0.18 - group.rotation.x) * 0.025;
+      core.rotation.x += 0.006;
+      core.rotation.y += 0.008;
+      rails.forEach((rail, index) => {
+        rail.rotation.z += 0.003 + index * 0.001;
+      });
+      beads.forEach((bead) => {
+        bead.userData.angle += bead.userData.speed;
+        bead.position.set(
+          Math.cos(bead.userData.angle) * bead.userData.radius,
+          Math.sin(bead.userData.angle * 1.4) * 0.62,
+          Math.sin(bead.userData.angle) * bead.userData.radius * 0.48,
+        );
+      });
+      renderer.render(scene, camera);
+      raf = window.requestAnimationFrame(animate);
+    };
+    animate();
+
+    return () => {
+      window.cancelAnimationFrame(raf);
+      window.removeEventListener('resize', resize);
+      mount.removeEventListener('pointermove', move);
+      group.traverse((child) => {
+        if (child.geometry) child.geometry.dispose();
+        if (child.material) child.material.dispose();
+      });
+      renderer.dispose();
+      mount.removeChild(renderer.domElement);
+    };
+  }, []);
+
+  return <div ref={mountRef} className="award-visual-canvas" aria-label="Interactive 3D nanoWISS instrument" />;
+};
+
 const SceneFrames = () => (
   <div className="cinema-frames">
     {[heroImage, labImage, deviceImage, agrowissProduct, agrowissTeam].map((image, index) => (
@@ -385,7 +632,7 @@ const StandaloneShell = ({ variant, tone = 'dark', eyebrow, title, text, visual,
   </div>
 );
 
-const PlatformRows = ({ mode = 'dark', title = 'One nanoparticle platform, multiple application directions.' }) => (
+const PlatformRows = ({ mode = 'dark', title = 'One nanoparticle platform, multiple application pathways.' }) => (
   <section id="platform" className={`standalone-section platform-rows platform-rows-${mode}`}>
     <p className="standalone-kicker">Platform</p>
     <h2>{title}</h2>
@@ -421,7 +668,7 @@ export const NeonResearchCitySite = () => (
     variant="neon-city"
     eyebrow="Applied Nano Research District"
     title="The city where material ideas become testable systems."
-    text="A full replacement site built as a procedural research district: synthesis towers, process pathways, evidence blocks, and collaboration routes."
+    text="A live WebGL research district for nanoWISS: synthesis towers, process pathways, evidence blocks, and collaboration routes in one complete homepage."
     visual={<CityCanvas />}
   >
     <PlatformRows title="A research district organized by capability." />
@@ -472,7 +719,7 @@ export const AgroOrbitSite = () => (
     tone="light"
     eyebrow="AgroWISS Field Intelligence"
     title="Field orbit."
-    text="A full AgroWISS-first site where crop protection, chitosan carriers, and sustainable field systems are organized as living data rings."
+    text="A nanoWISS agricultural biotechnology homepage where crop protection, chitosan carriers, and sustainable field systems are organized as living data rings."
     visual={<div className="agro-orbit-visual"><img src={agrowissProduct} alt="AgroWISS product" /><span /><span /><span /></div>}
   >
     <PlatformRows mode="light" title="AgroWISS as the operating system of the page." />
@@ -533,7 +780,7 @@ export const BreathSignalSite = () => (
     tone="light"
     eyebrow="Respiratory Delivery Map"
     title="Breath as a precise delivery signal."
-    text="A calm medical-tech replacement site where airflow, lung geometry, particles, and biofilm interfaces are presented as a controlled platform story."
+    text="A calm nanoWISS medical-tech homepage where airflow, lung geometry, particles, and biofilm interfaces are presented as a controlled platform story."
     visual={<div className="lung-visual"><Waves size={190} /><span /><span /><span /></div>}
   >
     <PlatformRows mode="light" title="Respiratory delivery explained as a signal path." />
@@ -582,7 +829,7 @@ export const FounderLabSite = () => (
     tone="light"
     eyebrow="Founder Lab Notebook"
     title="The team behind the platform."
-    text="An editorial replacement site where team expertise, research decisions, and venture milestones form the primary story."
+    text="A team-led nanoWISS homepage where expertise, research decisions, and venture milestones form the primary story."
     visual={<div className="founder-wall">{teamCards.map(([name, role, image]) => <article key={name}><img src={image} alt={name} loading="eager" decoding="async" /><strong>{name}</strong><span>{role}</span></article>)}</div>}
   >
     <PlatformRows mode="light" title="The operating team becomes the trust architecture." />
@@ -601,14 +848,14 @@ export const ProductTheaterSite = () => (
     variant="product-theater"
     eyebrow="Product Theater"
     title="Particles on stage."
-    text="A replacement site built as a product demo: staged objects, technical captions, and business-ready proof."
+    text="A nanoWISS product homepage staged as a live demo: objects, technical captions, and business-ready proof."
     visual={<div className="product-stage"><img src={deviceImage} alt="nanoWISS production system" /><img src={agrowissProduct} alt="AgroWISS product" /><img src={productImage} alt="Application product" /></div>}
   >
     <PlatformRows title="A product showroom with technical captions." />
     <ApplicationsPanel title="Objects, specs, and use contexts staged for inspection." items={[
       ['Production System', 'Scalable system design for nanoparticle development.'],
       ['AgroWISS Bottle', 'Agricultural biotechnology shown as an inspectable product object.'],
-      ['Application Pipeline', 'Health, disinfection, and surface concepts framed carefully.'],
+      ['Application Pipeline', 'Health, disinfection, and surface pathways framed carefully.'],
     ]} />
     <EvidenceGrid />
     <TeamStrip />
@@ -616,12 +863,155 @@ export const ProductTheaterSite = () => (
   </StandaloneShell>
 );
 
+export const SplatGardenSite = () => (
+  <div id="top" className="award-site award-splat-garden">
+    <StandaloneNav />
+    <main>
+      <section className="award-hero">
+        <div className="award-hero-copy">
+          <p>Point Cloud Field System</p>
+          <h1>A living product scan for nanoWISS.</h1>
+          <span>
+            A live WebGL product hero for nanoWISS: particles, product evidence, and application
+            pathways orbit one inspectable material story.
+          </span>
+          <div className="standalone-actions">
+            <a href="#platform">Enter scan <ScanLine size={18} /></a>
+            <a href="mailto:info@nanowiss.com">Contact <Mail size={18} /></a>
+          </div>
+        </div>
+        <div className="award-hero-stage">
+          <SplatGardenCanvas />
+          <div className="award-stage-caption">
+            <strong>3,600 procedural splats</strong>
+            <span>Static-hosting safe point cloud, inspired by Gaussian splat product scans.</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="platform" className="award-section award-scan-grid">
+        <p className="standalone-kicker">Platform</p>
+        <h2>The product is treated like a spatial dataset.</h2>
+        <div>
+          {[
+            ['Carrier field', 'Chitosan carrier systems shown as a live material cloud.'],
+            ['Release behavior', 'Slow-release logic explained through movement, density, and orbit.'],
+            ['Evidence layer', 'Awards, partners, and incorporation proof become part of the scan.'],
+          ].map(([title, text]) => (
+            <article key={title}>
+              <ScanLine size={26} />
+              <strong>{title}</strong>
+              <span>{text}</span>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section id="applications" className="award-section award-editorial-band">
+        <div>
+          <p className="standalone-kicker">Applications</p>
+          <h2>Designed as a flagship product website, not a brochure.</h2>
+        </div>
+        <div>
+          <article>
+            <span>01</span>
+            <strong>Agricultural biotechnology</strong>
+            <p>AgroWISS is presented as one application branch of the nanoWISS platform.</p>
+          </article>
+          <article>
+            <span>02</span>
+            <strong>Material translation</strong>
+            <p>nanoWISS remains visible as the platform behind nanoparticle synthesis and scale-up.</p>
+          </article>
+        </div>
+      </section>
+
+      <EvidenceGrid />
+      <TeamStrip />
+      <ContactBand title="Discuss a spatial product story" />
+    </main>
+    <SimpleFooter />
+  </div>
+);
+
+export const NanoInstrumentSite = () => (
+  <div id="top" className="award-site award-nano-instrument">
+    <StandaloneNav />
+    <main>
+      <section className="award-hero award-instrument-hero">
+        <div className="award-hero-copy">
+          <p>Interactive Scientific Instrument</p>
+          <h1>The website behaves like the machine.</h1>
+          <span>
+            A live WebGL product hero for nanoWISS: visitors move around a glowing instrument,
+            reactor core, and material-control system.
+          </span>
+          <div className="standalone-actions">
+            <a href="#platform">Inspect system <Gauge size={18} /></a>
+            <a href="mailto:info@nanowiss.com">Contact <Mail size={18} /></a>
+          </div>
+        </div>
+        <div className="award-hero-stage">
+          <NanoInstrumentCanvas />
+          <div className="award-stage-caption">
+            <strong>Pointer-reactive reactor</strong>
+            <span>Three.js core, orbiting particles, glass geometry, and instrument floor grid.</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="platform" className="award-section award-console-grid">
+        <p className="standalone-kicker">Platform</p>
+        <h2>A control surface for nanoparticle decisions.</h2>
+        <div>
+          {[
+            ['Synthesis core', 'A central reactor metaphor for formulation, particle behavior, and iteration.', Microscope],
+            ['Scale-up console', 'Device geometry and floor grid make production-system thinking visible.', Gauge],
+            ['Application orbit', 'Health, biofilm, and AgroWISS applications move around the same scientific core.', Orbit],
+          ].map(([title, text, Icon]) => (
+            <article key={title}>
+              <Icon size={28} />
+              <strong>{title}</strong>
+              <span>{text}</span>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section id="applications" className="award-section award-proof-theater">
+        <div>
+          <p className="standalone-kicker">Applications</p>
+          <h2>Every section is staged like a product demo.</h2>
+        </div>
+        <div className="award-proof-cards">
+          {[
+            ['Health interfaces', labImage, 'Biofilm and respiratory research framed through careful validation.'],
+            ['Production systems', deviceImage, 'The nanoWISS production device becomes a premium interface object.'],
+            ['AgroWISS branch', agrowissProduct, 'Agricultural biotechnology sits as a productized application branch.'],
+          ].map(([title, image, text]) => (
+            <article key={title}>
+              <img src={image} alt={title} />
+              <strong>{title}</strong>
+              <span>{text}</span>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <EvidenceGrid />
+      <TeamStrip />
+      <ContactBand title="Build a scientific interface with nanoWISS" />
+    </main>
+    <SimpleFooter />
+  </div>
+);
+
 export const SignalObservatorySite = () => (
   <StandaloneShell
     variant="signal-observatory"
     eyebrow="Signal Observatory"
     title="Reading the signals hidden at particle scale."
-    text="A waveform and observatory-style replacement site that positions nanoWISS as a system for sensing, interpreting, and validating material behavior."
+    text="A waveform observatory homepage for nanoWISS, built around sensing, interpreting, and validating material behavior."
     visual={<WaveCanvas />}
   >
     <PlatformRows title="A measurement environment for material behavior." />

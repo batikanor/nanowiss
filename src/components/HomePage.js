@@ -1,7 +1,7 @@
 import React from 'react';
 import { Camera } from 'lucide-react';
-import backgroundImage from '../assets/nwiss_backgr.jpg';
-import mobileBackgroundImage from '../assets/nwiss_backgr_mobile.jpg';
+import backgroundImage from '../assets/agrowiss_team.png';
+import agrowissLogo from '../assets/agrowiss_logo.png';
 import Navbar from './Navbar'; // Import the Navbar component
 import Footer from './Footer';
 
@@ -11,23 +11,19 @@ const HomePage = () => {
       <Navbar /> {/* Include the Navbar */}
 
       <main className="flex-grow">
-        <div className="relative h-[32rem] overflow-hidden">
-          <img
-            src={backgroundImage} 
-            alt="Nanoparticle visualization" 
-            className="hidden w-full h-full object-cover animate-zoom-slide md:block"
+        <div className="relative h-[34rem] overflow-hidden">
+          <div
+            role="img"
+            aria-label="nanoWISS and AgroWISS team presenting agricultural biotechnology"
+            className="absolute inset-0 bg-cover bg-center md:animate-zoom-slide"
+            style={{ backgroundImage: `url(${backgroundImage})` }}
           />
-          <img
-            src={mobileBackgroundImage}
-            alt="Nanoparticle visualization"
-            className="h-full w-full object-cover md:hidden"
-          />
-          <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-            <div className="text-center text-white">
-              <p className="text-2xl md:text-xl sm:text-lg font-bold mb-4">
+          <div className="absolute inset-0 flex items-center justify-center bg-black/55">
+            <div className="px-4 text-center text-white">
+              <p className="mb-4 text-xl font-bold sm:text-2xl">
                 We make nanoparticles for a healthier world!
               </p>
-              <h1 className="text-2xl md:text-5xl sm:text-3xl font-extrabold">
+              <h1 className="text-4xl font-extrabold sm:text-5xl">
                 nanoWISS
               </h1>
             </div>
@@ -36,9 +32,9 @@ const HomePage = () => {
 
         {/* Two Column Layout: Our Mission and Latest Product */}
         <section className="py-16 bg-white">
-          <div className="container mx-auto flex flex-col md:flex-row items-center">
+          <div className="container mx-auto grid grid-cols-1 items-center gap-10 px-4 md:grid-cols-[1.05fr_0.95fr]">
             {/* Our Mission Section */}
-            <div className="w-full md:w-1/2 px-4">
+            <div>
               <h2 className="text-3xl font-bold mb-8 text-primary-dark">Our Mission</h2>
               <p className="text-xl sm:text-lg text-gray-700">
                 nanoWISS is a deep technology and social impact startup developing nanoparticle
@@ -47,10 +43,22 @@ const HomePage = () => {
                 and now also supports eco-friendly agricultural biotechnology through AgroWISS.
               </p>
             </div>
+            <div className="rounded-lg border border-gray-100 bg-white p-8 text-center shadow">
+              <p className="font-semibold uppercase tracking-wide text-secondary-light">AgroWISS</p>
+              <img
+                src={agrowissLogo}
+                alt="AgroWISS logo"
+                className="mx-auto mt-5 h-24 w-auto object-contain sm:h-32"
+              />
+              <p className="mx-auto mt-5 max-w-md text-gray-700">
+                AgroWISS carries nanoWISS nanoparticle know-how into sustainable crop protection
+                with chitosan-based, slow-release agricultural biotechnology.
+              </p>
+            </div>
           </div>
         </section>
 
-        <section className="py-16 bg-secondary-light">
+        <section id="technology" className="scroll-mt-24 bg-secondary-light py-16">
           <div className="container mx-auto text-center">
             <h2 className="text-3xl font-bold mb-8 text-white">Our Technology</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

@@ -6,17 +6,20 @@ import tubitakBiggLogo from '../assets/tubitak_bigg.png';
 import bogaziciTeknoparkLogo from '../assets/bogazici_teknopark.png';
 import turkiyeKalkinmaFonuLogo from '../assets/turkiye_kalkinma_fonu.png';
 
-const partners = [
+const nanoWissPartners = [
   {
     name: 'Social Impact Award Germany',
     logo: socialImpactAwardLogo,
-    href: 'https://socialimpactaward.net',
+    href: 'https://germany.socialimpactaward.net/project/nanowiss/',
   },
   {
     name: 'The Migrant Accelerator',
     logo: migrantAcceleratorLogo,
     href: 'https://themigrantaccelerator.com',
   },
+];
+
+const agroWissPartners = [
   {
     name: 'TUBITAK BIGG',
     logo: tubitakBiggLogo,
@@ -39,9 +42,17 @@ const sitemapLinks = [
   ['/products', 'Products'],
   ['/agrowiss', 'AgroWISS'],
   ['/team', 'Team'],
+  ['/social-impact', 'Social Impact'],
 ];
 
-const Footer = ({ showCredit = false }) => {
+const partnerSets = {
+  nanowiss: nanoWissPartners,
+  agrowiss: agroWissPartners,
+};
+
+const Footer = ({ showCredit = false, partnerSet = 'nanowiss' }) => {
+  const partners = partnerSets[partnerSet] || [];
+
   return (
     <footer className="bg-primary-dark text-white">
       <section className="border-b border-white/10 py-10">
@@ -74,29 +85,31 @@ const Footer = ({ showCredit = false }) => {
         </div>
       </section>
 
-      <section className="border-b border-white/10 py-10">
-        <div className="container mx-auto px-4">
-          <h2 className="mb-6 text-center text-2xl font-bold">Our Partners</h2>
-          <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5">
-            {partners.map((partner) => (
-              <a
-                key={partner.name}
-                href={partner.href}
-                target="_blank"
-                rel="noreferrer"
-                className="flex h-28 items-center justify-center rounded-lg bg-white p-4 transition hover:-translate-y-1 hover:shadow-lg"
-                aria-label={partner.name}
-              >
-                <img
-                  src={partner.logo}
-                  alt={partner.name}
-                  className="max-h-20 w-full object-contain"
-                />
-              </a>
-            ))}
+      {partners.length > 0 && (
+        <section className="border-b border-white/10 py-10">
+          <div className="container mx-auto px-4">
+            <h2 className="mb-6 text-center text-2xl font-bold">Our Partners</h2>
+            <div className="mx-auto grid max-w-4xl grid-cols-2 gap-4 sm:grid-cols-3">
+              {partners.map((partner) => (
+                <a
+                  key={partner.name}
+                  href={partner.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="flex h-28 items-center justify-center rounded-lg bg-white p-4 transition hover:-translate-y-1 hover:shadow-lg"
+                  aria-label={partner.name}
+                >
+                  <img
+                    src={partner.logo}
+                    alt={partner.name}
+                    className="max-h-20 w-full object-contain"
+                  />
+                </a>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
 
       <div className="container mx-auto px-4 py-8 text-center">
         <p>&copy; 2026 nanoWISS. All rights reserved.</p>

@@ -44,6 +44,8 @@ const milestones = [
     description:
       'nanoWISS was named a finalist for the Social Impact Award Germany, recognizing its social-impact potential.',
     logo: socialImpactAwardLogo,
+    logoHref: 'https://germany.socialimpactaward.net/project/nanowiss/',
+    storyHref: '/social-impact',
   },
   {
     icon: Building2,
@@ -117,14 +119,38 @@ const ProductsPage = () => {
                   <article key={milestone.title} className="rounded-lg bg-secondary-dark p-6 shadow">
                     <div className="flex h-16 items-center gap-4">
                       <Icon size={34} className="shrink-0 text-primary-light" />
-                      <img
-                        src={milestone.logo}
-                        alt=""
-                        className="max-h-14 max-w-[11rem] rounded bg-white object-contain p-2"
-                      />
+                      {milestone.logoHref ? (
+                        <a
+                          href={milestone.logoHref}
+                          target="_blank"
+                          rel="noreferrer"
+                          aria-label={`${milestone.title} project page`}
+                          className="rounded bg-white p-2 transition hover:-translate-y-0.5 hover:shadow-lg"
+                        >
+                          <img
+                            src={milestone.logo}
+                            alt=""
+                            className="max-h-14 max-w-[11rem] object-contain"
+                          />
+                        </a>
+                      ) : (
+                        <img
+                          src={milestone.logo}
+                          alt=""
+                          className="max-h-14 max-w-[11rem] rounded bg-white object-contain p-2"
+                        />
+                      )}
                     </div>
                     <h3 className="mt-5 text-xl font-bold">{milestone.title}</h3>
                     <p className="mt-3 text-white/85">{milestone.description}</p>
+                    {milestone.storyHref && (
+                      <a
+                        href={milestone.storyHref}
+                        className="mt-5 inline-flex rounded-full border border-white/25 px-4 py-2 text-sm font-semibold text-white transition hover:border-primary-light hover:text-primary-light"
+                      >
+                        Read the story
+                      </a>
+                    )}
                   </article>
                 );
               })}

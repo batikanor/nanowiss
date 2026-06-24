@@ -1,7 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import * as THREE from 'three';
 import {
-  ArrowLeft,
   ArrowRight,
   Atom,
   Blocks,
@@ -16,7 +15,6 @@ import {
   Timer,
   Trophy,
 } from 'lucide-react';
-import { Link } from 'react-router-dom';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import labImage from '../assets/lab_nanoparticle.png';
@@ -24,40 +22,6 @@ import deviceImage from '../assets/nanoparticle_device.png';
 import agrowissProduct from '../assets/agrowiss_product.png';
 import productImage from '../assets/product1.png';
 import agrowissTeam from '../assets/agrowiss_team.png';
-
-const variantLinks = [
-  ['/alternative/showcase', 'Showcase'],
-  ['/alternative/constellation', 'Constellation'],
-  ['/alternative/control-room', 'Control Room'],
-  ['/alternative/agro-lab', 'Agro Lab'],
-  ['/alternative/clinical', 'Clinical'],
-  ['/alternative/orbital-reactor', '3D Reactor'],
-  ['/alternative/specimen-vault', 'Specimen Vault'],
-  ['/alternative/launch-sequence', 'Launch Sequence'],
-  ['/alternative/biofilm-breaker', 'Biofilm Breaker'],
-  ['/alternative/splat-lab', 'Splat Lab'],
-  ['/alternative/impact-portal', 'Impact Portal'],
-];
-
-const HiddenNav = ({ active, tone = 'dark' }) => (
-  <div className="flex flex-wrap gap-2">
-    {variantLinks.map(([href, label]) => (
-      <Link
-        key={href}
-        to={href}
-        className={`rounded-full border px-4 py-2 text-sm font-bold transition ${
-          active === href
-            ? 'border-primary-light bg-primary-light text-white'
-            : tone === 'light'
-              ? 'border-[#422768]/15 text-[#422768]/70 hover:border-primary hover:text-primary'
-              : 'border-white/20 text-white/75 hover:border-primary-light hover:text-primary-light'
-        }`}
-      >
-        {label}
-      </Link>
-    ))}
-  </div>
-);
 
 const ThreeReactorCanvas = () => {
   const mountRef = useRef(null);
@@ -199,19 +163,12 @@ export const AlternativeOrbitalReactorPage = () => (
       <section className="relative overflow-hidden bg-[radial-gradient(circle_at_70%_35%,#422768_0%,#1a1a2e_45%,#090312_100%)]">
         <div className="container mx-auto grid min-h-[46rem] grid-cols-1 items-center gap-8 px-4 py-16 lg:grid-cols-[0.82fr_1.18fr]">
           <div>
-            <Link to="/alternative" className="inline-flex items-center gap-2 rounded-full border border-white/20 px-4 py-2 text-sm font-bold text-white/80 hover:border-primary-light hover:text-primary-light">
-              <ArrowLeft size={16} />
-              Back to Alternative
-            </Link>
-            <p className="mt-8 font-bold uppercase tracking-wide text-primary-light">Three.js Concept</p>
+            <p className="font-bold uppercase tracking-wide text-primary-light">Live WebGL Product Hero</p>
             <h1 className="mt-4 text-4xl font-extrabold md:text-6xl">Orbital Reactor</h1>
             <p className="mt-6 max-w-xl text-lg text-white/72">
               A live WebGL product hero for nanoWISS: the nanoparticle platform becomes a responsive,
-              explorable reactor instead of a static marketing card.
+              explorable reactor for product, science, and partner storytelling.
             </p>
-            <div className="mt-8">
-              <HiddenNav active="/alternative/orbital-reactor" />
-            </div>
           </div>
           <div className="three-reactor-shell">
             <ThreeReactorCanvas />
@@ -270,7 +227,7 @@ const vaultItems = [
     title: 'Application Pipeline',
     image: productImage,
     label: 'Specimen 04',
-    text: 'A pipeline object: health, biofilm, and disinfection concepts framed carefully.',
+    text: 'A pipeline object: health, biofilm, and disinfection pathways framed carefully.',
   },
 ];
 
@@ -280,20 +237,15 @@ export const AlternativeSpecimenVaultPage = () => (
     <main>
       <section className="vault-hero">
         <div className="container mx-auto px-4 py-16">
-          <Link to="/alternative" className="inline-flex items-center gap-2 rounded-full border border-[#422768]/20 px-4 py-2 text-sm font-bold text-[#422768] hover:border-[#422768]">
-            <ArrowLeft size={16} />
-            Back to Alternative
-          </Link>
-          <div className="mt-14 grid grid-cols-1 items-end gap-8 lg:grid-cols-[1.2fr_0.8fr]">
+          <div className="grid grid-cols-1 items-end gap-8 lg:grid-cols-[1.2fr_0.8fr]">
             <div>
-              <p className="font-bold uppercase tracking-wide text-primary">Editorial Concept</p>
+              <p className="font-bold uppercase tracking-wide text-primary">Product Specimen Archive</p>
               <h1 className="mt-4 text-5xl font-extrabold md:text-7xl">Specimen Vault</h1>
               <p className="mt-6 max-w-3xl text-xl text-[#4f3f63]">
-                A museum-like product archive that feels premium, sparse, and tactile. It trades
-                the usual startup layout for a curated science collection.
+                A museum-like nanoWISS homepage that feels premium, sparse, and tactile. Products,
+                platform systems, and evidence are arranged as a curated science collection.
               </p>
             </div>
-            <HiddenNav active="/alternative/specimen-vault" tone="light" />
           </div>
         </div>
       </section>
@@ -327,21 +279,14 @@ export const AlternativeLaunchSequencePage = () => (
     <Navbar />
     <main className="launch-page">
       <section className="container mx-auto px-4 py-16">
-        <Link to="/alternative" className="inline-flex items-center gap-2 rounded-full border border-white/20 px-4 py-2 text-sm font-bold text-white/80 hover:border-primary-light hover:text-primary-light">
-          <ArrowLeft size={16} />
-          Back to Alternative
-        </Link>
         <div className="mt-12 grid grid-cols-1 gap-8 lg:grid-cols-[0.85fr_1.15fr]">
           <div className="lg:sticky lg:top-8 lg:self-start">
-            <p className="font-bold uppercase tracking-wide text-primary-light">Scrollytelling Concept</p>
+            <p className="font-bold uppercase tracking-wide text-primary-light">Scrollytelling Homepage</p>
             <h1 className="mt-4 text-4xl font-extrabold md:text-6xl">Launch Sequence</h1>
             <p className="mt-6 text-lg text-white/70">
-              A guided narrative version of the website. Instead of asking visitors to choose a page,
-              it walks them through the business story in a cinematic sequence.
+              A guided nanoWISS narrative that walks visitors through the business story in a
+              cinematic sequence, from scientific origin to applied impact.
             </p>
-            <div className="mt-8">
-              <HiddenNav active="/alternative/launch-sequence" />
-            </div>
           </div>
           <div className="launch-sequence">
             {sequenceSteps.map(([number, title, text, Icon]) => (
@@ -359,7 +304,7 @@ export const AlternativeLaunchSequencePage = () => (
               <img src={agrowissTeam} alt="nanoWISS and AgroWISS team" />
               <div>
                 <p>Final Frame</p>
-                <h2>One platform, multiple planetary-health directions.</h2>
+                <h2>One platform, multiple planetary-health pathways.</h2>
               </div>
             </article>
           </div>
@@ -749,21 +694,14 @@ export const AlternativeBiofilmBreakerPage = () => {
       <Navbar />
       <main className="game-page">
         <section className="container mx-auto px-4 py-16">
-          <Link to="/alternative" className="inline-flex items-center gap-2 rounded-full border border-white/20 px-4 py-2 text-sm font-bold text-white/80 hover:border-primary-light hover:text-primary-light">
-            <ArrowLeft size={16} />
-            Back to Alternative
-          </Link>
           <div className="mt-10 grid grid-cols-1 gap-8 xl:grid-cols-[0.72fr_1.28fr]">
             <div className="game-brief">
-              <p className="font-bold uppercase tracking-wide text-primary-light">Playable Concept</p>
+              <p className="font-bold uppercase tracking-wide text-primary-light">Playable Product System</p>
               <h1>Biofilm Breaker</h1>
               <p>
-                An award-style interactive product game: steer the nanoWISS particle through a
+                A live nanoWISS product game: steer a nanoparticle through a
                 biofilm field, collect active carriers, and avoid red resistance nodes.
               </p>
-              <div className="mt-8">
-                <HiddenNav active="/alternative/biofilm-breaker" />
-              </div>
               <div className="game-stats">
                 <div><span>Carriers</span><strong>{stats.score}</strong></div>
                 <div><span>Purity</span><strong>{stats.purity}%</strong></div>
@@ -792,20 +730,12 @@ export const AlternativeSplatLabPage = () => (
     <main className="splat-page">
       <section className="container mx-auto grid min-h-[48rem] grid-cols-1 items-center gap-8 px-4 py-16 lg:grid-cols-[0.78fr_1.22fr]">
         <div>
-          <Link to="/alternative" className="inline-flex items-center gap-2 rounded-full border border-white/20 px-4 py-2 text-sm font-bold text-white/80 hover:border-primary-light hover:text-primary-light">
-            <ArrowLeft size={16} />
-            Back to Alternative
-          </Link>
-          <p className="mt-8 font-bold uppercase tracking-wide text-primary-light">Gaussian Splat Inspired</p>
+          <p className="font-bold uppercase tracking-wide text-primary-light">Gaussian Splat Inspired</p>
           <h1 className="mt-4 text-4xl font-extrabold md:text-6xl">Splat Lab</h1>
           <p className="mt-6 max-w-xl text-lg text-white/72">
-            A lightweight, client-side point-cloud scene inspired by Gaussian splatting. It turns
-            AgroWISS-style product material into a luminous scanned object without shipping a heavy
-            trained splat dataset.
+            A live WebGL product hero for nanoWISS: client-side point-cloud rendering turns material
+            systems into a luminous scanned object without shipping a heavy trained splat dataset.
           </p>
-          <div className="mt-8">
-            <HiddenNav active="/alternative/splat-lab" />
-          </div>
           <div className="splat-notes">
             <span><ScanLine size={18} /> 5.5k translucent splats</span>
             <span><Sparkles size={18} /> Pointer-reactive scan</span>
@@ -850,19 +780,14 @@ export const AlternativeImpactPortalPage = () => (
     <Navbar />
     <main className="portal-page">
       <section className="container mx-auto px-4 py-16">
-        <Link to="/alternative" className="inline-flex items-center gap-2 rounded-full border border-white/20 px-4 py-2 text-sm font-bold text-white/80 hover:border-primary-light hover:text-primary-light">
-          <ArrowLeft size={16} />
-          Back to Alternative
-        </Link>
         <div className="portal-hero">
           <div className="portal-copy">
-            <p>Immersive Boardroom Concept</p>
+            <p>Immersive Boardroom</p>
             <h1>Impact Portal</h1>
             <span>
-              A bolder investor-facing room where product, proof, team, and mission behave like
-              orbiting evidence panels instead of ordinary website sections.
+              A bolder nanoWISS homepage where product, proof, team, and mission behave like
+              orbiting evidence panels for investor and partner conversations.
             </span>
-            <HiddenNav active="/alternative/impact-portal" />
           </div>
           <div className="portal-stage">
             <div className="portal-ring portal-ring-a" />

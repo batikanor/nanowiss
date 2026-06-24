@@ -52,7 +52,7 @@ const hiddenConcepts = [
   {
     title: 'Launch Sequence',
     path: '/alternative/launch-sequence',
-    description: 'A cinematic scrollytelling version of the nanoWISS business story.',
+    description: 'A cinematic scrollytelling homepage for the nanoWISS business story.',
   },
   {
     title: 'Biofilm Breaker',
@@ -72,52 +72,62 @@ const hiddenConcepts = [
   {
     title: 'Neon Research City',
     path: '/alternative/neon-research-city',
-    description: 'Standalone replacement site: procedural 3D research district for nanoWISS capabilities.',
+    description: 'A procedural 3D research district for nanoWISS capabilities.',
   },
   {
     title: 'Particle Quest',
     path: '/alternative/particle-quest',
-    description: 'Standalone replacement site: a polished playable scientific instrument and product narrative.',
+    description: 'A polished playable scientific homepage with instrument-like product storytelling.',
   },
   {
     title: 'AgroOrbit',
     path: '/alternative/agro-orbit',
-    description: 'Standalone replacement site: AgroWISS-first field intelligence with orbiting growth systems.',
+    description: 'A nanoWISS agriculture homepage with orbiting field intelligence and growth systems.',
   },
   {
     title: 'Clinical Eclipse',
     path: '/alternative/clinical-eclipse',
-    description: 'Standalone replacement site: dark medical-science editorial around biofilm interfaces.',
+    description: 'A dark medical-science homepage around biofilm interfaces and validation pathways.',
   },
   {
     title: 'Material Atlas',
     path: '/alternative/material-atlas',
-    description: 'Standalone replacement site: data-visualization atlas of materials, evidence, and applications.',
+    description: 'A data-visualization atlas of nanoWISS materials, evidence, and applications.',
   },
   {
     title: 'Breath Signal',
     path: '/alternative/breath-signal',
-    description: 'Standalone replacement site: calm respiratory delivery map with signal and lung visuals.',
+    description: 'A calm respiratory delivery homepage with signal paths and lung-inspired visuals.',
   },
   {
     title: 'Nano Cinema',
     path: '/alternative/nano-cinema',
-    description: 'Standalone replacement site: cinematic scroll narrative with film-strip product storytelling.',
+    description: 'A cinematic scroll homepage with film-strip product storytelling.',
   },
   {
     title: 'Founder Lab',
     path: '/alternative/founder-lab',
-    description: 'Standalone replacement site: premium editorial lab notebook centered on the team.',
+    description: 'A premium editorial lab notebook centered on the nanoWISS team.',
   },
   {
     title: 'Product Theater',
     path: '/alternative/product-theater',
-    description: 'Standalone replacement site: premium product showroom for nanoWISS and AgroWISS systems.',
+    description: 'A premium product showroom for nanoWISS platform systems.',
   },
   {
     title: 'Signal Observatory',
     path: '/alternative/signal-observatory',
-    description: 'Standalone replacement site: waveform and instrumentation interface for nanoparticle science.',
+    description: 'A waveform and instrumentation homepage for nanoparticle science.',
+  },
+  {
+    title: 'Splat Garden',
+    path: '/alternative/splat-garden',
+    description: 'A Gaussian-splat-inspired product scan for nanoWISS material systems.',
+  },
+  {
+    title: 'Nano Instrument',
+    path: '/alternative/nano-instrument',
+    description: 'A Three.js scientific homepage with a pointer-reactive reactor.',
   },
 ];
 
@@ -132,13 +142,13 @@ const AlternativePage = () => {
           <div className="absolute inset-0 bg-[#0a1f1a]/70" />
           <div className="container relative mx-auto flex min-h-[34rem] items-center px-4 py-16 text-white">
             <div className="max-w-3xl">
-              <p className="font-semibold uppercase tracking-wide text-[#9ee6bf]">Alternative Business UI</p>
+              <p className="font-semibold uppercase tracking-wide text-[#9ee6bf]">nanoWISS Homepage Lab</p>
               <h1 className="mt-4 text-4xl font-extrabold md:text-6xl">
                 Nanoparticle platforms for medical resilience and sustainable agriculture.
               </h1>
               <p className="mt-6 text-lg text-white/85 md:text-xl">
-                This version positions nanoWISS as the parent deep-tech platform and AgroWISS as the
-                agriculture venture, making the commercial story easier to understand for partners,
+                nanoWISS connects deep-tech nanoparticle science with focused application paths,
+                making the platform, product logic, proof, and team easier to understand for partners,
                 investors, and grant reviewers.
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
@@ -202,10 +212,10 @@ const AlternativePage = () => {
             <div>
               <p className="font-semibold uppercase tracking-wide text-primary-light">New Product Theater</p>
               <h2 className="mt-3 text-3xl font-extrabold md:text-4xl">
-                See nanoWISS concepts with animated, high-detail product storytelling.
+                See nanoWISS technologies with animated, high-detail product storytelling.
               </h2>
               <p className="mt-5 max-w-3xl text-lg text-white/75">
-                The showcase page adds multiple visual variants for explaining how nanoparticle
+                The showcase page adds multiple visual systems for explaining how nanoparticle
                 synthesis, production systems, and AgroWISS delivery technologies work.
               </p>
             </div>
@@ -222,9 +232,9 @@ const AlternativePage = () => {
         <section className="bg-[#12051f] py-16 text-white">
           <div className="container mx-auto px-4">
             <div className="mx-auto max-w-3xl text-center">
-              <p className="font-semibold uppercase tracking-wide text-primary-light">Hidden Concept Routes</p>
+              <p className="font-semibold uppercase tracking-wide text-primary-light">Private Homepage Routes</p>
               <h2 className="mt-3 text-3xl font-extrabold md:text-4xl">
-                More experimental directions, each with a different visual language.
+                Complete nanoWISS homepage experiences, each with a different visual language.
               </h2>
             </div>
             <div className="mt-10 grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3">
@@ -237,7 +247,7 @@ const AlternativePage = () => {
                   <p className="text-sm font-bold uppercase tracking-wide text-primary-light">{concept.title}</p>
                   <p className="mt-3 text-white/72">{concept.description}</p>
                   <span className="mt-5 inline-flex items-center gap-2 font-bold text-white">
-                    Open slug
+                    View homepage
                     <ArrowRight size={16} className="transition group-hover:translate-x-1" />
                   </span>
                 </Link>
@@ -249,14 +259,13 @@ const AlternativePage = () => {
         <section className="bg-white py-16">
           <div className="container mx-auto grid grid-cols-1 gap-10 px-4 lg:grid-cols-[0.9fr_1.1fr]">
             <div>
-              <p className="font-semibold uppercase tracking-wide text-[#276a4a]">Why This Alternative Works</p>
+              <p className="font-semibold uppercase tracking-wide text-[#276a4a]">Why This Homepage Works</p>
               <h2 className="mt-3 text-3xl font-extrabold md:text-4xl">
                 It separates brand architecture from product detail.
               </h2>
               <p className="mt-5 text-lg text-[#4f625a]">
-                The original site is useful for presenting pages. This alternative is optimized for
-                business scanning: what the platform does, where AgroWISS fits, what proof exists, and
-                what action a partner should take next.
+                The page is optimized for business scanning: what the platform does, where each
+                application fits, what proof exists, and what action a partner should take next.
               </p>
             </div>
             <div className="rounded-lg bg-[#eef7f0] p-6">

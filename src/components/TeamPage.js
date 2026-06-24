@@ -87,7 +87,7 @@ const team = [
     ],
   },
   {
-    name: 'Ceyda Öner',
+    name: 'Ceyda Önder',
     role: 'B.Sc. Chemical Engineer',
     image: CeydaImage,
     bio: [

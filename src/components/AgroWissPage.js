@@ -7,6 +7,11 @@ import agrowissProduct from '../assets/agrowiss_product.png';
 import agrowissTeam from '../assets/agrowiss_team.png';
 import tubitakBiggLogo from '../assets/tubitak_bigg.png';
 import bogaziciTeknoparkLogo from '../assets/bogazici_teknopark.png';
+import turkiyeKalkinmaFonuLogo from '../assets/turkiye_kalkinma_fonu.png';
+import FeyzaImage from '../assets/team_feyza_thumb.jpg';
+import SelenImage from '../assets/team_selen_thumb.jpg';
+import NisaImage from '../assets/team_nisa_thumb.jpg';
+import ElifImage from '../assets/team_elif_thumb.jpg';
 
 const highlights = [
   {
@@ -29,6 +34,13 @@ const highlights = [
   },
 ];
 
+const agroWissTeamMembers = [
+  ['Zeynep Feyza Atabey', 'CSO of AgroWISS', FeyzaImage],
+  ['Selen Ozdinc', 'CFO of AgroWISS', SelenImage],
+  ['Nisa Tan', 'CEO of AgroWISS', NisaImage],
+  ['Elif Kaman', 'CMO of AgroWISS', ElifImage],
+];
+
 const AgroWissPage = () => {
   return (
     <div className="min-h-screen bg-background">
@@ -37,7 +49,7 @@ const AgroWissPage = () => {
         <section className="bg-white">
           <div className="container mx-auto grid min-h-[34rem] grid-cols-1 items-center gap-10 px-4 py-16 lg:grid-cols-2">
             <div>
-              <img src={agrowissLogo} alt="AgroWISS" className="mb-8 h-20 w-auto object-contain" />
+              <img src={agrowissLogo} alt="AgroWISS" className="mb-8 h-24 w-auto object-contain sm:h-32" />
               <p className="font-semibold uppercase tracking-wide text-primary-dark">
                 AGROWISS BIOTECHNOLOGY RESEARCH INC.
               </p>
@@ -99,7 +111,40 @@ const AgroWissPage = () => {
                     className="max-h-full object-contain"
                   />
                 </div>
+                <div className="flex h-24 w-44 items-center justify-center rounded-lg bg-white p-4">
+                  <img
+                    src={turkiyeKalkinmaFonuLogo}
+                    alt="Turkiye Kalkinma Fonu"
+                    className="max-h-full object-contain"
+                  />
+                </div>
               </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="bg-secondary-dark py-16 text-white">
+          <div className="container mx-auto px-4">
+            <div className="mx-auto max-w-3xl text-center">
+              <p className="font-semibold uppercase tracking-wide text-primary-light">AgroWISS Team</p>
+              <h2 className="mt-2 text-3xl font-bold text-white">
+                Built by the four-person team carrying nanoWISS science into agriculture.
+              </h2>
+            </div>
+            <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+              {agroWissTeamMembers.map(([name, role, image]) => (
+                <article key={name} className="rounded-lg bg-white p-5 text-center shadow">
+                  <img
+                    src={image}
+                    alt={name}
+                    loading="eager"
+                    decoding="async"
+                    className="mx-auto h-36 w-36 rounded-full border-4 border-primary-light object-cover"
+                  />
+                  <h3 className="mt-4 font-bold text-primary-dark">{name}</h3>
+                  <p className="mt-1 text-sm text-gray-600">{role}</p>
+                </article>
+              ))}
             </div>
           </div>
         </section>
@@ -129,7 +174,7 @@ const AgroWissPage = () => {
           </div>
         </section>
       </main>
-      <Footer />
+      <Footer partnerSet="agrowiss" />
     </div>
   );
 };

@@ -22,22 +22,14 @@ const Navbar = () => {
                 Home
               </Link>
             </li>
-            {/* <li>
-              <Link
-                to="/story"
-                className={`text-white hover:text-primary-light ${isActive('/story') ? 'font-bold text-primary-light' : ''}`}
-              >
-                Story
-              </Link>
-            </li>
             <li>
-              <Link
-                to="/technology"
-                className={`text-white hover:text-primary-light ${isActive('/technology') ? 'font-bold text-primary-light' : ''}`}
+              <a
+                href="/#technology"
+                className="text-white hover:text-primary-light"
               >
-                Technology
-              </Link>
-            </li> */}
+                Our Technology
+              </a>
+            </li>
             <li>
               <Link
                 to="/team"

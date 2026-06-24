@@ -1,6 +1,5 @@
 import React from 'react';
 import {
-  ArrowLeft,
   Activity,
   Beaker,
   Cpu,
@@ -10,7 +9,6 @@ import {
   ShieldCheck,
   Sparkles,
 } from 'lucide-react';
-import { Link } from 'react-router-dom';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import deviceImage from '../assets/nanoparticle_device.png';
@@ -21,7 +19,7 @@ import productImage from '../assets/product1.png';
 const variants = {
   constellation: {
     title: 'nanoWISS Constellation',
-    kicker: 'Hidden Concept 01',
+    kicker: 'Spatial Product Map',
     subtitle:
       'A cosmic product map for presenting the platform as a connected universe of nanoparticle applications.',
     className: 'concept-constellation',
@@ -32,7 +30,7 @@ const variants = {
   },
   'control-room': {
     title: 'Autonomous Production Room',
-    kicker: 'Hidden Concept 02',
+    kicker: 'Production Command Center',
     subtitle:
       'A command-center layout for explaining scale-up, automation, batch control, and production reliability.',
     className: 'concept-control',
@@ -43,9 +41,9 @@ const variants = {
   },
   'agro-lab': {
     title: 'AgroWISS Release Garden',
-    kicker: 'Hidden Concept 03',
+    kicker: 'Agricultural Release System',
     subtitle:
-      'A living-field concept that makes the slow-release crop protection mechanism feel immediate and tangible.',
+      'A living-field homepage that makes the slow-release crop protection mechanism feel immediate and tangible.',
     className: 'concept-agro',
     accent: '#9ee6bf',
     image: agrowissProduct,
@@ -54,7 +52,7 @@ const variants = {
   },
   clinical: {
     title: 'Biofilm Barrier Lab',
-    kicker: 'Hidden Concept 04',
+    kicker: 'Biofilm Interface System',
     subtitle:
       'A clinical-facing explainer that shows nanoparticles moving through a resistant biofilm environment.',
     className: 'concept-clinical',
@@ -65,42 +63,10 @@ const variants = {
   },
 };
 
-const routes = [
-  ['constellation', 'Constellation'],
-  ['control-room', 'Control Room'],
-  ['agro-lab', 'Agro Lab'],
-  ['clinical', 'Clinical'],
-  ['orbital-reactor', '3D Reactor'],
-  ['specimen-vault', 'Vault'],
-  ['launch-sequence', 'Launch'],
-  ['biofilm-breaker', 'Game'],
-  ['splat-lab', 'Splat Lab'],
-  ['impact-portal', 'Portal'],
-  ['showcase', 'Showcase'],
-];
-
 const FloatingMolecules = ({ count = 18 }) => (
   <div className="concept-molecules" aria-hidden="true">
     {Array.from({ length: count }).map((_, index) => (
       <span key={index} className={`concept-molecule concept-molecule-${(index % 12) + 1}`} />
-    ))}
-  </div>
-);
-
-const VariantRail = ({ active }) => (
-  <div className="flex flex-wrap gap-2">
-    {routes.map(([slug, label]) => (
-      <Link
-        key={slug}
-        to={`/alternative/${slug}`}
-        className={`rounded-full border px-4 py-2 text-sm font-bold transition ${
-          active === slug
-            ? 'border-primary-light bg-primary-light text-white'
-            : 'border-white/20 text-white/75 hover:border-primary-light hover:text-primary-light'
-        }`}
-      >
-        {label}
-      </Link>
     ))}
   </div>
 );
@@ -203,19 +169,9 @@ const AlternativeConceptPage = ({ slug }) => {
           <div className="concept-backdrop" />
           <div className="container relative mx-auto grid min-h-[44rem] grid-cols-1 items-center gap-10 px-4 py-16 lg:grid-cols-[0.85fr_1.15fr]">
             <div>
-              <Link
-                to="/alternative"
-                className="inline-flex items-center gap-2 rounded-full border border-white/25 px-4 py-2 text-sm font-bold text-white/80 transition hover:border-primary-light hover:text-primary-light"
-              >
-                <ArrowLeft size={16} />
-                Back to Alternative
-              </Link>
-              <p className="mt-8 font-bold uppercase tracking-wide text-primary-light">{variant.kicker}</p>
+              <p className="font-bold uppercase tracking-wide text-primary-light">{variant.kicker}</p>
               <h1 className="mt-4 text-4xl font-extrabold md:text-6xl">{variant.title}</h1>
               <p className="mt-6 max-w-2xl text-lg text-white/72">{variant.subtitle}</p>
-              <div className="mt-8">
-                <VariantRail active={slug} />
-              </div>
             </div>
             <Scene slug={slug} variant={variant} />
           </div>
@@ -249,7 +205,7 @@ const AlternativeConceptPage = ({ slug }) => {
                 regulatory claims.
               </SpecPanel>
               <SpecPanel title="Business Use" icon={Activity}>
-                Best for pitch decks, partner walkthroughs, investor calls, and landing-page A/B tests.
+                Built for pitch decks, partner walkthroughs, investor calls, and product demonstrations.
               </SpecPanel>
             </div>
           </div>
@@ -257,13 +213,10 @@ const AlternativeConceptPage = ({ slug }) => {
 
         <section className="bg-[#0d0318] py-16">
           <div className="container mx-auto px-4">
-            <p className="text-center font-bold uppercase tracking-wide text-primary-light">Route Slugs</p>
+            <p className="text-center font-bold uppercase tracking-wide text-primary-light">nanoWISS Platform</p>
             <h2 className="mx-auto mt-3 max-w-3xl text-center text-3xl font-extrabold md:text-5xl">
-              Hidden concepts for fast creative comparison
+              A complete product story built for partner walkthroughs
             </h2>
-            <div className="mt-10 flex justify-center">
-              <VariantRail active={slug} />
-            </div>
           </div>
         </section>
       </main>

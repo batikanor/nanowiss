@@ -3,6 +3,7 @@ import HomePage from './components/HomePage';
 import TeamPage from './components/TeamPage'; // Import the TeamPage
 import ProductsPage from './components/ProductsPage'; // Import the ProductsPage
 import AgroWissPage from './components/AgroWissPage';
+import SocialImpactPage from './components/SocialImpactPage';
 import AlternativePage from './components/AlternativePage';
 import AlternativeShowcasePage from './components/AlternativeShowcasePage';
 import {
@@ -26,10 +27,12 @@ import {
   FounderLabSite,
   MaterialAtlasSite,
   NanoCinemaSite,
+  NanoInstrumentSite,
   NeonResearchCitySite,
   ParticleQuestSite,
   ProductTheaterSite,
   SignalObservatorySite,
+  SplatGardenSite,
 } from './components/AlternativeStandaloneSites';
 import Seo from './components/Seo';
 import { BrowserRouter as Router, Route, Routes, Navigate, useLocation } from 'react-router-dom';
@@ -63,13 +66,20 @@ const pageSeo = {
     keywords:
       'AgroWISS, agricultural biotechnology, chitosan nanoparticles, crop protection, slow release plant protection',
   },
+  '/social-impact': {
+    title: 'Social Impact Story | nanoWISS',
+    description:
+      'Read the nanoWISS social impact story, from health-focused nanoparticle research to sustainable agricultural biotechnology through AgroWISS.',
+    keywords:
+      'nanoWISS social impact, Social Impact Award Germany, biotechnology impact, AgroWISS sustainability, nanoparticle research',
+  },
 };
 
 const alternativeSeo = {
-  title: 'Alternative Design Concepts | nanoWISS',
+  title: 'nanoWISS Interactive Product Homepage | nanoWISS',
   description:
-    'Hidden nanoWISS concept routes for experimental storytelling, interactive product visuals, and alternative interface directions.',
-  keywords: 'nanoWISS alternative concepts, Three.js product showcase, interactive biotechnology website',
+    'nanoWISS interactive homepage routes for WebGL product storytelling, scientific interfaces, and deep-tech brand exploration.',
+  keywords: 'nanoWISS WebGL product showcase, interactive biotechnology website, nanoparticle platform homepage',
   robots: 'noindex, nofollow',
 };
 
@@ -105,6 +115,7 @@ function AppRoutes() {
         <Route path="/team" element={<TeamPage />} />
         <Route path="/products" element={<ProductsPage />} />
         <Route path="/agrowiss" element={<AgroWissPage />} />
+        <Route path="/social-impact" element={<SocialImpactPage />} />
         <Route path="/alternative" element={<AlternativePage />} />
         <Route path="/alternative/showcase" element={<AlternativeShowcasePage />} />
         <Route path="/alternative/constellation" element={<AlternativeConstellationPage />} />
@@ -127,10 +138,13 @@ function AppRoutes() {
         <Route path="/alternative/founder-lab" element={<FounderLabSite />} />
         <Route path="/alternative/product-theater" element={<ProductTheaterSite />} />
         <Route path="/alternative/signal-observatory" element={<SignalObservatorySite />} />
+        <Route path="/alternative/splat-garden" element={<SplatGardenSite />} />
+        <Route path="/alternative/nano-instrument" element={<NanoInstrumentSite />} />
         <Route path="/nanowiss" element={<HomePage />} />
         <Route path="/nanowiss/team" element={<TeamPage />} />
         <Route path="/nanowiss/products" element={<ProductsPage />} />
         <Route path="/nanowiss/agrowiss" element={<AgroWissPage />} />
+        <Route path="/nanowiss/social-impact" element={<SocialImpactPage />} />
         <Route path="/nanowiss/alternative" element={<AlternativePage />} />
         <Route path="/nanowiss/alternative/showcase" element={<AlternativeShowcasePage />} />
         <Route path="/nanowiss/alternative/constellation" element={<AlternativeConstellationPage />} />
@@ -153,6 +167,8 @@ function AppRoutes() {
         <Route path="/nanowiss/alternative/founder-lab" element={<FounderLabSite />} />
         <Route path="/nanowiss/alternative/product-theater" element={<ProductTheaterSite />} />
         <Route path="/nanowiss/alternative/signal-observatory" element={<SignalObservatorySite />} />
+        <Route path="/nanowiss/alternative/splat-garden" element={<SplatGardenSite />} />
+        <Route path="/nanowiss/alternative/nano-instrument" element={<NanoInstrumentSite />} />
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </>

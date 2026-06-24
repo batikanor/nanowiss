@@ -1,6 +1,5 @@
 import React from 'react';
 import {
-  ArrowLeft,
   Beaker,
   CircuitBoard,
   Droplets,
@@ -13,7 +12,6 @@ import {
   Sparkles,
   TimerReset,
 } from 'lucide-react';
-import { Link } from 'react-router-dom';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import deviceImage from '../assets/nanoparticle_device.png';
@@ -23,7 +21,7 @@ import productImage from '../assets/product1.png';
 
 const productVariants = [
   {
-    eyebrow: 'Variant 01',
+    eyebrow: 'System 01',
     title: 'Precision Nanoparticle Synthesis',
     description:
       'Laboratory synthesis for controlled particle size, stable formulations, and repeatable R&D batches.',
@@ -32,16 +30,16 @@ const productVariants = [
     specs: ['Lab-scale synthesis', 'Particle-size control', 'Repeatable formulation work'],
   },
   {
-    eyebrow: 'Variant 02',
+    eyebrow: 'System 02',
     title: 'nanoWISS Production System',
     description:
-      'A scalable production platform concept for efficient, sustainable, and adaptable nanoparticle workflows.',
+      'A scalable production platform for efficient, sustainable, and adaptable nanoparticle workflows.',
     icon: Factory,
     image: deviceImage,
     specs: ['Process automation', 'Scalable architecture', 'Sustainable throughput'],
   },
   {
-    eyebrow: 'Variant 03',
+    eyebrow: 'System 03',
     title: 'AgroWISS Crop Shield',
     description:
       'A chitosan-based carrier system designed to protect active ingredients and release them over time.',
@@ -50,7 +48,7 @@ const productVariants = [
     specs: ['Slow release', 'Biopolymer carrier', 'Crop protection focus'],
   },
   {
-    eyebrow: 'Variant 04',
+    eyebrow: 'System 04',
     title: 'Biofilm Application Platform',
     description:
       'Nanoparticle-containing formulations for future biofilm infection and disinfection applications.',
@@ -84,7 +82,7 @@ const pipeline = [
   'Autonomous production systems',
   'Agricultural biocontrol',
   'Disinfection products',
-  'Soil improvement concepts',
+  'Soil improvement systems',
 ];
 
 const ParticleField = () => (
@@ -143,16 +141,9 @@ const AlternativeShowcasePage = () => {
           </div>
           <div className="container relative mx-auto grid min-h-[42rem] grid-cols-1 items-center gap-10 px-4 py-16 lg:grid-cols-[0.9fr_1.1fr]">
             <div>
-              <Link
-                to="/alternative"
-                className="inline-flex items-center gap-2 rounded-full border border-white/25 px-4 py-2 text-sm font-semibold text-white/85 transition hover:border-primary-light hover:text-primary-light"
-              >
-                <ArrowLeft size={16} />
-                Back to Alternative
-              </Link>
               <p className="mt-8 font-bold uppercase tracking-wide text-primary-light">Animated nanoWISS Product Theater</p>
               <h1 className="mt-4 text-4xl font-extrabold md:text-6xl">
-                Product concepts shown as moving nanoparticle systems.
+                nanoWISS products shown as moving nanoparticle systems.
               </h1>
               <p className="mt-6 max-w-2xl text-lg text-white/75">
                 This route is designed for demos and investor conversations: it turns nanoWISS
@@ -164,7 +155,7 @@ const AlternativeShowcasePage = () => {
                   href="#variants"
                   className="rounded-full bg-primary-light px-6 py-3 font-bold text-white transition hover:bg-white hover:text-primary-dark"
                 >
-                  View Variants
+                  View Systems
                 </a>
                 <a
                   href="mailto:info@nanowiss.com?subject=nanoWISS Product Showcase"
