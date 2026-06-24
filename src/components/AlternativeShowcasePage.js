@@ -18,6 +18,7 @@ import deviceImage from '../assets/nanoparticle_device.png';
 import labImage from '../assets/lab_nanoparticle.png';
 import agrowissProduct from '../assets/agrowiss_product.png';
 import productImage from '../assets/product1.png';
+import biofilmDemoVideo from '../assets/biofilm_demo.mp4';
 
 const productVariants = [
   {
@@ -54,6 +55,7 @@ const productVariants = [
       'Nanoparticle-containing formulations for future biofilm infection and disinfection applications.',
     icon: ShieldCheck,
     image: productImage,
+    video: biofilmDemoVideo,
     specs: ['Biofilm focus', 'Surface applications', 'Health-tech pipeline'],
   },
 ];
@@ -111,11 +113,24 @@ const ProductVariantCard = ({ item }) => {
         </div>
       </div>
       <div className="mt-5 h-48 overflow-hidden rounded-md bg-[#10051f]">
-        <img
-          src={item.image}
-          alt={item.title}
-          className="h-full w-full object-contain p-4 transition duration-700 group-hover:scale-110"
-        />
+        {item.video ? (
+          <video
+            src={item.video}
+            poster={item.image}
+            className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
+            autoPlay
+            loop
+            muted
+            playsInline
+            aria-label={`${item.title} visualization`}
+          />
+        ) : (
+          <img
+            src={item.image}
+            alt={item.title}
+            className="h-full w-full object-contain p-4 transition duration-700 group-hover:scale-110"
+          />
+        )}
       </div>
       <p className="mt-5 text-white/75">{item.description}</p>
       <div className="mt-5 grid gap-2">

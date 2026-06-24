@@ -1,6 +1,7 @@
 import React from 'react';
 import { Award, Building2, FlaskConical, Leaf, Mail } from 'lucide-react';
 import productImage from '../assets/product1.png';
+import biofilmDemoVideo from '../assets/biofilm_demo.mp4';
 import labNanoparticleImage from '../assets/lab_nanoparticle.png';
 import nanoparticleDeviceImage from '../assets/nanoparticle_device.png';
 import socialImpactAwardLogo from '../assets/social_impact_award.png';
@@ -27,6 +28,7 @@ const products = [
     description:
       'Our development pipeline includes agricultural solutions, disinfection products, and biofilm infection treatment applications.',
     image: productImage,
+    video: biofilmDemoVideo,
   },
 ];
 
@@ -81,11 +83,24 @@ const ProductsPage = () => {
                   key={product.title}
                   className="flex h-full flex-col rounded-lg border border-gray-100 bg-white p-6 shadow transition duration-300 hover:-translate-y-1 hover:shadow-xl"
                 >
-                  <img
-                    src={product.image}
-                    alt={product.title}
-                    className="mb-5 h-52 w-full rounded-md object-contain"
-                  />
+                  {product.video ? (
+                    <video
+                      src={product.video}
+                      poster={product.image}
+                      className="mb-5 h-52 w-full rounded-md bg-secondary-dark object-cover"
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
+                      aria-label={`${product.title} biofilm visualization`}
+                    />
+                  ) : (
+                    <img
+                      src={product.image}
+                      alt={product.title}
+                      className="mb-5 h-52 w-full rounded-md object-contain"
+                    />
+                  )}
                   <h2 className="text-xl font-bold text-primary-dark">{product.title}</h2>
                   <p className="mt-3 flex-grow text-gray-700">{product.description}</p>
                   {product.title === 'Nanoparticle-Containing Applications' && (
