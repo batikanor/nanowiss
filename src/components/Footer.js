@@ -5,6 +5,10 @@ import migrantAcceleratorLogo from '../assets/migrant_accelerator.png';
 import tubitakBiggLogo from '../assets/tubitak_bigg.png';
 import bogaziciTeknoparkLogo from '../assets/bogazici_teknopark.png';
 import turkiyeKalkinmaFonuLogo from '../assets/turkiye_kalkinma_fonu.png';
+import nanoWissDarkLogo from '../assets/nanowiss_logo_on_black.png';
+
+const newsletterUrl =
+  'https://www.linkedin.com/newsletters/%F0%9D%99%89%F0%9D%99%96%F0%9D%99%A3%F0%9D%99%A4%F0%9D%99%89%F0%9D%97%B2%F0%9D%98%84%F0%9D%99%8E%F0%9D%99%98%F0%9D%99%9E%F0%9D%99%9A%F0%9D%99%A3%F0%9D%99%98%F0%9D%99%9A-7430896331885264897';
 
 const nanoWissPartners = [
   {
@@ -58,17 +62,31 @@ const Footer = ({ showCredit = false, partnerSet = 'nanowiss' }) => {
       <section className="border-b border-white/10 py-10">
         <div className="container mx-auto grid gap-8 px-4 md:grid-cols-[1.3fr_0.7fr]">
           <div>
-            <h2 className="text-2xl font-bold">nanoWISS</h2>
+            <img
+              src={nanoWissDarkLogo}
+              alt="nanoWISS"
+              className="h-auto w-full max-w-xs rounded-md bg-black object-contain p-2"
+            />
             <p className="mt-3 max-w-2xl text-white/75">
               Nanoparticle technologies for health, scalable production systems, and
               AgroWISS agricultural biotechnology.
             </p>
-            <a
-              href="mailto:info@nanowiss.com"
-              className="mt-5 inline-flex rounded-full border border-white/25 px-5 py-2 font-semibold text-white transition hover:border-primary-light hover:text-primary-light"
-            >
-              info@nanowiss.com
-            </a>
+            <div className="mt-5 flex flex-wrap gap-3">
+              <a
+                href="mailto:info@nanowiss.com"
+                className="inline-flex rounded-full border border-white/25 px-5 py-2 font-semibold text-white transition hover:border-primary-light hover:text-primary-light"
+              >
+                info@nanowiss.com
+              </a>
+              <a
+                href={newsletterUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex rounded-full bg-primary-light px-5 py-2 font-semibold text-white transition hover:bg-white hover:text-primary-dark"
+              >
+                NanoNewsScience
+              </a>
+            </div>
           </div>
           <nav aria-label="Footer sitemap">
             <h3 className="font-bold uppercase tracking-wide text-primary-light">Sitemap</h3>

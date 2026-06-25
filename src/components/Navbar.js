@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import nanoWissLogo from '../assets/nanowiss_logo_on_white.png';
 
 const Navbar = () => {
   const location = useLocation(); // Get the current location
@@ -12,9 +13,9 @@ const Navbar = () => {
       <div className="container mx-auto flex items-center justify-between gap-4 overflow-hidden">
         <Link to="/" className="shrink-0" aria-label="nanoWISS home">
           <img
-            src="/logo192.png"
+            src={nanoWissLogo}
             alt="nanoWISS"
-            className="h-12 w-12 rounded-md object-cover sm:h-14 sm:w-14"
+            className="h-12 w-auto max-w-[11rem] rounded-md bg-white object-contain px-2 py-1 sm:h-14"
           />
         </Link>
         <nav className="flex-1" aria-label="Primary navigation">

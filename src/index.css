@@ -1053,10 +1053,20 @@
   }
 
   .standalone-logo {
-    color: inherit;
-    font-size: 1.35rem;
-    font-weight: 900;
+    display: inline-flex;
+    align-items: center;
+    border-radius: 0.45rem;
+    background: #fff;
+    padding: 0.2rem 0.35rem;
     text-decoration: none;
+  }
+
+  .standalone-logo img {
+    display: block;
+    height: 2.25rem;
+    width: auto;
+    max-width: 10rem;
+    object-fit: contain;
   }
 
   .standalone-nav nav {
@@ -1296,10 +1306,19 @@
   .standalone-footer {
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
     justify-content: space-between;
     gap: 1rem;
     border-top: 1px solid rgba(255, 255, 255, 0.12);
     padding: 2rem clamp(1rem, 6vw, 6rem);
+  }
+
+  .standalone-footer img {
+    display: block;
+    width: min(18rem, 100%);
+    border-radius: 0.45rem;
+    background: #000;
+    padding: 0.35rem;
   }
 
   .standalone-footer a,

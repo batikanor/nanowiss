@@ -72,6 +72,7 @@ const team = [
     name: 'Hakan Yılmaz',
     role: 'Engineer',
     image: HakanImage,
+    linkedin: 'https://www.linkedin.com/in/hakanyilmaz83',
     bio: [
       'Hakan Yılmaz is a fourth-year Biomedical Engineering student at Ankara University. During his university years, he has gained experience through internships in different fields.',
       'He currently works as a Quality Control and Mechanical Design Specialist and is responsible for mechanical processes at nanoWISS.',
@@ -81,6 +82,7 @@ const team = [
     name: 'Sümeyye Demir',
     role: 'Science Communication',
     image: SumeyyeImage,
+    linkedin: 'https://www.linkedin.com/in/s%C3%BCmeyye-demir-766878226',
     bio: [
       'Sümeyye Demir is a Bioengineering student at Gebze Technical University. She creates LinkedIn content for NanoNewsScience, a newsletter about nanotechnology, health, agriculture, and biotechnology.',
       'She supports science communication by making deep-tech biotechnology more understandable for a broad audience.',
@@ -90,6 +92,7 @@ const team = [
     name: 'Ceyda Önder',
     role: 'B.Sc. Chemical Engineer',
     image: CeydaImage,
+    linkedin: 'https://www.linkedin.com/in/ceyda-%C3%B6nder-6bb086271',
     bio: [
       'Ceyda graduated from Yalova University with a degree in Chemical Engineering. She has hands-on experience in food and biotechnology laboratory research through internships, as well as field-level experience in production processes.',
       'As Laboratory Support Staff, she performs practical tasks such as synthesis, characterization, and sample preparation while contributing to technical documentation.',

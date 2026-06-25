@@ -24,6 +24,8 @@ import FeyzaImage from '../assets/team_feyza_thumb.jpg';
 import SelenImage from '../assets/team_selen_thumb.jpg';
 import NisaImage from '../assets/team_nisa_thumb.jpg';
 import ElifImage from '../assets/team_elif_thumb.jpg';
+import nanoWissLogoOnBlack from '../assets/nanowiss_logo_on_black.png';
+import nanoWissLogoOnWhite from '../assets/nanowiss_logo_on_white.png';
 
 const siteNav = [
   ['platform', 'Platform'],
@@ -49,7 +51,9 @@ const teamCards = [
 
 const StandaloneNav = ({ tone = 'dark' }) => (
   <header className={`standalone-nav standalone-nav-${tone}`}>
-    <a href="#top" className="standalone-logo">nanoWISS</a>
+    <a href="#top" className="standalone-logo" aria-label="nanoWISS home">
+      <img src={tone === 'light' ? nanoWissLogoOnWhite : nanoWissLogoOnBlack} alt="nanoWISS" />
+    </a>
     <nav aria-label="nanoWISS site navigation">
       {siteNav.map(([id, label]) => (
         <a key={id} href={`#${id}`}>{label}</a>
@@ -105,7 +109,7 @@ const TeamStrip = () => (
 
 const SimpleFooter = () => (
   <footer className="standalone-footer">
-    <strong>nanoWISS</strong>
+    <img src={nanoWissLogoOnBlack} alt="nanoWISS" />
     <span>Let's take a Deep breath.</span>
     <a href="mailto:info@nanowiss.com">info@nanowiss.com</a>
   </footer>
