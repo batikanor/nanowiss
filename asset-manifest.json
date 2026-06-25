@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.328fcd2e.css",
-    "main.js": "/static/js/main.f62d85a5.js",
+    "main.css": "/static/css/main.b420f75b.css",
+    "main.js": "/static/js/main.e94bd39d.js",
     "static/js/453.e5c486a4.chunk.js": "/static/js/453.e5c486a4.chunk.js",
     "static/media/agrowiss_team.png": "/static/media/agrowiss_team.f7a5f11a934b846c091f.png",
     "static/media/hakan_yilmaz.png": "/static/media/hakan_yilmaz.bf9ff6e883a31e8df024.png",
@@ -13,12 +13,15 @@
     "static/media/nisa_tan_foto.png": "/static/media/nisa_tan_foto.f73b729386d91b4bd994.png",
     "static/media/sumeyye_demir.png": "/static/media/sumeyye_demir.e2f03f42cb4338007467.png",
     "static/media/ceyda_oner.png": "/static/media/ceyda_oner.62fc681d9646107f4178.png",
+    "static/media/founding_members.png": "/static/media/founding_members.8faea762e3584bf16ff9.png",
     "static/media/bogazici_teknopark.png": "/static/media/bogazici_teknopark.c24ab6c35df656b310d4.png",
     "static/media/migrant_accelerator.png": "/static/media/migrant_accelerator.ba5806fc1a5666cc586a.png",
     "static/media/berrin_saygi_yalcin.png": "/static/media/berrin_saygi_yalcin.451448f00e3a406204b9.png",
+    "static/media/nanowiss_logo_on_black.png": "/static/media/nanowiss_logo_on_black.519c81a9deeeb77b1bb7.png",
     "static/media/lab_nanoparticle.png": "/static/media/lab_nanoparticle.a8a73f15cca2a9b17682.png",
     "static/media/turkiye_kalkinma_fonu.png": "/static/media/turkiye_kalkinma_fonu.9985bdd81ff8fcf4d706.png",
     "static/media/nwiss_backgr.jpg": "/static/media/nwiss_backgr.04c96cfb0fef4b7611dc.jpg",
+    "static/media/nanowiss_logo_on_white.png": "/static/media/nanowiss_logo_on_white.2447b0bf754b2024c97c.png",
     "static/media/team_selen_thumb.jpg": "/static/media/team_selen_thumb.47a4d8be3ba8de6a272d.jpg",
     "static/media/nanoparticle_device.png": "/static/media/nanoparticle_device.ab951ac2f848f9686331.png",
     "static/media/team_nisa_thumb.jpg": "/static/media/team_nisa_thumb.323a724fca5085b28271.jpg",
@@ -30,12 +33,12 @@
     "static/media/tubitak_bigg.png": "/static/media/tubitak_bigg.216deb91caec315338f1.png",
     "static/media/social_impact_award.png": "/static/media/social_impact_award.c815cabfbe1715e387e2.png",
     "index.html": "/index.html",
-    "main.328fcd2e.css.map": "/static/css/main.328fcd2e.css.map",
-    "main.f62d85a5.js.map": "/static/js/main.f62d85a5.js.map",
+    "main.b420f75b.css.map": "/static/css/main.b420f75b.css.map",
+    "main.e94bd39d.js.map": "/static/js/main.e94bd39d.js.map",
     "453.e5c486a4.chunk.js.map": "/static/js/453.e5c486a4.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.328fcd2e.css",
-    "static/js/main.f62d85a5.js"
+    "static/css/main.b420f75b.css",
+    "static/js/main.e94bd39d.js"
   ]
 }
