@@ -9,13 +9,13 @@ const Navbar = () => {
   const isActive = (pathname) => location.pathname === pathname;
 
   return (
-    <header className="bg-primary-dark p-4">
+    <header className="border-b border-primary-dark/10 bg-white p-4 shadow-sm">
       <div className="container mx-auto flex items-center justify-between gap-4 overflow-hidden">
         <Link to="/" className="shrink-0" aria-label="nanoWISS home">
           <img
             src={nanoWissLogo}
             alt="nanoWISS"
-            className="h-12 w-auto max-w-[11rem] rounded-md bg-white object-contain px-2 py-1 sm:h-14"
+            className="h-12 w-auto max-w-[11rem] object-contain sm:h-14"
           />
         </Link>
         <nav className="flex-1" aria-label="Primary navigation">
@@ -23,7 +23,7 @@ const Navbar = () => {
             <li>
               <Link
                 to="/"
-                className={`text-white hover:text-primary-light ${isActive('/') ? 'font-bold text-primary-light' : ''}`}
+                className={`text-primary-dark hover:text-secondary-light ${isActive('/') ? 'font-bold text-secondary-light' : ''}`}
                 aria-current={isActive('/') ? 'page' : undefined}
               >
                 Home
@@ -32,7 +32,7 @@ const Navbar = () => {
             <li>
               <a
                 href="/#technology"
-                className="text-white hover:text-primary-light"
+                className="text-primary-dark hover:text-secondary-light"
               >
                 Our Technology
               </a>
@@ -40,7 +40,7 @@ const Navbar = () => {
             <li>
               <Link
                 to="/team"
-                className={`text-white hover:text-primary-light ${isActive('/team') ? 'font-bold text-primary-light' : ''}`}
+                className={`text-primary-dark hover:text-secondary-light ${isActive('/team') ? 'font-bold text-secondary-light' : ''}`}
                 aria-current={isActive('/team') ? 'page' : undefined}
               >
                 Team
@@ -49,7 +49,7 @@ const Navbar = () => {
             <li>
               <Link
                 to="/products"
-                className={`text-white hover:text-primary-light ${isActive('/products') ? 'font-bold text-primary-light' : ''}`}
+                className={`text-primary-dark hover:text-secondary-light ${isActive('/products') ? 'font-bold text-secondary-light' : ''}`}
                 aria-current={isActive('/products') ? 'page' : undefined}
               >
                 Products
@@ -58,7 +58,7 @@ const Navbar = () => {
             <li>
               <Link
                 to="/agrowiss"
-                className={`text-white hover:text-primary-light ${isActive('/agrowiss') ? 'font-bold text-primary-light' : ''}`}
+                className={`text-primary-dark hover:text-secondary-light ${isActive('/agrowiss') ? 'font-bold text-secondary-light' : ''}`}
                 aria-current={isActive('/agrowiss') ? 'page' : undefined}
               >
                 AgroWISS

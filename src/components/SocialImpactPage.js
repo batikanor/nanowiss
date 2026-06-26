@@ -7,6 +7,8 @@ import migrantAcceleratorLogo from '../assets/migrant_accelerator.png';
 import heroImage from '../assets/agrowiss_team.png';
 import labImage from '../assets/lab_nanoparticle.png';
 
+const migrantAcceleratorAlumniUrl = 'https://themigrantaccelerator.com/alumni-startups/';
+
 const chapters = [
   {
     icon: HeartPulse,
@@ -69,9 +71,15 @@ const SocialImpactPage = () => (
               <div className="flex h-32 items-center justify-center rounded-lg bg-white p-4">
                 <img src={socialImpactAwardLogo} alt="Social Impact Award Germany" className="max-h-24 object-contain" />
               </div>
-              <div className="flex h-32 items-center justify-center rounded-lg bg-white p-4">
+              <a
+                href={migrantAcceleratorAlumniUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="flex h-32 items-center justify-center rounded-lg bg-white p-4 transition hover:-translate-y-1 hover:shadow-lg"
+                aria-label="The Migrant Accelerator Alumni Startups"
+              >
                 <img src={migrantAcceleratorLogo} alt="The Migrant Accelerator" className="max-h-24 object-contain" />
-              </div>
+              </a>
             </div>
             <p className="mt-5 text-white/80">
               Recognition and acceleration help nanoWISS communicate a careful impact story without

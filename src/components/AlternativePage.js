@@ -12,6 +12,8 @@ import socialImpactAwardLogo from '../assets/social_impact_award.png';
 import tubitakBiggLogo from '../assets/tubitak_bigg.png';
 import migrantAcceleratorLogo from '../assets/migrant_accelerator.png';
 
+const migrantAcceleratorAlumniUrl = 'https://themigrantaccelerator.com/alumni-startups/';
+
 const proofPoints = [
   'TUBITAK Seal of Excellence for chitosan nanoparticle-based agricultural improver',
   'Finalist for Social Impact Award Germany',
@@ -298,7 +300,14 @@ const AlternativePage = () => {
               <div className="mt-6 grid grid-cols-3 gap-3">
                 <img src={tubitakBiggLogo} alt="TUBITAK BIGG" className="h-20 rounded bg-white object-contain p-2" />
                 <img src={socialImpactAwardLogo} alt="Social Impact Award Germany" className="h-20 rounded bg-white object-contain p-2" />
-                <img src={migrantAcceleratorLogo} alt="The Migrant Accelerator" className="h-20 rounded bg-white object-contain p-2" />
+                <a
+                  href={migrantAcceleratorAlumniUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="The Migrant Accelerator Alumni Startups"
+                >
+                  <img src={migrantAcceleratorLogo} alt="The Migrant Accelerator" className="h-20 rounded bg-white object-contain p-2 transition hover:-translate-y-1 hover:shadow-lg" />
+                </a>
               </div>
             </div>
           </div>

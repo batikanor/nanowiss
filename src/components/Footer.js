@@ -5,10 +5,11 @@ import migrantAcceleratorLogo from '../assets/migrant_accelerator.png';
 import tubitakBiggLogo from '../assets/tubitak_bigg.png';
 import bogaziciTeknoparkLogo from '../assets/bogazici_teknopark.png';
 import turkiyeKalkinmaFonuLogo from '../assets/turkiye_kalkinma_fonu.png';
-import nanoWissDarkLogo from '../assets/nanowiss_logo_on_black.png';
+import nanoWissWhiteLogo from '../assets/nanowiss_logo_on_white.png';
 
 const newsletterUrl =
   'https://www.linkedin.com/newsletters/%F0%9D%99%89%F0%9D%99%96%F0%9D%99%A3%F0%9D%99%A4%F0%9D%99%89%F0%9D%97%B2%F0%9D%98%84%F0%9D%99%8E%F0%9D%99%98%F0%9D%99%9E%F0%9D%99%9A%F0%9D%99%A3%F0%9D%99%98%F0%9D%99%9A-7430896331885264897';
+const migrantAcceleratorAlumniUrl = 'https://themigrantaccelerator.com/alumni-startups/';
 
 const nanoWissPartners = [
   {
@@ -19,7 +20,7 @@ const nanoWissPartners = [
   {
     name: 'The Migrant Accelerator',
     logo: migrantAcceleratorLogo,
-    href: 'https://themigrantaccelerator.com',
+    href: migrantAcceleratorAlumniUrl,
   },
 ];
 
@@ -63,9 +64,9 @@ const Footer = ({ showCredit = false, partnerSet = 'nanowiss' }) => {
         <div className="container mx-auto grid gap-8 px-4 md:grid-cols-[1.3fr_0.7fr]">
           <div>
             <img
-              src={nanoWissDarkLogo}
+              src={nanoWissWhiteLogo}
               alt="nanoWISS"
-              className="h-auto w-full max-w-xs rounded-md bg-black object-contain p-2"
+              className="h-auto w-full max-w-xs rounded-md bg-white object-contain p-2"
             />
             <p className="mt-3 max-w-2xl text-white/75">
               Nanoparticle technologies for health, scalable production systems, and

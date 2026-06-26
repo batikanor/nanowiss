@@ -13,6 +13,7 @@ import Footer from './Footer';
 
 const newsletterUrl =
   'https://www.linkedin.com/newsletters/%F0%9D%99%89%F0%9D%99%96%F0%9D%99%A3%F0%9D%99%A4%F0%9D%99%89%F0%9D%97%B2%F0%9D%98%84%F0%9D%99%8E%F0%9D%99%98%F0%9D%99%9E%F0%9D%99%9A%F0%9D%99%A3%F0%9D%99%98%F0%9D%99%9A-7430896331885264897';
+const migrantAcceleratorAlumniUrl = 'https://themigrantaccelerator.com/alumni-startups/';
 
 const HomePage = () => {
   return (
@@ -114,7 +115,7 @@ const HomePage = () => {
                   />
                 </a>
                 <a
-                  href="https://themigrantaccelerator.com"
+                  href={migrantAcceleratorAlumniUrl}
                   target="_blank"
                   rel="noreferrer"
                   className="flex h-32 items-center justify-center rounded-md bg-white p-5 transition hover:-translate-y-1 hover:shadow-lg"
