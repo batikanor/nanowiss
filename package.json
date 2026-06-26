@@ -22,6 +22,7 @@
     "deploy": "gh-pages -d build --nojekyll",
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "postbuild": "node scripts/create-spa-fallback.js",
     "brand:check": "node scripts/check-brand-copy.js",
     "hooks:install": "git config core.hooksPath .githooks",
     "prepare": "git config core.hooksPath .githooks || true",
