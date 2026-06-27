@@ -1,6 +1,6 @@
 import React from 'react';
 import biofilmDemoVideo from '../assets/biofilm_demo.mp4';
-import biofilmPoster from '../assets/product1.png';
+import biofilmPoster from '../assets/biofilm_demo_poster.jpg';
 
 const BiofilmVideo = ({ className = '', ariaLabel = 'nanoWISS biofilm visualization' }) => (
   <div className={`relative overflow-hidden rounded-md bg-white ${className}`}>

@@ -1,9 +1,10 @@
 import React from 'react';
-import { ExternalLink, Leaf, ShieldCheck, Sprout } from 'lucide-react';
+import { CheckCircle2, ExternalLink, Leaf, ShieldCheck, Sprout } from 'lucide-react';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import agrowissLogo from '../assets/agrowiss_logo.png';
 import agrowissProduct from '../assets/agrowiss_product.png';
+import agrowissGrowthEffects from '../assets/agrowiss_growth_effects.png';
 import agrowissTeam from '../assets/agrowiss_team.png';
 import tubitakBiggLogo from '../assets/tubitak_bigg.png';
 import bogaziciTeknoparkLogo from '../assets/bogazici_teknopark.png';
@@ -32,6 +33,13 @@ const highlights = [
     description:
       'The formula is designed to help protect crops against harmful pests and microbial diseases while reducing repeated spraying needs.',
   },
+];
+
+const growthEffects = [
+  'Environmentally friendly, antimicrobial plant growth-promoting chitosan nanoparticles',
+  'Environmentally friendly insect repellents',
+  'Longer-lasting effect thanks to a controlled active ingredient release mechanism',
+  'Low-cost production',
 ];
 
 const agroWissTeamMembers = [
@@ -78,6 +86,37 @@ const AgroWissPage = () => {
                 className="mx-auto max-h-[34rem] rounded-lg object-contain shadow-xl"
               />
             </div>
+          </div>
+        </section>
+
+        <section className="bg-white py-16">
+          <div className="container mx-auto grid grid-cols-1 items-center gap-10 px-4 lg:grid-cols-[1.05fr_0.95fr]">
+            <div>
+              <p className="font-semibold uppercase tracking-wide text-secondary-light">
+                Plant Growth and Crop Protection
+              </p>
+              <h2 className="mt-3 text-3xl font-bold text-primary-dark">
+                Chitosan nanoparticle systems designed for healthier plant growth.
+              </h2>
+              <p className="mt-5 text-lg text-gray-700">
+                AgroWISS focuses on plant growth-promoting, antimicrobial, and environmentally
+                friendly crop-protection pathways using controlled-release chitosan nanoparticles.
+              </p>
+              <div className="mt-6 space-y-4">
+                {growthEffects.map((effect) => (
+                  <div key={effect} className="flex gap-3">
+                    <CheckCircle2 className="mt-1 shrink-0 text-secondary-light" size={22} />
+                    <p className="text-gray-700">{effect}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <img
+              src={agrowissGrowthEffects}
+              alt="AgroWISS plant growth and crop protection effects"
+              className="w-full rounded-lg border border-gray-100 bg-white object-contain shadow-xl"
+              loading="lazy"
+            />
           </div>
         </section>
 

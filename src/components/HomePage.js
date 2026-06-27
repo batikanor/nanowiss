@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Award, Camera } from 'lucide-react';
+import { ArrowRight, Award } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import backgroundImage from '../assets/agrowiss_team.png';
 import agrowissLogo from '../assets/agrowiss_logo.png';
@@ -7,6 +7,9 @@ import socialImpactAwardLogo from '../assets/social_impact_award.png';
 import migrantAcceleratorLogo from '../assets/migrant_accelerator.png';
 import nanoWissDarkLogo from '../assets/nanowiss_logo_on_black.png';
 import foundingMembersImage from '../assets/founding_members.png';
+import nanoparticleProductionVideo from '../assets/nanoparticle_production.mp4';
+import nanoparticleProductionPoster from '../assets/nanoparticle_production_poster.jpg';
+import rareDiseaseTreatmentImage from '../assets/rare_disease_treatment.png';
 import BiofilmVideo from './BiofilmVideo';
 import Navbar from './Navbar'; // Import the Navbar component
 import Footer from './Footer';
@@ -168,22 +171,36 @@ const HomePage = () => {
             <h2 className="text-3xl font-bold mb-8 text-white">Our Technology</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="bg-white p-6 rounded-lg shadow">
-                <Camera className="mx-auto mb-4 text-primary-dark" size={48} />
                 <h3 className="text-xl font-semibold mb-2">Nanoparticle Production</h3>
                 <p>Efficient and scalable production of nanoparticles for medical applications.</p>
+                <video
+                  className="mt-5 h-56 w-full rounded-md bg-gray-100 object-cover"
+                  src={nanoparticleProductionVideo}
+                  poster={nanoparticleProductionPoster}
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  aria-label="nanoWISS nanoparticle production work in the lab"
+                />
               </div>
               <div className="bg-white p-6 rounded-lg shadow">
                 <h3 className="text-xl font-semibold mb-2">Biofilm Treatment</h3>
                 <p>Innovative solutions for treating biofilm bacterial infections in cystic fibrosis.</p>
                 <BiofilmVideo
-                  className="mt-5 h-48 w-full"
+                  className="mt-5 h-56 w-full border border-gray-100"
                   ariaLabel="nanoWISS biofilm research visualization"
                 />
               </div>
               <div className="bg-white p-6 rounded-lg shadow">
-                <Camera className="mx-auto mb-4 text-primary-dark" size={48} />
-                <h3 className="text-xl font-semibold mb-2">Rare Disease Awareness</h3>
-                <p>Raising awareness and supporting research for rare diseases.</p>
+                <h3 className="text-xl font-semibold mb-2">Rare Disease Treatment</h3>
+                <p>Raising awareness and supporting research pathways for rare diseases.</p>
+                <img
+                  src={rareDiseaseTreatmentImage}
+                  alt="nanoWISS rare disease treatment awareness activity"
+                  className="mt-5 h-56 w-full rounded-md object-cover object-[50%_38%]"
+                  loading="lazy"
+                />
               </div>
             </div>
           </div>

@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 
 const SITE_URL = 'https://www.nanowiss.com';
-const DEFAULT_IMAGE = `${SITE_URL}/nanowiss-preview.png`;
+const DEFAULT_IMAGE = `${SITE_URL}/nanowiss-preview-white-logo.png`;
 
 const defaultStructuredData = {
   '@context': 'https://schema.org',
@@ -92,9 +92,9 @@ const Seo = ({
     setMeta('property', 'og:image', image);
     setMeta('property', 'og:image:secure_url', image);
     setMeta('property', 'og:image:type', 'image/png');
-    setMeta('property', 'og:image:width', '512');
-    setMeta('property', 'og:image:height', '512');
-    setMeta('name', 'twitter:card', 'summary');
+    setMeta('property', 'og:image:width', '1200');
+    setMeta('property', 'og:image:height', '630');
+    setMeta('name', 'twitter:card', 'summary_large_image');
     setMeta('name', 'twitter:title', fullTitle);
     setMeta('name', 'twitter:description', description);
     setMeta('name', 'twitter:image', image);
