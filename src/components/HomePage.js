@@ -1,5 +1,5 @@
-import React from 'react';
-import { ArrowRight, Award } from 'lucide-react';
+import React, { useEffect, useState } from 'react';
+import { ArrowRight, Award, Expand, X } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import backgroundImage from '../assets/agrowiss_team.png';
 import agrowissLogo from '../assets/agrowiss_logo.png';
@@ -9,7 +9,10 @@ import nanoWissDarkLogo from '../assets/nanowiss_logo_on_black.png';
 import foundingMembersImage from '../assets/founding_members.png';
 import nanoparticleProductionVideo from '../assets/nanoparticle_production.mp4';
 import nanoparticleProductionPoster from '../assets/nanoparticle_production_poster.jpg';
+import biofilmDemoVideo from '../assets/biofilm_demo.mp4';
+import biofilmPoster from '../assets/biofilm_demo_poster.jpg';
 import rareDiseaseTreatmentImage from '../assets/rare_disease_treatment.png';
+import rareDiseaseTreatmentCardImage from '../assets/rare_disease_treatment_card.png';
 import BiofilmVideo from './BiofilmVideo';
 import Navbar from './Navbar'; // Import the Navbar component
 import Footer from './Footer';
@@ -19,6 +22,51 @@ const newsletterUrl =
 const migrantAcceleratorAlumniUrl = 'https://themigrantaccelerator.com/alumni-startups/';
 
 const HomePage = () => {
+  const [activeMedia, setActiveMedia] = useState(null);
+
+  useEffect(() => {
+    if (!activeMedia) return undefined;
+
+    const handleKeyDown = (event) => {
+      if (event.key === 'Escape') {
+        setActiveMedia(null);
+      }
+    };
+
+    document.body.style.overflow = 'hidden';
+    window.addEventListener('keydown', handleKeyDown);
+
+    return () => {
+      document.body.style.overflow = '';
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [activeMedia]);
+
+  const openMedia = (media) => setActiveMedia(media);
+
+  const technologyMedia = [
+    {
+      title: 'Nanoparticle Production',
+      type: 'video',
+      src: nanoparticleProductionVideo,
+      poster: nanoparticleProductionPoster,
+      description: 'nanoWISS nanoparticle production work in the lab',
+    },
+    {
+      title: 'Biofilm Treatment',
+      type: 'video',
+      src: biofilmDemoVideo,
+      poster: biofilmPoster,
+      description: 'nanoWISS biofilm research visualization',
+    },
+    {
+      title: 'Rare Disease Treatment',
+      type: 'image',
+      src: rareDiseaseTreatmentImage,
+      description: 'nanoWISS rare disease treatment awareness activity',
+    },
+  ];
+
   return (
     <div className="min-h-screen flex flex-col bg-background">
       <Navbar /> {/* Include the Navbar */}
@@ -173,34 +221,67 @@ const HomePage = () => {
               <div className="bg-white p-6 rounded-lg shadow">
                 <h3 className="text-xl font-semibold mb-2">Nanoparticle Production</h3>
                 <p>Efficient and scalable production of nanoparticles for medical applications.</p>
-                <video
-                  className="mt-5 h-56 w-full rounded-md bg-gray-100 object-cover"
-                  src={nanoparticleProductionVideo}
-                  poster={nanoparticleProductionPoster}
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  aria-label="nanoWISS nanoparticle production work in the lab"
-                />
+                <button
+                  type="button"
+                  onClick={() => openMedia(technologyMedia[0])}
+                  className="group relative mt-5 block h-56 w-full overflow-hidden rounded-md bg-gray-100 text-left focus:outline-none focus:ring-4 focus:ring-primary-light/50"
+                  aria-label="Open nanoparticle production video fullscreen"
+                >
+                  <video
+                    className="h-full w-full object-cover"
+                    src={nanoparticleProductionVideo}
+                    poster={nanoparticleProductionPoster}
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    aria-hidden="true"
+                  />
+                  <span className="absolute bottom-3 right-3 inline-flex items-center gap-2 rounded-full bg-primary-dark/90 px-3 py-2 text-sm font-semibold text-white opacity-95 transition group-hover:bg-primary-light">
+                    <Expand size={16} />
+                    View fullscreen
+                  </span>
+                </button>
               </div>
               <div className="bg-white p-6 rounded-lg shadow">
                 <h3 className="text-xl font-semibold mb-2">Biofilm Treatment</h3>
                 <p>Innovative solutions for treating biofilm bacterial infections in cystic fibrosis.</p>
-                <BiofilmVideo
-                  className="mt-5 h-56 w-full border border-gray-100"
-                  ariaLabel="nanoWISS biofilm research visualization"
-                />
+                <button
+                  type="button"
+                  onClick={() => openMedia(technologyMedia[1])}
+                  className="group relative mt-5 block h-56 w-full overflow-hidden rounded-md border border-gray-100 bg-white text-left focus:outline-none focus:ring-4 focus:ring-primary-light/50"
+                  aria-label="Open biofilm treatment video fullscreen"
+                >
+                  <BiofilmVideo
+                    className="h-full w-full"
+                    ariaLabel="nanoWISS biofilm research visualization"
+                  />
+                  <span className="absolute bottom-3 right-3 inline-flex items-center gap-2 rounded-full bg-primary-dark/90 px-3 py-2 text-sm font-semibold text-white opacity-95 transition group-hover:bg-primary-light">
+                    <Expand size={16} />
+                    View fullscreen
+                  </span>
+                </button>
               </div>
               <div className="bg-white p-6 rounded-lg shadow">
                 <h3 className="text-xl font-semibold mb-2">Rare Disease Treatment</h3>
                 <p>Raising awareness and supporting research pathways for rare diseases.</p>
-                <img
-                  src={rareDiseaseTreatmentImage}
-                  alt="nanoWISS rare disease treatment awareness activity"
-                  className="mt-5 h-56 w-full rounded-md object-cover object-[50%_38%]"
-                  loading="lazy"
-                />
+                <button
+                  type="button"
+                  onClick={() => openMedia(technologyMedia[2])}
+                  className="group relative mt-5 block h-56 w-full overflow-hidden rounded-md bg-gray-50 text-left focus:outline-none focus:ring-4 focus:ring-primary-light/50"
+                  aria-label="Open rare disease treatment image fullscreen"
+                >
+                  <img
+                    src={rareDiseaseTreatmentCardImage}
+                    alt="nanoWISS rare disease treatment awareness activity"
+                    className="h-full w-full object-cover"
+                    loading="lazy"
+                  />
+                  <span className="absolute bottom-3 right-3 inline-flex items-center gap-2 rounded-full bg-primary-dark/90 px-3 py-2 text-sm font-semibold text-white opacity-95 transition group-hover:bg-primary-light">
+                    <Expand size={16} />
+                    View fullscreen
+                  </span>
+                </button>
               </div>
             </div>
           </div>
@@ -208,6 +289,51 @@ const HomePage = () => {
       </main>
 
       <Footer showCredit />
+
+      {activeMedia && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-4"
+          role="dialog"
+          aria-modal="true"
+          aria-label={`${activeMedia.title} fullscreen media`}
+          onClick={() => setActiveMedia(null)}
+        >
+          <div className="relative flex h-full w-full max-w-6xl flex-col" onClick={(event) => event.stopPropagation()}>
+            <div className="mb-3 flex items-center justify-between gap-4 text-white">
+              <h2 className="text-xl font-bold">{activeMedia.title}</h2>
+              <button
+                type="button"
+                onClick={() => setActiveMedia(null)}
+                className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-white text-primary-dark transition hover:bg-primary-light hover:text-white focus:outline-none focus:ring-4 focus:ring-primary-light/60"
+                aria-label="Close fullscreen media"
+              >
+                <X size={24} />
+              </button>
+            </div>
+            <div className="flex min-h-0 flex-1 items-center justify-center">
+              {activeMedia.type === 'video' ? (
+                <video
+                  className="max-h-full max-w-full rounded-lg bg-black object-contain shadow-2xl"
+                  src={activeMedia.src}
+                  poster={activeMedia.poster}
+                  controls
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  aria-label={activeMedia.description}
+                />
+              ) : (
+                <img
+                  src={activeMedia.src}
+                  alt={activeMedia.description}
+                  className="max-h-full max-w-full rounded-lg object-contain shadow-2xl"
+                />
+              )}
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
