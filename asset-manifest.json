@@ -1,20 +1,23 @@
 {
   "files": {
-    "main.css": "/static/css/main.1510baf6.css",
-    "main.js": "/static/js/main.2575e76e.js",
+    "main.css": "/static/css/main.eb31045e.css",
+    "main.js": "/static/js/main.d2c837d8.js",
     "static/js/453.e5c486a4.chunk.js": "/static/js/453.e5c486a4.chunk.js",
     "static/media/agrowiss_team.png": "/static/media/agrowiss_team.f7a5f11a934b846c091f.png",
+    "static/media/rare_disease_treatment.png": "/static/media/rare_disease_treatment.51df384d93717ceb047f.png",
     "static/media/hakan_yilmaz.png": "/static/media/hakan_yilmaz.bf9ff6e883a31e8df024.png",
-    "static/media/biofilm_demo.mp4": "/static/media/biofilm_demo.58f0ba98f7b6ddee9099.mp4",
     "static/media/agrowiss_product.png": "/static/media/agrowiss_product.3d707799af90c8c143fd.png",
     "static/media/selen_ozdinc_foto.png": "/static/media/selen_ozdinc_foto.fe3691852aadf8961b7c.png",
+    "static/media/nanoparticle_production.mp4": "/static/media/nanoparticle_production.707b16bf1fbc844edeb5.mp4",
     "static/media/elif_kaman_foto.png": "/static/media/elif_kaman_foto.ffdd7b4b9304e0f15f95.png",
     "static/media/feyza_atabey_foto.png": "/static/media/feyza_atabey_foto.25db46e8ac5d2139dad8.png",
     "static/media/nisa_tan_foto.png": "/static/media/nisa_tan_foto.f73b729386d91b4bd994.png",
     "static/media/sumeyye_demir.png": "/static/media/sumeyye_demir.e2f03f42cb4338007467.png",
     "static/media/ceyda_oner.png": "/static/media/ceyda_oner.62fc681d9646107f4178.png",
     "static/media/founding_members.png": "/static/media/founding_members.8faea762e3584bf16ff9.png",
+    "static/media/agrowiss_growth_effects.png": "/static/media/agrowiss_growth_effects.541c95c841f738547acc.png",
     "static/media/bogazici_teknopark.png": "/static/media/bogazici_teknopark.c24ab6c35df656b310d4.png",
+    "static/media/biofilm_demo.mp4": "/static/media/biofilm_demo.581a3781293772a43efc.mp4",
     "static/media/migrant_accelerator.png": "/static/media/migrant_accelerator.ba5806fc1a5666cc586a.png",
     "static/media/berrin_saygi_yalcin.png": "/static/media/berrin_saygi_yalcin.451448f00e3a406204b9.png",
     "static/media/nanowiss_logo_on_black.png": "/static/media/nanowiss_logo_on_black.519c81a9deeeb77b1bb7.png",
@@ -29,16 +32,18 @@
     "static/media/agrowiss_logo.png": "/static/media/agrowiss_logo.9ec7a6b40655acdd7675.png",
     "static/media/team_elif_thumb.jpg": "/static/media/team_elif_thumb.a34849e4f4e8f24b9d84.jpg",
     "static/media/nwiss_backgr_mobile.jpg": "/static/media/nwiss_backgr_mobile.9975c28efd5c82f43ede.jpg",
+    "static/media/nanoparticle_production_poster.jpg": "/static/media/nanoparticle_production_poster.411312eba455d954773c.jpg",
     "static/media/product1.png": "/static/media/product1.04cc79e675ade3f7b45a.png",
     "static/media/tubitak_bigg.png": "/static/media/tubitak_bigg.216deb91caec315338f1.png",
+    "static/media/biofilm_demo_poster.jpg": "/static/media/biofilm_demo_poster.98806e7de9638d6d9fcb.jpg",
     "static/media/social_impact_award.png": "/static/media/social_impact_award.c815cabfbe1715e387e2.png",
     "index.html": "/index.html",
-    "main.1510baf6.css.map": "/static/css/main.1510baf6.css.map",
-    "main.2575e76e.js.map": "/static/js/main.2575e76e.js.map",
+    "main.eb31045e.css.map": "/static/css/main.eb31045e.css.map",
+    "main.d2c837d8.js.map": "/static/js/main.d2c837d8.js.map",
     "453.e5c486a4.chunk.js.map": "/static/js/453.e5c486a4.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1510baf6.css",
-    "static/js/main.2575e76e.js"
+    "static/css/main.eb31045e.css",
+    "static/js/main.d2c837d8.js"
   ]
 }
