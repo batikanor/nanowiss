@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.6b2743a2.css",
-    "main.js": "/static/js/main.aca56b5b.js",
+    "main.css": "/static/css/main.2da24309.css",
+    "main.js": "/static/js/main.0f35c5d7.js",
     "static/js/453.e5c486a4.chunk.js": "/static/js/453.e5c486a4.chunk.js",
     "static/media/agrowiss_team.png": "/static/media/agrowiss_team.f7a5f11a934b846c091f.png",
     "static/media/rare_disease_treatment.png": "/static/media/rare_disease_treatment.51df384d93717ceb047f.png",
@@ -12,7 +12,6 @@
     "static/media/elif_kaman_foto.png": "/static/media/elif_kaman_foto.ffdd7b4b9304e0f15f95.png",
     "static/media/feyza_atabey_foto.png": "/static/media/feyza_atabey_foto.25db46e8ac5d2139dad8.png",
     "static/media/nisa_tan_foto.png": "/static/media/nisa_tan_foto.f73b729386d91b4bd994.png",
-    "static/media/rare_disease_treatment_card.png": "/static/media/rare_disease_treatment_card.ead61d772396097584fe.png",
     "static/media/sumeyye_demir.png": "/static/media/sumeyye_demir.e2f03f42cb4338007467.png",
     "static/media/ceyda_oner.png": "/static/media/ceyda_oner.62fc681d9646107f4178.png",
     "static/media/founding_members.png": "/static/media/founding_members.8faea762e3584bf16ff9.png",
@@ -38,12 +37,12 @@
     "static/media/biofilm_demo_poster.jpg": "/static/media/biofilm_demo_poster.98806e7de9638d6d9fcb.jpg",
     "static/media/social_impact_award.png": "/static/media/social_impact_award.c815cabfbe1715e387e2.png",
     "index.html": "/index.html",
-    "main.6b2743a2.css.map": "/static/css/main.6b2743a2.css.map",
-    "main.aca56b5b.js.map": "/static/js/main.aca56b5b.js.map",
+    "main.2da24309.css.map": "/static/css/main.2da24309.css.map",
+    "main.0f35c5d7.js.map": "/static/js/main.0f35c5d7.js.map",
     "453.e5c486a4.chunk.js.map": "/static/js/453.e5c486a4.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6b2743a2.css",
-    "static/js/main.aca56b5b.js"
+    "static/css/main.2da24309.css",
+    "static/js/main.0f35c5d7.js"
   ]
 }
