@@ -60,10 +60,10 @@ const HomePage = () => {
       description: 'nanoWISS biofilm research visualization',
     },
     {
-      title: 'Rare Disease Treatment',
+      title: 'Rare Disease Awareness',
       type: 'image',
       src: rareDiseaseTreatmentImage,
-      description: 'nanoWISS rare disease treatment awareness activity',
+      description: 'nanoWISS rare disease awareness activity',
     },
   ];
 
@@ -263,18 +263,18 @@ const HomePage = () => {
                 </button>
               </div>
               <div className="bg-white p-6 rounded-lg shadow">
-                <h3 className="text-xl font-semibold mb-2">Rare Disease Treatment</h3>
+                <h3 className="text-xl font-semibold mb-2">Rare Disease Awareness</h3>
                 <p>Raising awareness and supporting research pathways for rare diseases.</p>
                 <button
                   type="button"
                   onClick={() => openMedia(technologyMedia[2])}
-                  className="group relative mt-5 block h-56 w-full overflow-hidden rounded-md bg-gray-50 text-left focus:outline-none focus:ring-4 focus:ring-primary-light/50"
-                  aria-label="Open rare disease treatment image fullscreen"
+                  className="group relative mt-5 flex h-56 w-full items-center justify-center overflow-hidden rounded-md bg-gray-50 text-left focus:outline-none focus:ring-4 focus:ring-primary-light/50"
+                  aria-label="Open rare disease awareness image fullscreen"
                 >
                   <img
                     src={rareDiseaseTreatmentCardImage}
-                    alt="nanoWISS rare disease treatment awareness activity"
-                    className="h-full w-full object-cover"
+                    alt="nanoWISS rare disease awareness activity"
+                    className="h-full w-full object-cover object-center"
                     loading="lazy"
                   />
                   <span className="absolute bottom-3 right-3 inline-flex items-center gap-2 rounded-full bg-primary-dark/90 px-3 py-2 text-sm font-semibold text-white opacity-95 transition group-hover:bg-primary-light">
