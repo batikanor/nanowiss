@@ -105,7 +105,7 @@ const team = [
     image: BatikanImage,
     linkedin: 'https://www.linkedin.com/in/batikanor',
     bio: [
-      'Batikan Bora Ormanci is an award-winning technology professional who supports nanoWISS as an AI / IT Mentor, occasionally helping the team identify opportunities and build practical web solutions.',
+      'Batikan is an award-winning technology professional who supports nanoWISS as an AI / IT Mentor, occasionally helping the team identify opportunities and build practical web solutions.',
       'He is a Computer Science master’s graduate of Technical University of Munich and, at the time of this entry, works as a software engineer for an M&A boutique in Germany.',
     ],
   },
