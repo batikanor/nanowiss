@@ -4,7 +4,6 @@ import Navbar from './Navbar';
 import Footer from './Footer';
 import agrowissLogo from '../assets/agrowiss_logo.png';
 import agrowissProduct from '../assets/agrowiss_product.png';
-import agrowissGrowthEffects from '../assets/agrowiss_growth_effects.png';
 import agrowissTeam from '../assets/agrowiss_team.png';
 import tubitakBiggLogo from '../assets/tubitak_bigg.png';
 import bogaziciTeknoparkLogo from '../assets/bogazici_teknopark.png';
@@ -90,7 +89,7 @@ const AgroWissPage = () => {
         </section>
 
         <section className="bg-white py-16">
-          <div className="container mx-auto grid grid-cols-1 items-center gap-10 px-4 lg:grid-cols-[1.05fr_0.95fr]">
+          <div className="container mx-auto max-w-4xl px-4 text-center">
             <div>
               <p className="font-semibold uppercase tracking-wide text-secondary-light">
                 Plant Growth and Crop Protection
@@ -104,19 +103,13 @@ const AgroWissPage = () => {
               </p>
               <div className="mt-6 space-y-4">
                 {growthEffects.map((effect) => (
-                  <div key={effect} className="flex gap-3">
+                  <div key={effect} className="flex gap-3 text-left">
                     <CheckCircle2 className="mt-1 shrink-0 text-secondary-light" size={22} />
                     <p className="text-gray-700">{effect}</p>
                   </div>
                 ))}
               </div>
             </div>
-            <img
-              src={agrowissGrowthEffects}
-              alt="AgroWISS plant growth and crop protection effects"
-              className="w-full rounded-lg border border-gray-100 bg-white object-contain shadow-xl"
-              loading="lazy"
-            />
           </div>
         </section>
 
