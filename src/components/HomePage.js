@@ -100,10 +100,11 @@ const HomePage = () => {
             <div>
               <h2 className="text-3xl font-bold mb-8 text-primary-dark">Our Mission</h2>
               <p className="text-xl sm:text-lg text-gray-700">
-                nanoWISS is a deep technology and social impact startup developing nanoparticle
-                technologies for healthier people and a healthier planet. Our work began with
-                nanotechnology-based solutions for resistant biofilm infections in cystic fibrosis
-                and now also supports eco-friendly agricultural biotechnology through AgroWISS.
+                nanoWISS is a deep technology and social impact startup developing sustainable
+                nanoparticle technologies for healthier people and a healthier planet. Our work
+                began with nanotechnology-based solutions for resistant biofilm infections in cystic
+                fibrosis and now also supports eco-friendly agricultural biotechnology through
+                AgroWISS.
               </p>
             </div>
             <div className="rounded-lg border border-gray-100 bg-white p-8 text-center shadow">
@@ -131,11 +132,12 @@ const HomePage = () => {
             <div>
               <p className="font-semibold uppercase tracking-wide text-primary-light">Founding team</p>
               <h2 className="mt-3 text-3xl font-bold text-white">
-                Built by founders connecting science, product, and field applications.
+                Built by young women scientists connecting science, product, and field applications.
               </h2>
               <p className="mt-5 text-lg text-white/75">
-                The nanoWISS founding team brings together molecular biotechnology, nanoscience,
-                biomedical engineering, operations, and AgroWISS commercialization work.
+                The nanoWISS team brings together young women scientists working across molecular
+                biotechnology, nanoscience, biomedical engineering, operations, and AgroWISS
+                commercialization.
               </p>
               <Link
                 to="/team"

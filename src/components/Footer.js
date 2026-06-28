@@ -69,7 +69,7 @@ const Footer = ({ showCredit = false, partnerSet = 'nanowiss' }) => {
               className="h-auto w-full max-w-xs rounded-md bg-white object-contain p-2"
             />
             <p className="mt-3 max-w-2xl text-white/75">
-              Nanoparticle technologies for health, scalable production systems, and
+              Sustainable nanoparticle technologies for health, scalable production systems, and
               AgroWISS agricultural biotechnology.
             </p>
             <div className="mt-5 flex flex-wrap gap-3">

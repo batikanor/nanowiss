@@ -43,9 +43,9 @@ import { BrowserRouter as Router, Route, Routes, Navigate, useLocation } from 'r
 
 const pageSeo = {
   '/': {
-    title: 'nanoWISS | Nanoparticle Technologies for Health and Agriculture',
+    title: 'nanoWISS | Sustainable Nanoparticle Technologies for Health and Agriculture',
     description:
-      "Let's take a Deep breath. nanoWISS develops nanoparticle synthesis, scalable production systems, and AgroWISS agricultural biotechnology for healthier people and a healthier planet.",
+      "Let's take a Deep breath. Sustainable Nanoparticle Technologies for healthier people and planet.",
     keywords:
       'nanoWISS, nanoparticles, nanotechnology, nanoparticle synthesis, biofilm research, cystic fibrosis, AgroWISS, agricultural biotechnology',
   },
@@ -59,7 +59,7 @@ const pageSeo = {
   '/products': {
     title: 'Products and Technologies | nanoWISS',
     description:
-      'Explore nanoWISS nanoparticle synthesis, scalable nanoparticle production systems, and application pipelines for health, disinfection, and agricultural biotechnology.',
+      'Explore nanoWISS sustainable nanoparticle synthesis, scalable nanoparticle production systems, and application pipelines for health, disinfection, and agricultural biotechnology.',
     keywords:
       'nanoparticle production system, nanoparticle synthesis, biofilm treatment research, nanoWISS products, nanotechnology applications',
   },
