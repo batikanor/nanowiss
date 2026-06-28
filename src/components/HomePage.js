@@ -12,7 +12,6 @@ import nanoparticleProductionPoster from '../assets/nanoparticle_production_post
 import biofilmDemoVideo from '../assets/biofilm_demo.mp4';
 import biofilmPoster from '../assets/biofilm_demo_poster.jpg';
 import rareDiseaseTreatmentImage from '../assets/rare_disease_treatment.png';
-import rareDiseaseTreatmentCardImage from '../assets/rare_disease_treatment_card.png';
 import BiofilmVideo from './BiofilmVideo';
 import Navbar from './Navbar'; // Import the Navbar component
 import Footer from './Footer';
@@ -274,9 +273,9 @@ const HomePage = () => {
                   aria-label="Open rare disease awareness image fullscreen"
                 >
                   <img
-                    src={rareDiseaseTreatmentCardImage}
+                    src={rareDiseaseTreatmentImage}
                     alt="nanoWISS rare disease awareness activity"
-                    className="h-full w-full object-cover object-center"
+                    className="h-full w-full object-cover object-[center_88%]"
                     loading="lazy"
                   />
                   <span className="absolute bottom-3 right-3 inline-flex items-center gap-2 rounded-full bg-primary-dark/90 px-3 py-2 text-sm font-semibold text-white opacity-95 transition group-hover:bg-primary-light">
