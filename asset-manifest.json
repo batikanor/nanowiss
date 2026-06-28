@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.6b2743a2.css",
-    "main.js": "/static/js/main.29b84fcb.js",
+    "main.js": "/static/js/main.aca56b5b.js",
     "static/js/453.e5c486a4.chunk.js": "/static/js/453.e5c486a4.chunk.js",
     "static/media/agrowiss_team.png": "/static/media/agrowiss_team.f7a5f11a934b846c091f.png",
     "static/media/rare_disease_treatment.png": "/static/media/rare_disease_treatment.51df384d93717ceb047f.png",
@@ -16,7 +16,6 @@
     "static/media/sumeyye_demir.png": "/static/media/sumeyye_demir.e2f03f42cb4338007467.png",
     "static/media/ceyda_oner.png": "/static/media/ceyda_oner.62fc681d9646107f4178.png",
     "static/media/founding_members.png": "/static/media/founding_members.8faea762e3584bf16ff9.png",
-    "static/media/agrowiss_growth_effects.png": "/static/media/agrowiss_growth_effects.541c95c841f738547acc.png",
     "static/media/bogazici_teknopark.png": "/static/media/bogazici_teknopark.c24ab6c35df656b310d4.png",
     "static/media/biofilm_demo.mp4": "/static/media/biofilm_demo.581a3781293772a43efc.mp4",
     "static/media/migrant_accelerator.png": "/static/media/migrant_accelerator.ba5806fc1a5666cc586a.png",
@@ -40,11 +39,11 @@
     "static/media/social_impact_award.png": "/static/media/social_impact_award.c815cabfbe1715e387e2.png",
     "index.html": "/index.html",
     "main.6b2743a2.css.map": "/static/css/main.6b2743a2.css.map",
-    "main.29b84fcb.js.map": "/static/js/main.29b84fcb.js.map",
+    "main.aca56b5b.js.map": "/static/js/main.aca56b5b.js.map",
     "453.e5c486a4.chunk.js.map": "/static/js/453.e5c486a4.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.6b2743a2.css",
-    "static/js/main.29b84fcb.js"
+    "static/js/main.aca56b5b.js"
   ]
 }
