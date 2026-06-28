@@ -10,6 +10,7 @@ import BerrinImage from '../assets/berrin_saygi_yalcin.png';
 import HakanImage from '../assets/hakan_yilmaz.png';
 import SumeyyeImage from '../assets/sumeyye_demir.png';
 import CeydaImage from '../assets/ceyda_oner.png';
+import BatikanImage from '../assets/batikan_bora_ormanci.jpg';
 
 const founders = [
   {
@@ -98,18 +99,45 @@ const team = [
       'As Laboratory Support Staff, she performs practical tasks such as synthesis, characterization, and sample preparation while contributing to technical documentation.',
     ],
   },
+  {
+    name: 'Batikan Bora Ormanci',
+    role: 'AI / IT Mentor',
+    image: BatikanImage,
+    linkedin: 'https://www.linkedin.com/in/batikanor',
+    bio: [
+      'Batikan Bora Ormanci is an award-winning technology professional who supports nanoWISS as an AI / IT Mentor, occasionally helping the team identify opportunities and build practical web solutions.',
+      'He is a Computer Science master’s graduate of Technical University of Munich and, at the time of this entry, works as a software engineer for an M&A boutique in Germany.',
+    ],
+  },
 ];
 
 const TeamCard = ({ member, large = false }) => (
   <article className={`h-full rounded-lg bg-white p-6 text-left shadow ${large ? 'md:p-8' : ''}`}>
-    <div className="flex flex-col gap-5 sm:flex-row">
-      <img
-        src={member.image}
-        alt={member.name}
-        loading="eager"
-        decoding="async"
-        className={`${large ? 'h-36 w-36' : 'h-28 w-28'} shrink-0 rounded-full object-cover`}
-      />
+    <div className={`flex flex-col gap-5 ${large ? 'sm:flex-row' : ''}`}>
+      {member.image ? (
+        <img
+          src={member.image}
+          alt={member.name}
+          loading="eager"
+          decoding="async"
+          className={
+            large
+              ? 'h-36 w-36 shrink-0 rounded-full object-cover'
+              : 'h-32 w-32 shrink-0 rounded-full border-4 border-primary-light object-cover'
+          }
+        />
+      ) : (
+        <div
+          aria-hidden="true"
+          className={
+            large
+              ? 'flex h-36 w-36 shrink-0 items-center justify-center rounded-full bg-primary-dark text-4xl font-bold text-white shadow-inner'
+              : 'flex h-32 w-32 shrink-0 items-center justify-center rounded-full bg-primary-dark text-3xl font-bold text-white shadow-inner'
+          }
+        >
+          {member.initials}
+        </div>
+      )}
       <div>
         <h3 className="text-xl font-bold text-primary-dark">{member.name}</h3>
         <p className="mt-1 font-semibold text-secondary-light">{member.role}</p>
@@ -138,7 +166,7 @@ const TeamSection = ({ title, members, large = false }) => (
   <section className="py-12">
     <div className="container mx-auto px-4">
       <h2 className="mb-8 text-center text-3xl font-bold text-white">{title}</h2>
-      <div className={`grid gap-6 ${large ? 'lg:grid-cols-2' : 'md:grid-cols-3'}`}>
+      <div className={`grid gap-6 ${large ? 'lg:grid-cols-2' : 'md:grid-cols-2'}`}>
         {members.map((member) => (
           <TeamCard key={member.name} member={member} large={large} />
         ))}
@@ -157,7 +185,7 @@ const TeamPage = () => {
             <h1 className="text-4xl font-extrabold">Meet Our Team</h1>
             <p className="mx-auto mt-4 max-w-3xl text-lg text-white/85">
               nanoWISS brings together molecular biotechnology, biomedical engineering,
-              chemical engineering, product development, and science communication.
+              chemical engineering, product development, science communication, and AI / IT mentoring.
             </p>
           </div>
         </section>

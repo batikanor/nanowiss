@@ -52,9 +52,9 @@ const pageSeo = {
   '/team': {
     title: 'Team | nanoWISS',
     description:
-      'Meet the nanoWISS team working across molecular biotechnology, nanoscience, biomedical engineering, chemical engineering, product development, and science communication.',
+      'Meet the nanoWISS team working across molecular biotechnology, nanoscience, biomedical engineering, chemical engineering, product development, science communication, and AI / IT mentoring.',
     keywords:
-      'nanoWISS team, biotechnology founders, nanoscience team, AgroWISS founders, molecular biotechnology',
+      'nanoWISS team, biotechnology founders, nanoscience team, AgroWISS founders, molecular biotechnology, AI IT mentor',
   },
   '/products': {
     title: 'Products and Technologies | nanoWISS',
