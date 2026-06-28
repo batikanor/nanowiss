@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.6b2743a2.css",
-    "main.js": "/static/js/main.8a65771f.js",
+    "main.js": "/static/js/main.09de66ac.js",
     "static/js/453.e5c486a4.chunk.js": "/static/js/453.e5c486a4.chunk.js",
     "static/media/agrowiss_team.png": "/static/media/agrowiss_team.f7a5f11a934b846c091f.png",
     "static/media/rare_disease_treatment.png": "/static/media/rare_disease_treatment.51df384d93717ceb047f.png",
@@ -40,11 +40,11 @@
     "static/media/social_impact_award.png": "/static/media/social_impact_award.c815cabfbe1715e387e2.png",
     "index.html": "/index.html",
     "main.6b2743a2.css.map": "/static/css/main.6b2743a2.css.map",
-    "main.8a65771f.js.map": "/static/js/main.8a65771f.js.map",
+    "main.09de66ac.js.map": "/static/js/main.09de66ac.js.map",
     "453.e5c486a4.chunk.js.map": "/static/js/453.e5c486a4.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.6b2743a2.css",
-    "static/js/main.8a65771f.js"
+    "static/js/main.09de66ac.js"
   ]
 }
