@@ -4,6 +4,7 @@ import Navbar from './Navbar';
 import Footer from './Footer';
 import socialImpactAwardLogo from '../assets/social_impact_award.png';
 import migrantAcceleratorLogo from '../assets/migrant_accelerator.png';
+import wisaLogo from '../assets/wisa_logo.png';
 import heroImage from '../assets/agrowiss_team.png';
 import labImage from '../assets/lab_nanoparticle.png';
 
@@ -67,9 +68,18 @@ const SocialImpactPage = () => (
             </div>
           </div>
           <div className="rounded-lg border border-white/15 bg-white/10 p-6 backdrop-blur">
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
               <div className="flex h-32 items-center justify-center rounded-lg bg-white p-4">
                 <img src={socialImpactAwardLogo} alt="Social Impact Award Germany" className="max-h-24 object-contain" />
+              </div>
+              <div
+                className="relative flex h-32 items-center justify-center rounded-lg bg-white p-4"
+                aria-label="WISA Women In Science Academy coming soon"
+              >
+                <img src={wisaLogo} alt="WISA Women In Science Academy" className="max-h-24 object-contain" />
+                <span className="absolute right-3 top-3 rounded-full bg-primary-light px-3 py-1 text-xs font-bold uppercase tracking-wide text-white">
+                  Coming Soon
+                </span>
               </div>
               <a
                 href={migrantAcceleratorAlumniUrl}
@@ -82,8 +92,9 @@ const SocialImpactPage = () => (
               </a>
             </div>
             <p className="mt-5 text-white/80">
-              Recognition and acceleration help nanoWISS communicate a careful impact story without
-              overstating scientific or commercial claims.
+              Recognition, acceleration, and the forthcoming WISA Women In Science Academy pathway
+              help nanoWISS communicate a careful impact story without overstating scientific or
+              commercial claims.
             </p>
           </div>
         </div>

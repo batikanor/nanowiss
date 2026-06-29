@@ -5,6 +5,7 @@ import backgroundImage from '../assets/agrowiss_team.png';
 import agrowissLogo from '../assets/agrowiss_logo.png';
 import socialImpactAwardLogo from '../assets/social_impact_award.png';
 import migrantAcceleratorLogo from '../assets/migrant_accelerator.png';
+import wisaLogo from '../assets/wisa_logo.png';
 import nanoWissDarkLogo from '../assets/nanowiss_logo_on_black.png';
 import foundingMembersImage from '../assets/founding_members.png';
 import nanoparticleProductionVideo from '../assets/nanoparticle_production.mp4';
@@ -152,7 +153,7 @@ const HomePage = () => {
         <section id="social-impact" className="scroll-mt-24 bg-white py-16">
           <div className="container mx-auto grid grid-cols-1 items-center gap-10 px-4 lg:grid-cols-[0.95fr_1.05fr]">
             <div className="rounded-lg border border-gray-100 bg-background p-8 shadow">
-              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+              <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
                 <a
                   href="https://germany.socialimpactaward.net/project/nanowiss/"
                   target="_blank"
@@ -166,6 +167,19 @@ const HomePage = () => {
                     className="max-h-24 w-full object-contain"
                   />
                 </a>
+                <div
+                  className="relative flex h-32 items-center justify-center rounded-md bg-white p-5"
+                  aria-label="WISA Women In Science Academy coming soon"
+                >
+                  <img
+                    src={wisaLogo}
+                    alt="WISA Women In Science Academy"
+                    className="max-h-24 w-full object-contain"
+                  />
+                  <span className="absolute right-3 top-3 rounded-full bg-primary-light px-3 py-1 text-xs font-bold uppercase tracking-wide text-white">
+                    Coming Soon
+                  </span>
+                </div>
                 <a
                   href={migrantAcceleratorAlumniUrl}
                   target="_blank"
@@ -192,8 +206,8 @@ const HomePage = () => {
               <p className="mt-5 text-lg text-gray-700">
                 nanoWISS started from resistant biofilm infection research and expanded toward
                 sustainable agricultural biotechnology through AgroWISS. Social Impact Award
-                Germany and The Migrant Accelerator help frame that mission as a clear, credible
-                impact story.
+                Germany, The Migrant Accelerator, and the forthcoming WISA Women In Science
+                Academy help frame that mission as a clear, credible impact story.
               </p>
               <Link
                 to="/social-impact"
