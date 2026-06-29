@@ -68,16 +68,16 @@ const SocialImpactPage = () => (
             </div>
           </div>
           <div className="rounded-lg border border-white/15 bg-white/10 p-6 backdrop-blur">
-            <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
-              <div className="flex h-32 items-center justify-center rounded-lg bg-white p-4">
+            <div className="grid grid-cols-1 place-items-center gap-4 sm:grid-cols-3">
+              <div className="flex h-32 w-full max-w-72 items-center justify-center rounded-lg bg-white p-4">
                 <img src={socialImpactAwardLogo} alt="Social Impact Award Germany" className="max-h-24 object-contain" />
               </div>
               <div
-                className="relative flex h-32 items-center justify-center rounded-lg bg-white p-4"
+                className="relative flex h-32 w-full max-w-72 items-center justify-center rounded-lg bg-white p-4"
                 aria-label="WISA Women In Science Academy coming soon"
               >
                 <img src={wisaLogo} alt="WISA Women In Science Academy" className="max-h-24 object-contain" />
-                <span className="absolute right-3 top-3 rounded-full bg-primary-light px-3 py-1 text-xs font-bold uppercase tracking-wide text-white">
+                <span className="absolute right-3 top-3 rounded-full bg-primary-light px-3 py-1 text-xs font-bold tracking-wide text-white">
                   Coming Soon
                 </span>
               </div>
@@ -85,7 +85,7 @@ const SocialImpactPage = () => (
                 href={migrantAcceleratorAlumniUrl}
                 target="_blank"
                 rel="noreferrer"
-                className="flex h-32 items-center justify-center rounded-lg bg-white p-4 transition hover:-translate-y-1 hover:shadow-lg"
+                className="flex h-32 w-full max-w-72 items-center justify-center rounded-lg bg-white p-4 transition hover:-translate-y-1 hover:shadow-lg"
                 aria-label="The Migrant Accelerator Alumni Startups"
               >
                 <img src={migrantAcceleratorLogo} alt="The Migrant Accelerator" className="max-h-24 object-contain" />

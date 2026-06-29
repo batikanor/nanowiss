@@ -153,12 +153,12 @@ const HomePage = () => {
         <section id="social-impact" className="scroll-mt-24 bg-white py-16">
           <div className="container mx-auto grid grid-cols-1 items-center gap-10 px-4 lg:grid-cols-[0.95fr_1.05fr]">
             <div className="rounded-lg border border-gray-100 bg-background p-8 shadow">
-              <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
+              <div className="grid grid-cols-1 place-items-center gap-4 sm:grid-cols-3">
                 <a
                   href="https://germany.socialimpactaward.net/project/nanowiss/"
                   target="_blank"
                   rel="noreferrer"
-                  className="flex h-32 items-center justify-center rounded-md bg-white p-5 transition hover:-translate-y-1 hover:shadow-lg"
+                  className="flex h-32 w-full max-w-72 items-center justify-center rounded-md bg-white p-5 transition hover:-translate-y-1 hover:shadow-lg"
                   aria-label="Social Impact Award Germany nanoWISS profile"
                 >
                   <img
@@ -168,7 +168,7 @@ const HomePage = () => {
                   />
                 </a>
                 <div
-                  className="relative flex h-32 items-center justify-center rounded-md bg-white p-5"
+                  className="relative flex h-32 w-full max-w-72 items-center justify-center rounded-md bg-white p-5"
                   aria-label="WISA Women In Science Academy coming soon"
                 >
                   <img
@@ -176,7 +176,7 @@ const HomePage = () => {
                     alt="WISA Women In Science Academy"
                     className="max-h-24 w-full object-contain"
                   />
-                  <span className="absolute right-3 top-3 rounded-full bg-primary-light px-3 py-1 text-xs font-bold uppercase tracking-wide text-white">
+                  <span className="absolute right-3 top-3 rounded-full bg-primary-light px-3 py-1 text-xs font-bold tracking-wide text-white">
                     Coming Soon
                   </span>
                 </div>
@@ -184,7 +184,7 @@ const HomePage = () => {
                   href={migrantAcceleratorAlumniUrl}
                   target="_blank"
                   rel="noreferrer"
-                  className="flex h-32 items-center justify-center rounded-md bg-white p-5 transition hover:-translate-y-1 hover:shadow-lg"
+                  className="flex h-32 w-full max-w-72 items-center justify-center rounded-md bg-white p-5 transition hover:-translate-y-1 hover:shadow-lg"
                   aria-label="The Migrant Accelerator"
                 >
                   <img
