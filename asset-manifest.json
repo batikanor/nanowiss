@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.df5e7501.css",
-    "main.js": "/static/js/main.441d0d28.js",
+    "main.css": "/static/css/main.550c55c8.css",
+    "main.js": "/static/js/main.a1c3506c.js",
     "static/js/453.e5c486a4.chunk.js": "/static/js/453.e5c486a4.chunk.js",
     "static/media/agrowiss_team.png": "/static/media/agrowiss_team.f7a5f11a934b846c091f.png",
     "static/media/rare_disease_treatment.png": "/static/media/rare_disease_treatment.51df384d93717ceb047f.png",
@@ -20,6 +20,7 @@
     "static/media/migrant_accelerator.png": "/static/media/migrant_accelerator.ba5806fc1a5666cc586a.png",
     "static/media/berrin_saygi_yalcin.png": "/static/media/berrin_saygi_yalcin.451448f00e3a406204b9.png",
     "static/media/nanowiss_logo_on_black.png": "/static/media/nanowiss_logo_on_black.519c81a9deeeb77b1bb7.png",
+    "static/media/wisa_logo.png": "/static/media/wisa_logo.997d25220e8c7c12f630.png",
     "static/media/lab_nanoparticle.png": "/static/media/lab_nanoparticle.a8a73f15cca2a9b17682.png",
     "static/media/turkiye_kalkinma_fonu.png": "/static/media/turkiye_kalkinma_fonu.9985bdd81ff8fcf4d706.png",
     "static/media/nwiss_backgr.jpg": "/static/media/nwiss_backgr.04c96cfb0fef4b7611dc.jpg",
@@ -38,12 +39,12 @@
     "static/media/biofilm_demo_poster.jpg": "/static/media/biofilm_demo_poster.98806e7de9638d6d9fcb.jpg",
     "static/media/social_impact_award.png": "/static/media/social_impact_award.c815cabfbe1715e387e2.png",
     "index.html": "/index.html",
-    "main.df5e7501.css.map": "/static/css/main.df5e7501.css.map",
-    "main.441d0d28.js.map": "/static/js/main.441d0d28.js.map",
+    "main.550c55c8.css.map": "/static/css/main.550c55c8.css.map",
+    "main.a1c3506c.js.map": "/static/js/main.a1c3506c.js.map",
     "453.e5c486a4.chunk.js.map": "/static/js/453.e5c486a4.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.df5e7501.css",
-    "static/js/main.441d0d28.js"
+    "static/css/main.550c55c8.css",
+    "static/js/main.a1c3506c.js"
   ]
 }
