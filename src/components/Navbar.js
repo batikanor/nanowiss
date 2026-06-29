@@ -1,80 +1,112 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { Menu, X } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 import nanoWissLogo from '../assets/nanowiss_logo_on_white.png';
 
 const Navbar = () => {
   const location = useLocation(); // Get the current location
+  const [isOpen, setIsOpen] = useState(false);
 
   // Function to check if the link is active
   const isActive = (pathname) => location.pathname === pathname;
 
+  useEffect(() => {
+    setIsOpen(false);
+  }, [location.pathname, location.hash]);
+
+  const navItems = [
+    { label: 'Home', to: '/' },
+    { label: 'Our Technology', href: '/#technology' },
+    { label: 'Team', to: '/team' },
+    { label: 'Products', to: '/products' },
+    { label: 'AgroWISS', to: '/agrowiss' },
+  ];
+
+  const linkClass = (path) =>
+    `rounded-full px-3 py-2 text-sm font-semibold transition hover:bg-primary-dark/5 hover:text-secondary-light ${
+      path && isActive(path) ? 'bg-primary-dark/10 text-secondary-light' : 'text-primary-dark'
+    }`;
+
   return (
-    <header className="border-b border-primary-dark/10 bg-white p-4 shadow-sm">
-      <div className="container mx-auto flex items-center justify-between gap-4 overflow-hidden">
+    <header className="relative z-40 border-b border-primary-dark/10 bg-white shadow-sm">
+      <div className="container mx-auto flex items-center justify-between gap-4 px-4 py-3">
         <Link to="/" className="shrink-0" aria-label="nanoWISS home">
           <img
             src={nanoWissLogo}
             alt="nanoWISS"
-            className="h-12 w-auto max-w-[11rem] object-contain sm:h-14"
+            className="h-11 w-auto max-w-[10.5rem] object-contain sm:h-14 sm:max-w-[11rem]"
           />
         </Link>
-        <nav className="flex-1" aria-label="Primary navigation">
-          <ul className="flex flex-wrap justify-end space-x-4 overflow-hidden">
-            <li>
-              <Link
-                to="/"
-                className={`text-primary-dark hover:text-secondary-light ${isActive('/') ? 'font-bold text-secondary-light' : ''}`}
-                aria-current={isActive('/') ? 'page' : undefined}
-              >
-                Home
-              </Link>
-            </li>
-            <li>
-              <a
-                href="/#technology"
-                className="text-primary-dark hover:text-secondary-light"
-              >
-                Our Technology
-              </a>
-            </li>
-            <li>
-              <Link
-                to="/team"
-                className={`text-primary-dark hover:text-secondary-light ${isActive('/team') ? 'font-bold text-secondary-light' : ''}`}
-                aria-current={isActive('/team') ? 'page' : undefined}
-              >
-                Team
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/products"
-                className={`text-primary-dark hover:text-secondary-light ${isActive('/products') ? 'font-bold text-secondary-light' : ''}`}
-                aria-current={isActive('/products') ? 'page' : undefined}
-              >
-                Products
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/agrowiss"
-                className={`text-primary-dark hover:text-secondary-light ${isActive('/agrowiss') ? 'font-bold text-secondary-light' : ''}`}
-                aria-current={isActive('/agrowiss') ? 'page' : undefined}
-              >
-                AgroWISS
-              </Link>
-            </li>
-            {/* <li>
-              <Link
-                to="/contact"
-                className={`text-white hover:text-primary-light ${isActive('/contact') ? 'font-bold text-primary-light' : ''}`}
-              >
-                Contact
-              </Link>
-            </li> */}
+
+        <button
+          type="button"
+          className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-primary-dark/15 text-primary-dark transition hover:border-primary-light hover:text-primary-light focus:outline-none focus:ring-4 focus:ring-primary-light/30 md:hidden"
+          aria-label={isOpen ? 'Close primary navigation' : 'Open primary navigation'}
+          aria-controls="primary-navigation"
+          aria-expanded={isOpen}
+          onClick={() => setIsOpen((open) => !open)}
+        >
+          {isOpen ? <X size={22} /> : <Menu size={22} />}
+        </button>
+
+        <nav className="hidden flex-1 md:block" aria-label="Primary navigation">
+          <ul className="flex items-center justify-end gap-1">
+            {navItems.map((item) => (
+              <li key={item.label}>
+                {item.to ? (
+                  <Link
+                    to={item.to}
+                    className={linkClass(item.to)}
+                    aria-current={isActive(item.to) ? 'page' : undefined}
+                  >
+                    {item.label}
+                  </Link>
+                ) : (
+                  <a href={item.href} className={linkClass()}>
+                    {item.label}
+                  </a>
+                )}
+              </li>
+            ))}
           </ul>
         </nav>
       </div>
+
+      <nav
+        id="primary-navigation"
+        className={`border-t border-primary-dark/10 bg-white px-4 py-3 shadow-lg md:hidden ${
+          isOpen ? 'block' : 'hidden'
+        }`}
+        aria-label="Primary navigation"
+      >
+        <ul className="grid grid-cols-1 gap-2">
+          {navItems.map((item) => (
+            <li key={item.label}>
+              {item.to ? (
+                <Link
+                  to={item.to}
+                  className={`block rounded-md px-4 py-3 text-base font-semibold transition ${
+                    isActive(item.to)
+                      ? 'bg-primary-dark text-white'
+                      : 'bg-background text-primary-dark hover:bg-primary-dark/10'
+                  }`}
+                  aria-current={isActive(item.to) ? 'page' : undefined}
+                >
+                  {item.label}
+                </Link>
+              ) : (
+                <a
+                  href={item.href}
+                  className="block rounded-md bg-background px-4 py-3 text-base font-semibold text-primary-dark transition hover:bg-primary-dark/10"
+                  onClick={() => setIsOpen(false)}
+                >
+                  {item.label}
+                </a>
+              )}
+            </li>
+          ))}
+        </ul>
+      </nav>
     </header>
   );
 };
