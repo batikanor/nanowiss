@@ -1,11 +1,10 @@
 {
   "files": {
     "main.css": "/static/css/main.bc756e71.css",
-    "main.js": "/static/js/main.24f103d0.js",
+    "main.js": "/static/js/main.76dfe21a.js",
     "static/js/453.e5c486a4.chunk.js": "/static/js/453.e5c486a4.chunk.js",
     "static/media/agrowiss_team.png": "/static/media/agrowiss_team.f7a5f11a934b846c091f.png",
     "static/media/rare_disease_treatment.png": "/static/media/rare_disease_treatment.51df384d93717ceb047f.png",
-    "static/media/hakan_yilmaz.png": "/static/media/hakan_yilmaz.bf9ff6e883a31e8df024.png",
     "static/media/agrowiss_product.png": "/static/media/agrowiss_product.3d707799af90c8c143fd.png",
     "static/media/selen_ozdinc_foto.png": "/static/media/selen_ozdinc_foto.fe3691852aadf8961b7c.png",
     "static/media/nanoparticle_production.mp4": "/static/media/nanoparticle_production.707b16bf1fbc844edeb5.mp4",
@@ -13,7 +12,6 @@
     "static/media/feyza_atabey_foto.png": "/static/media/feyza_atabey_foto.25db46e8ac5d2139dad8.png",
     "static/media/nisa_tan_foto.png": "/static/media/nisa_tan_foto.f73b729386d91b4bd994.png",
     "static/media/sumeyye_demir.png": "/static/media/sumeyye_demir.e2f03f42cb4338007467.png",
-    "static/media/ceyda_oner.png": "/static/media/ceyda_oner.62fc681d9646107f4178.png",
     "static/media/founding_members.png": "/static/media/founding_members.8faea762e3584bf16ff9.png",
     "static/media/bogazici_teknopark.png": "/static/media/bogazici_teknopark.c24ab6c35df656b310d4.png",
     "static/media/biofilm_demo.mp4": "/static/media/biofilm_demo.581a3781293772a43efc.mp4",
@@ -40,11 +38,11 @@
     "static/media/social_impact_award.png": "/static/media/social_impact_award.c815cabfbe1715e387e2.png",
     "index.html": "/index.html",
     "main.bc756e71.css.map": "/static/css/main.bc756e71.css.map",
-    "main.24f103d0.js.map": "/static/js/main.24f103d0.js.map",
+    "main.76dfe21a.js.map": "/static/js/main.76dfe21a.js.map",
     "453.e5c486a4.chunk.js.map": "/static/js/453.e5c486a4.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.bc756e71.css",
-    "static/js/main.24f103d0.js"
+    "static/js/main.76dfe21a.js"
   ]
 }
