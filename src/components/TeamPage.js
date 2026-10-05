@@ -7,9 +7,7 @@ import NisaImage from '../assets/nisa_tan_foto.png';
 import SelenImage from '../assets/selen_ozdinc_foto.png';
 import ElifImage from '../assets/elif_kaman_foto.png';
 import BerrinImage from '../assets/berrin_saygi_yalcin.png';
-import HakanImage from '../assets/hakan_yilmaz.png';
 import SumeyyeImage from '../assets/sumeyye_demir.png';
-import CeydaImage from '../assets/ceyda_oner.png';
 import BatikanImage from '../assets/batikan_bora_ormanci.jpg';
 
 const founders = [
@@ -70,16 +68,6 @@ const advisors = [
 
 const team = [
   {
-    name: 'Hakan Yılmaz',
-    role: 'Engineer',
-    image: HakanImage,
-    linkedin: 'https://www.linkedin.com/in/hakanyilmaz83',
-    bio: [
-      'Hakan Yılmaz is a fourth-year Biomedical Engineering student at Ankara University. During his university years, he has gained experience through internships in different fields.',
-      'He currently works as a Quality Control and Mechanical Design Specialist and is responsible for mechanical processes at nanoWISS.',
-    ],
-  },
-  {
     name: 'Sümeyye Demir',
     role: 'Science Communication',
     image: SumeyyeImage,
@@ -87,16 +75,6 @@ const team = [
     bio: [
       'Sümeyye Demir is a Bioengineering student at Gebze Technical University. She creates LinkedIn content for NanoNewsScience, a newsletter about nanotechnology, health, agriculture, and biotechnology.',
       'She supports science communication by making deep-tech biotechnology more understandable for a broad audience.',
-    ],
-  },
-  {
-    name: 'Ceyda Önder',
-    role: 'B.Sc. Chemical Engineer',
-    image: CeydaImage,
-    linkedin: 'https://www.linkedin.com/in/ceyda-%C3%B6nder-6bb086271',
-    bio: [
-      'Ceyda graduated from Yalova University with a degree in Chemical Engineering. She has hands-on experience in food and biotechnology laboratory research through internships, as well as field-level experience in production processes.',
-      'As Laboratory Support Staff, she performs practical tasks such as synthesis, characterization, and sample preparation while contributing to technical documentation.',
     ],
   },
   {
