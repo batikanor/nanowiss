@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import LegalLinks from './LegalLinks';
 import socialImpactAwardLogo from '../assets/social_impact_award.png';
 import migrantAcceleratorLogo from '../assets/migrant_accelerator.png';
 import tubitakBiggLogo from '../assets/tubitak_bigg.png';
@@ -132,6 +133,7 @@ const Footer = ({ showCredit = false, partnerSet = 'nanowiss' }) => {
 
       <div className="container mx-auto px-4 py-8 text-center">
         <p>&copy; 2026 nanoWISS. All rights reserved.</p>
+        <div className="mt-3 text-white/80"><LegalLinks /></div>
         {showCredit && (
           <p className="mt-2 text-xs text-gray-400">
             Special thanks to our friend Batikan Bora Ormanci for creating this web app for nanoWISS.

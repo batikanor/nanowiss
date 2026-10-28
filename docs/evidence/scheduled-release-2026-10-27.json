@@ -1,0 +1,62 @@
+{
+  "scheduledFor": "2026-10-27T18:10:00+01:00",
+  "checkedAt": "2026-10-27T17:12:57.242903+00:00",
+  "outcome": "blocked before production publication",
+  "sourceHead": "b3d6aa8beaa548a97dbe24664af8948efa4d409e",
+  "sourceCommitted": false,
+  "sourcePushed": false,
+  "productionChanged": false,
+  "dnsChanged": false,
+  "productionUrl": "https://www.nanowiss.com/",
+  "productionHost": "GitHub Pages; www CNAME batikanor.github.io.",
+  "productionBundle": "/static/js/main.76dfe21a.js",
+  "productionLegalRoutes": {
+    "/impressum": 404,
+    "/datenschutz": 404
+  },
+  "stagingUrl": "https://staging-nanowiss.157-180-20-129.sslip.io",
+  "stagingRelease": "20261027T123954Z-workspace",
+  "desiredStagingDns": "staging.nanowiss.com still NXDOMAIN",
+  "dnsAccess": "no configured DNS access found in this project; owner friend controls DNS",
+  "checks": {
+    "brand": "passed",
+    "nodeLegalValidatorTests": {
+      "passed": 10,
+      "failed": 0
+    },
+    "reactTests": {
+      "passed": 10,
+      "failed": 0
+    },
+    "buildRelease": "blocked by legal check; production artifact not compiled or uploaded"
+  },
+  "legalIssues": [
+    "operator.confirmed: confirm the operator, contact details and all applicable register/identifier disclosures.",
+    "privacy.hosting.provider: provide a verified value without placeholders.",
+    "privacy.hosting.addressLines: provide the hosting provider's full postal address.",
+    "privacy.hosting.privacyUrl: provide the provider's HTTPS privacy notice URL.",
+    "privacy.hosting.serverLocations: provide a verified value without placeholders.",
+    "privacy.hosting.logRetention: provide a verified value without placeholders.",
+    "privacy.hosting.internationalTransfers: provide a verified value without placeholders.",
+    "privacy.hosting.processorAgreementConfirmed: confirm the applicable Art. 28 GDPR processing agreement.",
+    "privacy.emailService.provider: provide a verified value without placeholders.",
+    "privacy.emailService.privacyUrl: provide the email provider's HTTPS privacy notice URL.",
+    "privacy.emailService.retention: provide a verified value without placeholders.",
+    "privacy.emailService.internationalTransfers: provide a verified value without placeholders.",
+    "privacy.emailService.processorAgreementConfirmed: confirm the applicable Art. 28 GDPR processing agreement.",
+    "privacy.confirmed: confirm that the notice matches the deployed website and email practices.",
+    "reviewedOn: record the actual review date as YYYY-MM-DD."
+  ],
+  "automation": "deploy-nanowiss-at-18-10-today PAUSED after this attempt",
+  "preservation": "Existing staging, production, email/DNS records and unfinished user experiments retained; no server mutation or DNS cutover attempted.",
+  "liveBrowserVerification": {
+    "removedProfilesAbsentOnStagingAndProduction": true,
+    "teamMemberCount": 7,
+    "mobileViewport": "390x844",
+    "horizontalOverflow": false,
+    "stagingFooterLegalLinks": true,
+    "productionFooterLegalLinks": false,
+    "removedPortraitsReturn404": true,
+    "sessionsClosed": true
+  }
+}

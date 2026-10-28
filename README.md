@@ -14,8 +14,15 @@
 `npm install` ve 
 `npm start`
 
-* websitenin son halini deploy etmek icin
-`npm run deploy`
+* 28 Ekim 2026 tarihli proje sahibinin tercihine göre üretim GitHub Pages,
+  staging ise Hetzner üzerinde yayınlanır. DNS değişikliği gerekli değildir.
+  Ayrıntılar: [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md).
+* Hukuki bilgiler tamamlandıktan sonra yayın paketini doğrulamak için
+  `npm run build:release` ve `npm run test:legal` çalıştırın.
+* Impressum ve gizlilik bilgilerinin kaynağı:
+  [src/content/legal-details.json](src/content/legal-details.json).
+  Eksik alanlar tamamlanmadan hukuki sayfalar taslaktır;
+  [docs/LEGAL-NOTICES.md](docs/LEGAL-NOTICES.md) açıklamasına bakın.
 
 
 * github daki son degisiklikleri kendi bilgisayarina cekmek icin
@@ -38,3 +45,9 @@ Kurallar
     * `\src\components\TeamPage.js`
 
 
+
+## Current publishing
+
+The owner chose GitHub Pages production at https://www.nanowiss.com/ and Hetzner
+staging at https://staging.nanowiss.com/ on 28 October 2026. Use the current
+[deployment runbook](docs/DEPLOYMENT.md); no production DNS change is needed.

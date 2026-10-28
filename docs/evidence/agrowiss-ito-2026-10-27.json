@@ -1,0 +1,34 @@
+{
+  "source_url": "https://www.ito.org.tr/tr/meslek-komiteleri/uye-firmalar/mimarlik-ve-muhendislik?page=0",
+  "source_publisher": "İstanbul Ticaret Odası (İTO)",
+  "document_context": "29. Grup Mimarlık ve Mühendislik — Meslek Grubu Üye Firmaları",
+  "retrieved_on_utc": "2026-10-27",
+  "http_status": 200,
+  "html_character_count": 9169409,
+  "table_row_count_including_header": 21525,
+  "table_data_row_count": 21524,
+  "headers": [
+    "Sicil No",
+    "Ünvan",
+    "Üyelik Durum",
+    "Semt",
+    "Nace"
+  ],
+  "exact_matching_row": [
+    "1119202",
+    "AGROWISS BİYOTEKNOLOJİ ARAŞTIRMALARI ANONİM ŞİRKETİ",
+    "Faal",
+    "ÜSKÜDAR",
+    "72.10.02"
+  ],
+  "exact_matching_row_text": "1119202 | AGROWISS BİYOTEKNOLOJİ ARAŞTIRMALARI ANONİM ŞİRKETİ | Faal | ÜSKÜDAR | 72.10.02",
+  "matching_row_count": 1,
+  "verification_method": "Public official HTML fetched with Python urllib.request; table rows parsed using regular expressions and HTML entity decoding. Exact company name and number occur once.",
+  "sha256": null,
+  "sha256_note": "Original fetched HTML was held in a completed process and is no longer available; no additional large fetch performed solely to compute a hash.",
+  "limitations": [
+    "The table column is labelled Sicil No. This is an official published row, not a certified registry excerpt.",
+    "The source contains no MERSİS number, separate chamber number, incorporation date, full company address or authorized-representative details for this row.",
+    "Web text reader rejected the page due to its size; direct Python retrieval returned HTTP 200."
+  ]
+}

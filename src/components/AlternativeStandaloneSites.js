@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
+import LegalLinks from './LegalLinks';
 import * as THREE from 'three';
 import {
   ArrowRight,
@@ -112,6 +113,7 @@ const SimpleFooter = () => (
     <img src={nanoWissLogoOnBlack} alt="nanoWISS" />
     <span>Let's take a Deep breath.</span>
     <a href="mailto:info@nanowiss.com">info@nanowiss.com</a>
+    <LegalLinks />
   </footer>
 );
 
@@ -915,7 +917,7 @@ export const ProductTheaterSite = () => (
     variant="product-theater"
     eyebrow="Product Theater"
     title="Particles on stage."
-    text="A nanoWISS product homepage staged as a live demo: objects, technical captions, and business-ready proof."
+    text="Explore nanoWISS nanoparticle production systems, AgroWISS products, and research applications."
     visual={<div className="product-stage"><img src={deviceImage} alt="nanoWISS production system" /><img src={agrowissProduct} alt="AgroWISS product" /><img src={productImage} alt="Application product" /></div>}
   >
     <PlatformRows title="A product showroom with technical captions." />

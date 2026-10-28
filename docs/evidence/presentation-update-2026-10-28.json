@@ -1,0 +1,37 @@
+{
+  "release": "20261028T114613Z-workspace",
+  "url": "https://staging.nanowiss.com",
+  "server": "157.180.20.129",
+  "remotePath": "/srv/apps/nanowiss-staging/releases/20261028T114613Z-workspace",
+  "sourceHead": "b3d6aa8beaa548a97dbe24664af8948efa4d409e",
+  "source": "uncommitted working tree",
+  "gitCommitted": false,
+  "gitPushed": false,
+  "productionChanged": false,
+  "legalDetailsConfirmed": false,
+  "visibleEnvironmentLabels": false,
+  "previousRelease": "20261027T123954Z-workspace",
+  "artifactManifestSha256": "f94a1e8a3decf4aaeea7c1e0f76e4d766d382957f6bf987dcd11e57e26d35105",
+  "fileCount": 53,
+  "artifactBytes": 108856610,
+  "mainBundles": {
+    "static/js/main.9dcc8bd5.js": "2f6520fb827a2efb611021ce21a69befb582f110e2ef4bfa1b5b0788efcb05eb"
+  },
+  "verifiedAt": "2026-10-28T11:48:47.732312+00:00",
+  "checksumsVerified": 53,
+  "storageAnalyticsGatesPassedAt": "2026-10-28T11:44:06Z",
+  "browserVerification": {
+    "home": "no added status banner or reserved body padding",
+    "impressum": "no added status warning, register1119202retained",
+    "datenschutz": "no added status warning",
+    "footerLinks": "Impressum and Datenschutz retained",
+    "mobile": "390x844 no overflow",
+    "browserErrors": []
+  },
+  "existingLegalNavigationTestsPassed": 9,
+  "brandCheck": "passed",
+  "build": "passed",
+  "activation": "atomic current symlink switch; previous release retained",
+  "sourceCopy": "removed demo/environment descriptions from alternative pages",
+  "ownerPresentationRule": "recorded in AGENTS.md and docs/DEPLOYMENT.md"
+}

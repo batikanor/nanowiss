@@ -196,9 +196,9 @@ const AlternativeConceptPage = ({ slug }) => {
                 Translate lab synthesis into a product story with visible control over carrier,
                 active ingredient, particle behavior, and intended application.
               </SpecPanel>
-              <SpecPanel title="Demo Value" icon={Sparkles}>
-                Use motion to communicate what static product photos cannot: release timing,
-                particle movement, production flow, and system relationships.
+              <SpecPanel title="Platform Benefits" icon={Sparkles}>
+                Explore release timing, particle behavior, production flow, and the relationships
+                between carriers and active ingredients.
               </SpecPanel>
               <SpecPanel title="Technology Surface" icon={Cpu}>
                 Make the platform feel modern and precise without inventing unsupported medical or

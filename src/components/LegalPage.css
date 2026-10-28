@@ -1,0 +1,124 @@
+.legal-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem 1.5rem;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.legal-links a {
+  display: inline-block;
+  padding: 0.5rem 0.25rem;
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.legal-links a:hover {
+  text-decoration-thickness: 2px;
+}
+
+.legal-links a:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.legal-footer-strip {
+  padding: 1rem;
+  background: #422768;
+  color: #fff;
+}
+
+.legal-page {
+  background: #fbf9fd;
+  color: #282036;
+  padding: 3.5rem 1.25rem 5rem;
+}
+
+.legal-content {
+  max-width: 48rem;
+  margin: 0 auto;
+  overflow-wrap: anywhere;
+  line-height: 1.8;
+}
+
+.legal-content h1 {
+  color: #422768;
+  font-size: clamp(1.85rem, 5vw, 2.75rem);
+  font-weight: 800;
+  line-height: 1.25;
+  margin-bottom: 1.5rem;
+}
+
+.legal-content h1:focus {
+  outline: none;
+}
+
+.legal-languages {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.legal-languages a {
+  border: 1px solid #d8cce7;
+  border-radius: 999px;
+  padding: 0.45rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.legal-languages a:hover {
+  background: #eee7f7;
+}
+
+.legal-languages a[aria-current='page'] {
+  background: #422768;
+  border-color: #422768;
+  color: #fff;
+}
+
+.legal-content section + section {
+  margin-top: 2.25rem;
+}
+
+.legal-content h2 {
+  color: #422768;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.5;
+  margin-bottom: 0.75rem;
+}
+
+.legal-content p + p,
+.legal-content p + address,
+.legal-content address + p {
+  margin-top: 0.8rem;
+}
+
+.legal-content a {
+  color: #422768;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.legal-content a:focus-visible {
+  outline: 2px solid #422768;
+  outline-offset: 3px;
+}
+
+.legal-address {
+  display: flex;
+  flex-direction: column;
+  font-style: normal;
+}
+
+.legal-date {
+  color: #615569;
+  font-size: 0.875rem;
+  margin-bottom: 2rem;
+}

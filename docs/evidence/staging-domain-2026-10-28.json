@@ -1,0 +1,86 @@
+{
+  "verifiedAt": "2026-10-28T11:34:25.114969+00:00",
+  "url": "https://staging.nanowiss.com/",
+  "server": "157.180.20.129",
+  "release": "20261027T123954Z-workspace",
+  "sourceHead": "b3d6aa8beaa548a97dbe24664af8948efa4d409e",
+  "source": "uncommitted workspace, identical to deployed build",
+  "mainBundle": "main.53d88519.js",
+  "mainSha256": "911b7c6565f9889c686459d32c98a89476db6b0e4477e8594ab7bed18c0ddd24",
+  "https": {
+    "host": "staging.nanowiss.com",
+    "dns": [
+      "157.180.20.129"
+    ],
+    "certificate": {
+      "subjectAltName": [
+        [
+          "DNS",
+          "staging.nanowiss.com"
+        ]
+      ],
+      "issuer": [
+        [
+          [
+            "countryName",
+            "US"
+          ]
+        ],
+        [
+          [
+            "organizationName",
+            "Let's Encrypt"
+          ]
+        ],
+        [
+          [
+            "commonName",
+            "YE2"
+          ]
+        ]
+      ],
+      "notBefore": "Oct 28 10:33:47 2026 GMT",
+      "notAfter": "Jan 26 10:33:46 2027 GMT"
+    },
+    "httpRedirectFinal": "https://staging.nanowiss.com/team"
+  },
+  "httpRoutesPassed": 72,
+  "runtimeAssetsPassed": 42,
+  "expected404sPassed": 7,
+  "browser": {
+    "desktopTeam": "passed, removed profiles absent",
+    "footerLegalLinks": "same-origin Impressum and Datenschutz",
+    "mobilePrivacy": "passed at 390x844, no overflow, representative omitted",
+    "errors": [],
+    "externalRuntimeOrigins": [],
+    "brokenImages": []
+  },
+  "legalNotices": "remain visible drafts pending confirmations",
+  "indexing": "noindex, nofollow, noarchive; robots Disallow: /",
+  "cacheControl": "no-store",
+  "gitCommitted": false,
+  "gitPushed": false,
+  "productionChanged": false,
+  "dnsChangedByAgent": false,
+  "dns": "owner added only staging A record; no nameserver or mail changes",
+  "requiredGates": "storage and analytics passed 2026-10-28T11:31:51Z",
+  "healthAfterActivation": {
+    "https://www.nanowiss.com/": {
+      "status": 200,
+      "server": "GitHub.com"
+    },
+    "https://staging-nanowiss.157-180-20-129.sslip.io/": {
+      "status": 200,
+      "server": null
+    },
+    "https://maptheory.org/livez": {
+      "status": 200,
+      "server": null
+    },
+    "https://hack.maptheory.org/": {
+      "status": 200,
+      "server": null
+    }
+  },
+  "rollback": "Remove only nanowiss-staging-domain.caddy from edge fragments, validate complete Caddy config and gracefully reload; retain original preview, backend and current release."
+}

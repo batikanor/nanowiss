@@ -1,0 +1,126 @@
+{
+  "preparedAtUtc": "2026-10-28T22:58:10.340Z",
+  "scope": "Proposal only. GitHub Pages production is expressly authorized for this project; Hetzner remains staging. No project, account, Git or deployment changes made.",
+  "productionHosting": {
+    "provider": "GitHub Pages — GitHub, Inc.",
+    "addressLines": [
+      "88 Colin P. Kelly Jr. St.",
+      "San Francisco, CA 94107",
+      "United States"
+    ],
+    "additionalPrivacyEntity": {
+      "name": "GitHub B.V.",
+      "addressLines": [
+        "Prins Bernhardplein 200",
+        "Amsterdam 1097JB",
+        "The Netherlands"
+      ],
+      "scope": "Also named by GitHub’s Privacy Statement; do not infer the precise contracting entity from visitor geography."
+    },
+    "privacyUrl": "https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement",
+    "serverLocations": "GitHub operates internationally, including in the United States and other countries. These public notices do not identify the individual server or CDN locations serving this GitHub Pages website.",
+    "logRetention": "GitHub stores visitor IP addresses for security. No Pages-specific deletion period is stated in these notices; retention depends on the stated purposes and applicable contractual and legal requirements.",
+    "internationalTransfers": "Personal data may be processed outside the EEA. GitHub describes EU–US Data Privacy Framework participation and Standard Contractual Clauses as safeguards for the transfers to which they apply.",
+    "translations": {
+      "de": {
+        "serverLocations": "GitHub ist international tätig, unter anderem in den USA und weiteren Ländern. Die verlinkten öffentlichen Hinweise benennen keine einzelnen Server- oder CDN-Standorte, von denen diese GitHub-Pages-Website ausgeliefert wird.",
+        "logRetention": "GitHub speichert Besucher-IP-Adressen zu Sicherheitszwecken. Die verlinkten Hinweise nennen keine Pages-spezifische Löschfrist; die Aufbewahrung richtet sich nach den angegebenen Zwecken sowie vertraglichen und gesetzlichen Anforderungen.",
+        "internationalTransfers": "Personenbezogene Daten können außerhalb des EWR verarbeitet werden. GitHub nennt die Teilnahme am EU–US Data Privacy Framework und Standardvertragsklauseln als Garantien für die jeweils davon erfassten Übermittlungen."
+      },
+      "tr": {
+        "serverLocations": "GitHub, ABD ve diğer ülkeler dâhil uluslararası olarak faaliyet gösterir. Bağlantısı verilen kamuya açık bildirimler, bu GitHub Pages web sitesini sunan tek tek sunucu veya CDN konumlarını belirtmez.",
+        "logRetention": "GitHub, ziyaretçilerin IP adreslerini güvenlik amacıyla saklar. Bağlantılı bildirimlerde Pages’e özgü bir silme süresi belirtilmez; saklama, açıklanan amaçlara ve sözleşmesel ve yasal gerekliliklere bağlıdır.",
+        "internationalTransfers": "Kişisel veriler Avrupa Ekonomik Alanı dışında işlenebilir. GitHub, kapsamlarına giren aktarımlar için AB–ABD Veri Gizliliği Çerçevesine katılımı ve Standart Sözleşme Maddelerini güvence olarak belirtir."
+      }
+    },
+    "processorAgreementConfirmed": false,
+    "processingRoleReview": {
+      "status": "partially-documented",
+      "securityLogging": {
+        "status": "documented-independent-controller-basis",
+        "scope": "GitHub’s own security/abuse-prevention logging of Pages visitor IPs",
+        "basis": "Pages documentation links security IP logging to GitHub’s controller Privacy Statement; DPA section 3.C identifies its own abuse prevention as independent-controller processing.",
+        "inference": true,
+        "sources": [
+          "https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages#data-collection",
+          "https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement",
+          "https://github.com/customer-terms/github-data-protection-agreement"
+        ]
+      },
+      "otherHostingProcessing": {
+        "status": "not-assessed",
+        "scope": "Any customer-instructed hosting or personal-data processing beyond GitHub’s own security activity",
+        "basis": "No blanket Pages role or actual plan-specific DPA coverage has been established."
+      }
+    },
+    "service": "github-pages"
+  },
+  "hostingSectionAdditionalCopy": {
+    "en": {
+      "visitorLogging": "We use GitHub Pages to deliver this website. GitHub states that visitors’ IP addresses are logged and stored for security, including visitors who are not signed in to GitHub.",
+      "roleExplanation": "GitHub describes its own security and abuse-prevention processing as independent-controller processing."
+    },
+    "de": {
+      "visitorLogging": "Wir verwenden GitHub Pages zur Bereitstellung dieser Website. Nach GitHubs Angaben werden Besucher-IP-Adressen zu Sicherheitszwecken protokolliert und gespeichert, auch bei nicht bei GitHub angemeldeten Besuchern.",
+      "roleExplanation": "GitHub beschreibt seine eigene Verarbeitung zur Sicherheit und Missbrauchsabwehr als Verarbeitung in eigener Verantwortlichkeit."
+    },
+    "tr": {
+      "visitorLogging": "Bu web sitesini sunmak için GitHub Pages kullanıyoruz. GitHub, hesabına giriş yapmamış ziyaretçiler dâhil ziyaretçilerin IP adreslerini güvenlik amacıyla kaydettiğini ve sakladığını belirtir.",
+      "roleExplanation": "GitHub, kendi güvenlik ve kötüye kullanımı önleme işlemlerini bağımsız veri sorumlusu olarak yürüttüğünü açıklar."
+    }
+  },
+  "emailAgreementReviewProposal": {
+    "processorAgreementConfirmed": false,
+    "agreementReview": {
+      "status": "owner-assumption",
+      "date": "2026-10-28",
+      "basis": "The owner explicitly instructed us to assume acceptance. Current published Google Workspace online terms incorporate the CDPA through URL Terms; this tenant’s applicable agreement/acceptance has not been independently inspected.",
+      "source": "https://workspace.google.com/terms/premier_terms/",
+      "verificationLimit": "Owner-authorized operational assumption, not verified account acceptance; no contract accepted by the agent."
+    }
+  },
+  "validatorHandling": {
+    "providerRule": "Replace the obsolete Hetzner-only production test with the project-specific GitHub Pages production exception; retain Hetzner for staging.",
+    "locationsAndRetention": "The truthful published criteria and explicit absence of a fixed Pages-specific period are complete disclosures of the established facts, not empty placeholders. Do not invent locations or a deletion-day count to satisfy validation.",
+    "processorRule": "Use scoped applicability/review states rather than universally requiring processorAgreementConfirmed=true. A documented independent-controller basis for security logging is distinct from an applicable customer DPA and does not resolve other processing roles.",
+    "hostingReviewState": "Security scope documented; remaining hosting-role/plan-specific agreement scope not assessed. Do not turn that uncertainty into an accepted-DPA claim.",
+    "emailReviewState": "Record owner-assumption separately and keep processorAgreementConfirmed=false. If release policy accepts that authorized assumption, report the explicit assumption/status instead of silently relabelling it verified.",
+    "finalReview": "A content review can record what was checked and its limitations. Neither these values nor a passing software check certify legal compliance. Do not claim an existing EU office, an exemption or settled territorial applicability."
+  },
+  "productionCopyCorrections": [
+    "Remove the Helsinki/Finland location and local Docker log-retention description from production notices; those belong to the isolated Hetzner environment.",
+    "Do not say production HTTP access logging is disabled: GitHub Pages expressly stores visitor IPs for security.",
+    "Keep official AgroWISS name, supplied Türkiye address and registry data unchanged; no EU office is asserted."
+  ],
+  "evidence": {
+    "pagesDataCollection": {
+      "url": "https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages#data-collection",
+      "point": "Pages-specific security IP logging applies also to signed-out visitors."
+    },
+    "providerPrivacy": {
+      "url": "https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement",
+      "sections": [
+        "International data transfers",
+        "Security and Retention",
+        "Contact Us"
+      ],
+      "point": "International processing and purpose/legal retention criteria; no fixed Pages-specific period identified in the cited notices."
+    },
+    "roleAndTransferTerms": {
+      "url": "https://github.com/customer-terms/github-data-protection-agreement",
+      "sections": [
+        "3.A–3.C",
+        "7"
+      ],
+      "point": "Mixed roles by purpose; published controller and processor distinctions and transfer mechanisms. Applicability to this account is not established."
+    },
+    "dpaEligibility": {
+      "url": "https://github.com/customer-terms",
+      "point": "Published DPA product eligibility does not establish universal Free/Pro Pages coverage."
+    },
+    "pagesTerms": {
+      "url": "https://docs.github.com/en/site-policy/github-terms/github-terms-for-additional-products-and-features#pages",
+      "point": "Check actual informational showcase use rather than assuming every corporate site is prohibited; transactional/SaaS restrictions differ."
+    }
+  }
+}

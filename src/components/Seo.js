@@ -66,6 +66,7 @@ const Seo = ({
   path = '/',
   image = DEFAULT_IMAGE,
   robots = 'index, follow',
+  language = 'en',
   keywords,
   type = 'website',
   structuredData = defaultStructuredData,
@@ -75,7 +76,7 @@ const Seo = ({
     const canonicalUrl = `${SITE_URL}${canonicalPath}`;
     const fullTitle = title.includes('nanoWISS') ? title : `${title} | nanoWISS`;
 
-    document.documentElement.lang = 'en';
+    document.documentElement.lang = language;
     document.title = fullTitle;
 
     setMeta('name', 'description', description);
@@ -85,7 +86,7 @@ const Seo = ({
     setMeta('name', 'theme-color', '#422768');
     setMeta('property', 'og:type', type);
     setMeta('property', 'og:site_name', 'nanoWISS');
-    setMeta('property', 'og:locale', 'en_US');
+    setMeta('property', 'og:locale', { de: 'de_DE', tr: 'tr_TR', en: 'en_US' }[language] || 'en_US');
     setMeta('property', 'og:title', fullTitle);
     setMeta('property', 'og:description', description);
     setMeta('property', 'og:url', canonicalUrl);
@@ -100,7 +101,7 @@ const Seo = ({
     setMeta('name', 'twitter:image', image);
     setLink('canonical', canonicalUrl);
     setJsonLd(structuredData);
-  }, [description, image, keywords, path, robots, structuredData, title, type]);
+  }, [description, image, keywords, language, path, robots, structuredData, title, type]);
 
   return null;
 };

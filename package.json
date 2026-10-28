@@ -18,8 +18,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build --nojekyll",
+    "predeploy": "npm run build:release",
+    "deploy": "node scripts/deploy-github-pages.js",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "postbuild": "node scripts/create-spa-fallback.js",
@@ -27,7 +27,12 @@
     "hooks:install": "git config core.hooksPath .githooks",
     "prepare": "git config core.hooksPath .githooks || true",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "legal:check": "node scripts/check-legal-details.js",
+    "test:legal": "node --test scripts/check-legal-details.test.js",
+    "build:release": "npm run legal:check && npm run brand:check && npm run build",
+    "build:staging": "REACT_APP_SITE_ENV=staging npm run build",
+    "test:routes": "node --test scripts/create-spa-fallback.test.js"
   },
   "eslintConfig": {
     "extends": [

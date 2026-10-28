@@ -1,0 +1,115 @@
+{
+  "operator": {
+    "kind": "organization",
+    "brand": "AgroWISS",
+    "name": "AGROWISS BİYOTEKNOLOJİ ARAŞTIRMALARI ANONİM ŞİRKETİ",
+    "legalForm": "Anonim Şirket (A.Ş.)",
+    "representatives": [
+      "Zeynep Feyza Atabey"
+    ],
+    "address": {
+      "additionalLines": [
+        "Boğaziçi Teknopark Kandilli Kampüsü 9"
+      ],
+      "street": "Kandilli Mah. Rasathane Cad. No:104/13",
+      "postalCode": "34684",
+      "city": "Üsküdar / İstanbul",
+      "country": "Türkiye"
+    },
+    "email": "info@nanowiss.com",
+    "phone": "",
+    "register": {
+      "name": "İstanbul Ticaret Sicili Müdürlüğü (Handelsregister Istanbul, Türkiye)",
+      "number": "1119202"
+    },
+    "vatId": "",
+    "businessId": "",
+    "confirmed": true
+  },
+  "privacy": {
+    "contactEmail": "info@nanowiss.com",
+    "hosting": {
+      "provider": "GitHub Pages — GitHub, Inc.",
+      "addressLines": [
+        "88 Colin P. Kelly Jr. St.",
+        "San Francisco, CA 94107",
+        "United States"
+      ],
+      "additionalPrivacyEntity": {
+        "name": "GitHub B.V.",
+        "addressLines": [
+          "Prins Bernhardplein 200",
+          "Amsterdam 1097JB",
+          "The Netherlands"
+        ],
+        "scope": "Also named by GitHub’s Privacy Statement; do not infer the precise contracting entity from visitor geography."
+      },
+      "privacyUrl": "https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement",
+      "serverLocations": "GitHub operates internationally, including in the United States and other countries. These public notices do not identify the individual server or CDN locations serving this GitHub Pages website.",
+      "logRetention": "GitHub stores visitor IP addresses for security. No Pages-specific deletion period is stated in these notices; retention depends on the stated purposes and applicable contractual and legal requirements.",
+      "internationalTransfers": "Personal data may be processed outside the EEA. GitHub describes EU–US Data Privacy Framework participation and Standard Contractual Clauses as safeguards for the transfers to which they apply.",
+      "translations": {
+        "de": {
+          "serverLocations": "GitHub ist international tätig, unter anderem in den USA und weiteren Ländern. Die verlinkten öffentlichen Hinweise benennen keine einzelnen Server- oder CDN-Standorte, von denen diese GitHub-Pages-Website ausgeliefert wird.",
+          "logRetention": "GitHub speichert Besucher-IP-Adressen zu Sicherheitszwecken. Die verlinkten Hinweise nennen keine Pages-spezifische Löschfrist; die Aufbewahrung richtet sich nach den angegebenen Zwecken sowie vertraglichen und gesetzlichen Anforderungen.",
+          "internationalTransfers": "Personenbezogene Daten können außerhalb des EWR verarbeitet werden. GitHub nennt die Teilnahme am EU–US Data Privacy Framework und Standardvertragsklauseln als Garantien für die jeweils davon erfassten Übermittlungen."
+        },
+        "tr": {
+          "serverLocations": "GitHub, ABD ve diğer ülkeler dâhil uluslararası olarak faaliyet gösterir. Bağlantısı verilen kamuya açık bildirimler, bu GitHub Pages web sitesini sunan tek tek sunucu veya CDN konumlarını belirtmez.",
+          "logRetention": "GitHub, ziyaretçilerin IP adreslerini güvenlik amacıyla saklar. Bağlantılı bildirimlerde Pages’e özgü bir silme süresi belirtilmez; saklama, açıklanan amaçlara ve sözleşmesel ve yasal gerekliliklere bağlıdır.",
+          "internationalTransfers": "Kişisel veriler Avrupa Ekonomik Alanı dışında işlenebilir. GitHub, kapsamlarına giren aktarımlar için AB–ABD Veri Gizliliği Çerçevesine katılımı ve Standart Sözleşme Maddelerini güvence olarak belirtir."
+        }
+      },
+      "processorAgreementConfirmed": false,
+      "processingRoleReview": {
+        "status": "partially-documented",
+        "securityLogging": {
+          "status": "documented-independent-controller-basis",
+          "scope": "GitHub’s own security/abuse-prevention logging of Pages visitor IPs",
+          "basis": "Pages documentation links security IP logging to GitHub’s controller Privacy Statement; DPA section 3.C identifies its own abuse prevention as independent-controller processing.",
+          "inference": true,
+          "sources": [
+            "https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages#data-collection",
+            "https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement",
+            "https://github.com/customer-terms/github-data-protection-agreement"
+          ]
+        },
+        "otherHostingProcessing": {
+          "status": "not-assessed",
+          "scope": "Any customer-instructed hosting or personal-data processing beyond GitHub’s own security activity",
+          "basis": "No blanket Pages role or actual plan-specific DPA coverage has been established."
+        }
+      },
+      "service": "github-pages"
+    },
+    "emailService": {
+      "provider": "Google Workspace (Gmail)",
+      "privacyUrl": "https://cloud.google.com/terms/cloud-privacy-notice",
+      "retention": "We generally delete enquiries and related correspondence 12 months after the enquiry has been resolved. We keep them longer only where necessary for an ongoing contractual relationship or to meet statutory retention obligations.",
+      "internationalTransfers": "Google Workspace may process data outside the European Economic Area. Google’s published transfer safeguards include the EU–US Data Privacy Framework for covered transfers to the United States and applicable Standard Contractual Clauses for other restricted transfers where required.",
+      "processorAgreementConfirmed": false,
+      "customerDataProcessingTermsUrl": "https://cloud.google.com/terms/data-processing-addendum",
+      "translations": {
+        "de": {
+          "retention": "Anfragen und den zugehörigen Schriftverkehr löschen wir grundsätzlich 12 Monate nach abschließender Bearbeitung. Eine längere Aufbewahrung erfolgt nur, soweit sie für ein laufendes Vertragsverhältnis oder aufgrund gesetzlicher Aufbewahrungspflichten erforderlich ist.",
+          "internationalTransfers": "Google Workspace kann Daten außerhalb des Europäischen Wirtschaftsraums verarbeiten. Zu den von Google veröffentlichten Übermittlungsgarantien gehören der EU–US Data Privacy Framework für davon erfasste Übermittlungen in die Vereinigten Staaten sowie die jeweils anwendbaren Standardvertragsklauseln für andere beschränkte Übermittlungen, soweit erforderlich."
+        },
+        "tr": {
+          "retention": "İletişim taleplerini ve ilgili yazışmaları, talebin sonuçlandırılmasından 12 ay sonra kural olarak siliyoruz. Veriler yalnızca devam eden bir sözleşme ilişkisi veya yasal saklama yükümlülükleri gerektiriyorsa daha uzun süre saklanır.",
+          "internationalTransfers": "Google Workspace, verileri Avrupa Ekonomik Alanı dışında işleyebilir. Google’ın yayımladığı aktarım güvenceleri, kapsamına giren Amerika Birleşik Devletleri aktarımları için AB–ABD Veri Gizliliği Çerçevesini ve gerekli olduğu durumlarda diğer kısıtlamaya tabi aktarımlar için uygulanabilir Standart Sözleşme Maddelerini içerir."
+        }
+      },
+      "agreementReview": {
+        "status": "owner-assumption",
+        "date": "2026-10-28",
+        "basis": "The owner explicitly instructed us to assume acceptance. Current published Google Workspace online terms incorporate the CDPA through URL Terms; this tenant’s applicable agreement/acceptance has not been independently inspected.",
+        "source": "https://workspace.google.com/terms/premier_terms/",
+        "verificationLimit": "Owner-authorized operational assumption, not verified account acceptance; no contract accepted by the agent."
+      }
+    },
+    "confirmed": true,
+    "reviewBasis": "Public website practices and provider notices reviewed; Google agreement acceptance is an explicit owner-authorized assumption. GitHub security-role basis is documented; other hosting-role coverage remains unassessed. This content review does not certify legal compliance.",
+    "retentionOwnerApprovedOn": "2026-10-28"
+  },
+  "reviewedOn": "2026-10-28"
+}

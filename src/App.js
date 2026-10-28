@@ -39,6 +39,8 @@ import {
   SplatGardenSite,
 } from './components/AlternativeStandaloneSites';
 import Seo from './components/Seo';
+import LegalPage from './components/LegalPage';
+import { legalTranslations, resolveLegalLanguage } from './content/legal-translations';
 import { BrowserRouter as Router, Route, Routes, Navigate, useLocation } from 'react-router-dom';
 
 const pageSeo = {
@@ -87,11 +89,24 @@ const alternativeSeo = {
   robots: 'noindex, nofollow',
 };
 
-const getSeoForPath = (pathname) => {
+const getSeoForPath = (pathname, search) => {
   const normalized = pathname.replace(/\/$/, '') || '/';
   const canonicalPath = normalized.startsWith('/nanowiss')
     ? normalized.replace('/nanowiss', '') || '/'
     : normalized;
+
+  if (canonicalPath === '/impressum' || canonicalPath === '/datenschutz') {
+    const language = resolveLegalLanguage(new URLSearchParams(search).get('lang'));
+    const kind = canonicalPath === '/impressum' ? 'imprint' : 'privacy';
+    const copy = legalTranslations[language];
+    return {
+      title: `${copy.title[kind]} | nanoWISS`,
+      description: copy.description[kind],
+      language,
+      path: `${canonicalPath}${language === 'en' ? '' : `?lang=${language}`}`,
+      robots: normalized.startsWith('/nanowiss') ? 'noindex, follow' : 'index, follow',
+    };
+  }
 
   if (canonicalPath.startsWith('/alternative')) {
     return {
@@ -109,12 +124,14 @@ const getSeoForPath = (pathname) => {
 
 function AppRoutes() {
   const location = useLocation();
-  const seo = getSeoForPath(location.pathname);
+  const seo = getSeoForPath(location.pathname, location.search);
 
   return (
     <>
       <Seo {...seo} />
       <Routes>
+        <Route path="/impressum" element={<LegalPage kind="imprint" />} />
+        <Route path="/datenschutz" element={<LegalPage kind="privacy" />} />
         <Route path="/" element={<HomePage />} />
         <Route path="/team" element={<TeamPage />} />
         <Route path="/products" element={<ProductsPage />} />
@@ -148,6 +165,8 @@ function AppRoutes() {
         <Route path="/alternative/clinical-whitepaper" element={<ClinicalWhitepaperSite />} />
         <Route path="/alternative/field-notebook" element={<FieldNotebookSite />} />
         <Route path="/alternative/partner-briefing" element={<PartnerBriefingSite />} />
+        <Route path="/nanowiss/impressum" element={<LegalPage kind="imprint" />} />
+        <Route path="/nanowiss/datenschutz" element={<LegalPage kind="privacy" />} />
         <Route path="/nanowiss" element={<HomePage />} />
         <Route path="/nanowiss/team" element={<TeamPage />} />
         <Route path="/nanowiss/products" element={<ProductsPage />} />

@@ -1,0 +1,77 @@
+{
+  "operator": {
+    "kind": "organization",
+    "brand": "AgroWISS",
+    "name": "AGROWISS BİYOTEKNOLOJİ ARAŞTIRMALARI ANONİM ŞİRKETİ",
+    "legalForm": "Anonim Şirket (A.Ş.)",
+    "representatives": [
+      "Zeynep Feyza Atabey"
+    ],
+    "address": {
+      "additionalLines": [
+        "Boğaziçi Teknopark Kandilli Kampüsü 9"
+      ],
+      "street": "Kandilli Mah. Rasathane Cad. No:104/13",
+      "postalCode": "34684",
+      "city": "Üsküdar / İstanbul",
+      "country": "Türkiye"
+    },
+    "email": "info@nanowiss.com",
+    "phone": "",
+    "register": {
+      "name": "İstanbul Ticaret Sicili Müdürlüğü (Handelsregister Istanbul, Türkiye)",
+      "number": "1119202"
+    },
+    "vatId": "",
+    "businessId": "",
+    "confirmed": true
+  },
+  "privacy": {
+    "contactEmail": "info@nanowiss.com",
+    "hosting": {
+      "provider": "Hetzner Online GmbH",
+      "addressLines": [
+        "Industriestr. 25",
+        "91710 Gunzenhausen",
+        "Germany"
+      ],
+      "privacyUrl": "https://www.hetzner.com/legal/privacy-policy/",
+      "serverLocations": "Helsinki, Finland (European Union).",
+      "logRetention": "Routine HTTP access logging is disabled at the web server layer. Operational and error logs use rotating local Docker storage, with a maximum of 20 MB per file and five files per service. Rotation depends on log volume; no fixed calendar retention period is configured for these logs.",
+      "internationalTransfers": "The server used for this website is configured in Finland, within the European Union; no server location outside the EU is configured for this deployment. Hetzner states that data stored at an EU product location remains within the EU and that support access is generally provided by teams within the EU. This describes the configured hosting location and the provider’s published information; email processing is described separately.",
+      "processorAgreementConfirmed": false,
+      "translations": {
+        "de": {
+          "serverLocations": "Helsinki, Finnland (Europäische Union).",
+          "logRetention": "Die reguläre HTTP-Zugriffsprotokollierung ist auf Webserver-Ebene deaktiviert. Betriebs- und Fehlerprotokolle werden im rotierenden lokalen Docker-Protokollspeicher mit höchstens 20 MB pro Datei und fünf Dateien pro Dienst gespeichert. Die Rotation hängt vom Protokollaufkommen ab; für diese Protokolle ist keine feste zeitliche Aufbewahrungsfrist konfiguriert.",
+          "internationalTransfers": "Der für diese Website verwendete Server ist in Finnland innerhalb der Europäischen Union konfiguriert; für diese Bereitstellung ist kein Serverstandort außerhalb der EU eingerichtet. Nach den veröffentlichten Angaben von Hetzner verbleiben die an einem EU-Produktstandort gespeicherten Daten innerhalb der EU; Supportzugriffe erfolgen grundsätzlich durch Teams innerhalb der EU. Dies beschreibt den konfigurierten Hosting-Standort und die veröffentlichten Anbieterangaben; die E-Mail-Verarbeitung wird gesondert beschrieben."
+        },
+        "tr": {
+          "serverLocations": "Helsinki, Finlandiya (Avrupa Birliği).",
+          "logRetention": "Web sunucusu düzeyinde olağan HTTP erişim günlüğü tutulması devre dışıdır. İşletim ve hata günlükleri, her hizmet için dosya başına en fazla 20 MB ve en fazla beş dosyayla sınırlı, dönüşümlü yerel Docker depolamasında tutulur. Dosyaların dönüşümü günlük miktarına bağlıdır; bu günlükler için sabit bir takvim süresi yapılandırılmamıştır.",
+          "internationalTransfers": "Bu web sitesi için kullanılan sunucu, Avrupa Birliği içindeki Finlandiya’da yapılandırılmıştır; bu kurulum için AB dışında bir sunucu konumu yapılandırılmamıştır. Hetzner’in yayımladığı bilgilere göre, AB içindeki bir ürün konumunda saklanan veriler AB içinde kalır ve destek erişimi genel olarak AB içindeki ekiplerce sağlanır. Bu açıklama, yapılandırılan barındırma konumunu ve sağlayıcının yayımladığı bilgileri kapsar; e-posta işleme ayrıca açıklanmaktadır."
+        }
+      }
+    },
+    "emailService": {
+      "provider": "Google Workspace (Gmail)",
+      "privacyUrl": "https://cloud.google.com/terms/cloud-privacy-notice",
+      "retention": "We generally delete enquiries and related correspondence 12 months after the enquiry has been resolved. We keep them longer only where necessary for an ongoing contractual relationship or to meet statutory retention obligations.",
+      "internationalTransfers": "Google Workspace may process data outside the European Economic Area. Google’s published transfer safeguards include the EU–US Data Privacy Framework for covered transfers to the United States and applicable Standard Contractual Clauses for other restricted transfers where required.",
+      "processorAgreementConfirmed": false,
+      "customerDataProcessingTermsUrl": "https://cloud.google.com/terms/data-processing-addendum",
+      "translations": {
+        "de": {
+          "retention": "Anfragen und den zugehörigen Schriftverkehr löschen wir grundsätzlich 12 Monate nach abschließender Bearbeitung. Eine längere Aufbewahrung erfolgt nur, soweit sie für ein laufendes Vertragsverhältnis oder aufgrund gesetzlicher Aufbewahrungspflichten erforderlich ist.",
+          "internationalTransfers": "Google Workspace kann Daten außerhalb des Europäischen Wirtschaftsraums verarbeiten. Zu den von Google veröffentlichten Übermittlungsgarantien gehören der EU–US Data Privacy Framework für davon erfasste Übermittlungen in die Vereinigten Staaten sowie die jeweils anwendbaren Standardvertragsklauseln für andere beschränkte Übermittlungen, soweit erforderlich."
+        },
+        "tr": {
+          "retention": "İletişim taleplerini ve ilgili yazışmaları, talebin sonuçlandırılmasından 12 ay sonra kural olarak siliyoruz. Veriler yalnızca devam eden bir sözleşme ilişkisi veya yasal saklama yükümlülükleri gerektiriyorsa daha uzun süre saklanır.",
+          "internationalTransfers": "Google Workspace, verileri Avrupa Ekonomik Alanı dışında işleyebilir. Google’ın yayımladığı aktarım güvenceleri, kapsamına giren Amerika Birleşik Devletleri aktarımları için AB–ABD Veri Gizliliği Çerçevesini ve gerekli olduğu durumlarda diğer kısıtlamaya tabi aktarımlar için uygulanabilir Standart Sözleşme Maddelerini içerir."
+        }
+      }
+    },
+    "confirmed": false
+  },
+  "reviewedOn": "2026-10-28"
+}

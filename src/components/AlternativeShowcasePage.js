@@ -155,9 +155,8 @@ const AlternativeShowcasePage = () => {
                 nanoWISS products shown as moving nanoparticle systems.
               </h1>
               <p className="mt-6 max-w-2xl text-lg text-white/75">
-                This page is designed for demos and investor conversations: it turns nanoWISS
-                company strengths into clear product stories with proof, team context, and
-                application paths.
+                nanoWISS brings together nanoparticle technology, scientific expertise, and
+                application research for health and agriculture.
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
                 <a
@@ -237,8 +236,8 @@ const AlternativeShowcasePage = () => {
                 <p className="font-bold uppercase tracking-wide text-primary-dark">System Mechanics</p>
                 <h2 className="mt-3 text-3xl font-extrabold md:text-4xl">A simple three-stage product story</h2>
                 <p className="mt-5 text-lg text-gray-700">
-                  These panels are deliberately concise so the page works as a live demo, pitch
-                  walkthrough, or product explainer without turning into a technical paper.
+                  From nanoparticle synthesis to controlled release, explore the mechanisms behind
+                  nanoWISS products and their intended applications.
                 </p>
               </div>
               <div className="grid grid-cols-1 gap-5 md:grid-cols-3">

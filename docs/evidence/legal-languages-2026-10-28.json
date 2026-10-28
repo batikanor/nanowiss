@@ -1,0 +1,67 @@
+{
+  "release": "20261028T221450Z-legal-languages",
+  "url": "https://staging.nanowiss.com",
+  "remotePath": "/srv/apps/nanowiss-staging/releases/20261028T221450Z-legal-languages",
+  "previousRelease": "20261028T114613Z-workspace",
+  "sourceHead": "b3d6aa8beaa548a97dbe24664af8948efa4d409e",
+  "source": "uncommitted working tree",
+  "gitCommitted": false,
+  "gitPushed": false,
+  "productionChanged": false,
+  "fileCount": 53,
+  "mainBundles": {
+    "static/js/main.1300ecc0.js": "3dfcf986bdf597ec6e7b433fbd96b1a6ed8f6b127ea0fe784d9e77150f890ce7"
+  },
+  "footerLabels": [
+    "Legal Notice",
+    "Privacy Policy"
+  ],
+  "legalLanguages": [
+    "en",
+    "de",
+    "tr"
+  ],
+  "defaultLegalLanguage": "en",
+  "languageSelection": "URL query ?lang=de or ?lang=tr",
+  "visibleEnvironmentLabels": false,
+  "legalDetailsChanged": false,
+  "reactTestsPassed": 24,
+  "brandCheck": "passed",
+  "build": "passed",
+  "storageAnalyticsGatesPassedAt": "2026-10-28T22:12:57Z",
+  "verifiedAt": "2026-10-28T22:17:16.715069+00:00",
+  "checksumsVerified": 53,
+  "browserAudit": {
+    "languages": [
+      "en",
+      "de",
+      "tr"
+    ],
+    "pagesVerified": 6,
+    "languageSwitching": true,
+    "browserBack": true,
+    "mobile": "390x844 passed",
+    "invalidLanguageFallback": true,
+    "englishHomeAndFooter": true,
+    "visibleEnvironmentLabels": false,
+    "browserErrors": []
+  },
+  "healthAfterActivation": {
+    "https://www.nanowiss.com/": {
+      "status": 200,
+      "server": "GitHub.com"
+    },
+    "https://staging-nanowiss.157-180-20-129.sslip.io/": {
+      "status": 200,
+      "server": null
+    },
+    "https://maptheory.org/livez": {
+      "status": 200,
+      "server": null
+    },
+    "https://hack.maptheory.org/": {
+      "status": 200,
+      "server": null
+    }
+  }
+}
