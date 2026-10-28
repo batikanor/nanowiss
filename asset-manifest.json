@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/static/css/main.bc756e71.css",
-    "main.js": "/static/js/main.76dfe21a.js",
-    "static/js/453.e5c486a4.chunk.js": "/static/js/453.e5c486a4.chunk.js",
+    "main.css": "/static/css/main.d870c05d.css",
+    "main.js": "/static/js/main.107d843a.js",
+    "static/js/399.7c0b5ae8.chunk.js": "/static/js/399.7c0b5ae8.chunk.js",
     "static/media/agrowiss_team.png": "/static/media/agrowiss_team.f7a5f11a934b846c091f.png",
     "static/media/rare_disease_treatment.png": "/static/media/rare_disease_treatment.51df384d93717ceb047f.png",
     "static/media/agrowiss_product.png": "/static/media/agrowiss_product.3d707799af90c8c143fd.png",
@@ -37,12 +37,12 @@
     "static/media/biofilm_demo_poster.jpg": "/static/media/biofilm_demo_poster.98806e7de9638d6d9fcb.jpg",
     "static/media/social_impact_award.png": "/static/media/social_impact_award.c815cabfbe1715e387e2.png",
     "index.html": "/index.html",
-    "main.bc756e71.css.map": "/static/css/main.bc756e71.css.map",
-    "main.76dfe21a.js.map": "/static/js/main.76dfe21a.js.map",
-    "453.e5c486a4.chunk.js.map": "/static/js/453.e5c486a4.chunk.js.map"
+    "main.d870c05d.css.map": "/static/css/main.d870c05d.css.map",
+    "main.107d843a.js.map": "/static/js/main.107d843a.js.map",
+    "399.7c0b5ae8.chunk.js.map": "/static/js/399.7c0b5ae8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.bc756e71.css",
-    "static/js/main.76dfe21a.js"
+    "static/css/main.d870c05d.css",
+    "static/js/main.107d843a.js"
   ]
 }
